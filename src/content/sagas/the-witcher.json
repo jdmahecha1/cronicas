@@ -135,7 +135,7 @@
           }
         },
         {
-          "text": "Captura a un genio elemental en Skellige para revocar el deseo que la ataba místicamente a Geralt, comprobando que su amor mutuo sigue intacto.",
+          "text": "En Skellige, Geralt y Yennefer capturan un djinn para deshacer el deseo que los unía; según la decisión del jugador, descubren que su amor no dependía de la magia.",
           "at": {
             "game": "the-witcher-3",
             "chapter": 1
@@ -157,7 +157,7 @@
           }
         },
         {
-          "text": "Entra en la torre de Tor Gvalch'ca para detener la helada del Frío Blanco y, en el desenlace más común, regresa para adoptar formalmente la vida de bruja.",
+          "text": "Entra en Tor Gvalch'ca para enfrentarse al Frío Blanco. Su destino (bruja, emperatriz o algo peor) depende de las decisiones tomadas con ella a lo largo del juego.",
           "at": {
             "game": "the-witcher-3",
             "chapter": 3
@@ -205,7 +205,7 @@
           }
         },
         {
-          "text": "Negocia un acuerdo secreto con emisarios nilfgaardianos para restaurar a Temeria como estado autónomo a cambio de derrocar la corona de Redania.",
+          "text": "Negocia con Nilfgaard la restauración de Temeria como estado vasallo a cambio de acabar con el rey Radovid de Redania.",
           "at": {
             "game": "the-witcher-3",
             "chapter": 3
@@ -250,7 +250,7 @@
       },
       "reveals": [
         {
-          "text": "Su urgencia por hallar a Ciri responde al plan de proclamarla emperatriz para sofocar las rebeliones internas de la nobleza mercantil.",
+          "text": "Busca a Ciri para nombrarla su heredera al trono imperial.",
           "at": {
             "game": "the-witcher-3",
             "chapter": 1
@@ -268,8 +268,8 @@
     {
       "id": "olgierd",
       "name": "Olgierd von Everec",
-      "role": "Caudillo cosaco y noble inmortal",
-      "intro": "Un elegante atamán de refinados gustos artísticos y audacia temeraria que comanda a la feroz banda de los Jabalíes Desenfrenados.",
+      "role": "Noble redanio y líder de una banda de forajidos",
+      "intro": "Un noble redanio de gustos refinados y audacia temeraria que comanda a la feroz banda de los Jabalíes Desenfrenados.",
       "appears": {
         "game": "hearts-of-stone",
         "chapter": 0
@@ -302,7 +302,7 @@
       },
       "reveals": [
         {
-          "text": "Es una encarnación sobrenatural del engaño que disfruta atrapando a incautos en cláusulas contractuales para devorar sus almas.",
+          "text": "Muestra un poder sobrenatural, capaz de detener el tiempo para reclamar lo que se le debe, aunque su verdadera naturaleza nunca queda clara.",
           "at": {
             "game": "hearts-of-stone",
             "chapter": 2
@@ -492,10 +492,9 @@
         "game": "the-witcher-2",
         "chapter": 2
       },
-      "text": "Una niebla espectral alimentada por odios del pasado revive perpetuamente la guerra civil en el valle de Aedirn. Geralt reúne reliquias de valor bélico y político para disipar el maleficio y salvar al ejército aliado liderado por Roche.",
+      "text": "En el valle del Pontar, una niebla maldita revive una antigua batalla entre Aedirn y Kaedwen. Geralt busca la forma de romper el maleficio que mantiene atrapados a los espíritus de los caídos.",
       "characters": [
-        "geralt",
-        "vernon-roche"
+        "geralt"
       ],
       "major": false
     },
@@ -508,7 +507,7 @@
         "game": "the-witcher-2",
         "chapter": 3
       },
-      "text": "Monarcas y delegaciones diplomáticas se congregan en las ruinas de una metrópoli antigua para pactar un nuevo tratado de paz. Las maniobras encubiertas salen a la luz, desatando el pánico con la aparición de un dragón dominado y el arresto masivo de hechiceras.",
+      "text": "Monarcas y hechiceras se reúnen en las ruinas élficas de Loc Muinne para negociar la paz. La cumbre acaba en caos cuando salen a la luz las intrigas ocultas y aparece un dragón; a quién ayuda Geralt depende de sus decisiones.",
       "characters": [
         "geralt",
         "triss",
@@ -526,7 +525,7 @@
         "game": "the-witcher-2",
         "chapter": 4
       },
-      "text": "Letho se reúne con Geralt entre las ruinas y relata cómo la corte de Nilfgaard orquestó los regicidios para dejar al Norte sin liderazgo ante una inminente invasión. Con la verdad revelada, Geralt recuerda por fin su conexión con Yennefer y emprende su marcha hacia el sur.",
+      "text": "Letho le cuenta a Geralt que Nilfgaard lo contrató para asesinar a los reyes del Norte y desestabilizar la región antes de la invasión. Con la verdad revelada, Geralt recupera los recuerdos de Yennefer y decide buscarla.",
       "characters": [
         "geralt",
         "letho"
@@ -542,7 +541,7 @@
         "game": "the-witcher-3",
         "chapter": 0
       },
-      "text": "Tras reunirse con Yennefer en Huerto Blanco, Geralt es conducido de urgencia ante el emperador Emhyr en el palacio real de Wyzima. El soberano demanda formalmente la ayuda del brujo para rescatar a su hija Ciri antes de que la Cacería Salvaje alcance su poder.",
+      "text": "Tras reencontrarse con Yennefer en Huerto Blanco, Geralt es llevado ante el emperador Emhyr en Wyzima. El soberano le encarga encontrar a su hija Ciri, perseguida por la Cacería Salvaje.",
       "characters": [
         "geralt",
         "yennefer",
@@ -559,10 +558,9 @@
         "game": "the-witcher-3",
         "chapter": 1
       },
-      "text": "Durante la búsqueda en las ciénagas de Velen, Geralt pacta con las tres Moiras para recabar noticias sobre el paradero de Ciri. Mediante testimonios locales reconstruye la milagrosa huida de la joven de las fauces de bestias del pantano.",
+      "text": "En las ciénagas de Velen, Geralt sigue el rastro de Ciri hasta las tres Moiras, unas entidades antiguas y temibles que también la buscaban.",
       "characters": [
-        "geralt",
-        "ciri"
+        "geralt"
       ],
       "major": false
     },
@@ -575,10 +573,9 @@
         "game": "the-witcher-3",
         "chapter": 1
       },
-      "text": "Geralt y Triss preparan una audaz emboscada para rescatar a Jaskier de sus captores. Ya libre, el poeta cuenta lo que sabe del paso de Ciri por Novigrado.",
+      "text": "Geralt organiza con sus aliados el rescate de Jaskier, capturado por los cazadores de brujas de Novigrado. Ya libre, el poeta cuenta lo que sabe del paso de Ciri por la ciudad.",
       "characters": [
         "geralt",
-        "triss",
         "dandelion",
         "ciri"
       ],
@@ -729,9 +726,9 @@
       "from": "geralt",
       "to": "triss",
       "kind": "romance",
-      "detail": "Compañera incondicional y apasionada que veló por su bienestar cuando perdió la memoria de su pasado.",
+      "detail": "Lo cuidó durante su amnesia y al comienzo del segundo juego son pareja; en el tercero, el romance depende del jugador.",
       "at": {
-        "game": "the-witcher",
+        "game": "the-witcher-2",
         "chapter": 0
       }
     },
@@ -779,7 +776,7 @@
       "from": "geralt",
       "to": "gaunter-odimm",
       "kind": "enemigo",
-      "detail": "Una perturbadora relación deudor-acreedor que termina en una contienda a muerte por salvar almas humanas.",
+      "detail": "Geralt le debe un favor; según sus decisiones, puede acabar enfrentándolo para salvar el alma de Olgierd.",
       "at": {
         "game": "hearts-of-stone",
         "chapter": 0
@@ -789,7 +786,7 @@
       "from": "geralt",
       "to": "olgierd",
       "kind": "aliado",
-      "detail": "Pasa de ser un cliente hostil a un camarada redimido al que Geralt libera de su corazón petrificado.",
+      "detail": "De cliente hostil a alguien a quien Geralt puede ayudar a librarse de su pacto con O'Dimm.",
       "at": {
         "game": "hearts-of-stone",
         "chapter": 3
@@ -819,7 +816,7 @@
       "from": "regis",
       "to": "dettlaff",
       "kind": "aliado",
-      "detail": "Compañeros de sangre unidos por una profunda deuda vital tras haber compartido la resurrección de Regis.",
+      "detail": "Unidos por una deuda de sangre: Dettlaff reconstruyó el cuerpo de Regis después de que lo destruyeran.",
       "at": {
         "game": "blood-and-wine",
         "chapter": 1
@@ -839,7 +836,7 @@
       "from": "letho",
       "to": "emhyr",
       "kind": "aliado",
-      "detail": "Ejecutor contratado por la corona nilfgaardiana bajo la promesa de refundar la Escuela de la Víbora.",
+      "detail": "Asesino contratado por Nilfgaard para desestabilizar el Norte.",
       "at": {
         "game": "the-witcher-2",
         "chapter": 4
@@ -849,17 +846,17 @@
       "from": "olgierd",
       "to": "gaunter-odimm",
       "kind": "enemigo",
-      "detail": "Prisionero de un engaño demoníaco que le otorgó riquezas e inmortalidad a costa de perder toda su humanidad.",
+      "detail": "Prisionero de un pacto que le dio riqueza e inmortalidad a cambio de dejarlo incapaz de sentir.",
       "at": {
         "game": "hearts-of-stone",
-        "chapter": 1
+        "chapter": 2
       }
     },
     {
       "from": "triss",
       "to": "yennefer",
-      "kind": "rival",
-      "detail": "Hermanas del cónclave de hechiceras cuya prolongada amistad sufre roces por el amor que ambas profesan a Geralt.",
+      "kind": "aliado",
+      "detail": "Hechiceras y viejas amigas; su relación con Geralt puede generar tensión según las decisiones del jugador.",
       "at": {
         "game": "the-witcher-3",
         "chapter": 1
