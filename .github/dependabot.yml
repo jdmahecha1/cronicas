@@ -8,6 +8,10 @@ updates:
       dependencias:
         patterns: ['*']
     open-pull-requests-limit: 5
+    ignore:
+      # @astrojs/check aún no admite TypeScript 7; se actualizará cuando lo haga.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
