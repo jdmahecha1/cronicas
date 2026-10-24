@@ -18,6 +18,7 @@ const totals = {
 >
   <section class="hero">
     <div class="wrap hero__inner">
+      <div class="hero__text">
       <p class="eyebrow">Explorador de historias de videojuegos</p>
       <h1>Toda la historia de la saga.<br /><em>Solo hasta donde has llegado.</em></h1>
       <p class="hero__lead">
@@ -33,6 +34,26 @@ const totals = {
         <div><dt>Personajes</dt><dd>{totals.characters}</dd></div>
         <div><dt>Eventos</dt><dd>{totals.events}</dd></div>
       </dl>
+      </div>
+
+      <figure class="hero__demo" aria-hidden="true">
+        <div class="demo-card">
+          <p class="demo-card__meta">Año 1899 · Capítulo 1</p>
+          <p class="demo-card__title">La huida a las montañas</p>
+          <p class="demo-card__text">Lo que ya jugaste se muestra completo, con sus personajes y su contexto.</p>
+          <span class="demo-card__chip">Visible</span>
+        </div>
+        <div class="demo-card demo-card--veiled">
+          <p class="demo-card__title">Evento oculto</p>
+          <p class="demo-card__text">Se desbloquea al terminar la etapa 4 de 8.</p>
+          <span class="demo-card__chip">Mostrar igual</span>
+        </div>
+        <div class="demo-card demo-card--veiled demo-card--far">
+          <p class="demo-card__title">Personaje oculto</p>
+          <p class="demo-card__text">Ni su nombre aparece hasta que lo conozcas.</p>
+        </div>
+        <figcaption class="sr-only">Ejemplo del escudo de spoilers</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -81,6 +102,91 @@ const totals = {
 <style>
   .hero {
     padding-block: clamp(3.5rem, 10vw, 7rem) clamp(2rem, 6vw, 4rem);
+  }
+
+  .hero__inner {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 1000px) {
+    .hero__inner {
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 999px) {
+    .hero__demo {
+      display: none;
+    }
+  }
+
+  .hero__demo {
+    position: relative;
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+    transform: rotate(-2deg);
+  }
+
+  .demo-card {
+    position: relative;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    box-shadow: var(--shadow);
+  }
+
+  .demo-card--veiled {
+    border-style: dashed;
+    border-color: var(--border-strong);
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--surface),
+      var(--surface) 8px,
+      color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 8px,
+      color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 16px
+    );
+    margin-left: 2rem;
+  }
+
+  .demo-card--far {
+    margin-left: 4rem;
+    opacity: 0.7;
+  }
+
+  .demo-card p {
+    margin: 0;
+  }
+
+  .demo-card__meta {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-text);
+  }
+
+  .demo-card__title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .demo-card__text {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .demo-card__chip {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.1rem 0.6rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--muted);
   }
 
   .hero h1 em {

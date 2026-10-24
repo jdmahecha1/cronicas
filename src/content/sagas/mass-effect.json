@@ -177,7 +177,7 @@
           }
         },
         {
-          "text": "Consolida la hegemonía de su clan en Tuchanka e inaugura una nueva época para los krogans tras erradicarse la genofagia.",
+          "text": "Si sobrevive a Virmire y se cura la genofagia, lidera a los krogan hacia una nueva era en Tuchanka.",
           "at": {
             "game": "mass-effect-3",
             "chapter": 1
@@ -233,7 +233,7 @@
       "id": "saren-arterius",
       "name": "Saren Arterius",
       "role": "Agente encubierto del Consejo de la Ciudadela",
-      "intro": "El Espectro turiano más experimentado y temido de la galaxia, reverenciado por su implacabilidad para resolver crisis diplomáticas.",
+      "intro": "Espectro turiano veterano, temido por su implacabilidad y sus métodos extremos.",
       "appears": {
         "game": "mass-effect-1",
         "chapter": 0
@@ -309,7 +309,7 @@
           "text": "Fue creada en laboratorio por su padre para encarnar un ideal genético sin defectos, del cual huyó resguardando a su hermana gemela.",
           "at": {
             "game": "mass-effect-2",
-            "chapter": 1
+            "chapter": 2
           }
         },
         {
@@ -335,7 +335,7 @@
           "text": "Admite haber encabezado las modificaciones genéticas que recalibraron la genofagia para frenar la adaptación biológica krogan.",
           "at": {
             "game": "mass-effect-2",
-            "chapter": 1
+            "chapter": 2
           }
         },
         {
@@ -587,7 +587,7 @@
         "game": "mass-effect-2",
         "chapter": 4
       },
-      "text": "La nueva Normandía ingresa al núcleo de la galaxia y destruye la estación recolectora donde se incubaba un Segador con material genético humano. En el curso canónico, Shepard rechaza ceder la base a Cerberus.",
+      "text": "La nueva Normandía atraviesa el relé Omega-4 y asalta la estación recolectora, donde se construye un Segador con material genético humano. Al final, Shepard decide si destruir la base o entregársela a Cerberus.",
       "characters": [
         "shepard",
         "miranda-lawson",
@@ -606,7 +606,7 @@
         "game": "mass-effect-3",
         "chapter": 0
       },
-      "text": "Los Segadores arriban al espacio terrestre superando toda barrera defensiva en cuestión de horas. Shepard parte hacia la Ciudadela con la responsabilidad de organizar una alianza entre todas las potencias galácticas.",
+      "text": "Los Segadores llegan a la Tierra y arrasan sus defensas en cuestión de horas. Shepard escapa rumbo a Marte en busca de una forma de detenerlos.",
       "characters": [
         "shepard"
       ],
@@ -655,7 +655,7 @@
         "game": "mass-effect-3",
         "chapter": 2
       },
-      "text": "Tras abatir al Segador que esclavizaba a los sintéticos, Legion se inmola compartiendo un código de autoconciencia con sus pares, permitiendo un alto al fuego definitivo entre geth y quarianos.",
+      "text": "Si se cumplen las condiciones necesarias, Shepard destruye al Segador que controla a los geth y Legion se sacrifica para compartir con los suyos un código de autoconciencia, lo que abre paso a la paz entre geth y quarianos.",
       "characters": [
         "shepard",
         "legion",
@@ -731,10 +731,10 @@
       "from": "shepard",
       "to": "urdnot-wrex",
       "kind": "aliado",
-      "detail": "Consideración marcial mutua forjada tras superar las tensiones por la genofagia en Virmire.",
+      "detail": "Respeto marcial mutuo que se pone a prueba en Virmire.",
       "at": {
         "game": "mass-effect-1",
-        "chapter": 2
+        "chapter": 0
       }
     },
     {
@@ -763,8 +763,8 @@
       "kind": "enemigo",
       "detail": "Enemistad directa y despiadada tras fracasar en doblegar la voluntad ética de Shepard.",
       "at": {
-        "game": "mass-effect-3",
-        "chapter": 0
+        "game": "mass-effect-2",
+        "chapter": 4
       }
     },
     {
@@ -811,7 +811,7 @@
       "from": "tali-zorah",
       "to": "legion",
       "kind": "rival",
-      "detail": "Desconfianza arraigada entre creadora y creación que madura hacia una estrecha convivencia pacífica.",
+      "detail": "Desconfianza arraigada entre una quariana y una plataforma geth, que puede dar paso a la convivencia.",
       "at": {
         "game": "mass-effect-2",
         "chapter": 3
