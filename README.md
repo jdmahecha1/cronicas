@@ -123,4 +123,4 @@ Código bajo licencia [MIT](LICENSE). Textos de `src/content/` bajo [CC BY-SA 4.
 
 ---
 
-Hecho por [Juan Diego Mahecha](https://github.com/jdmahecha1), estudiante universitario y aprendiz del SENA (ADSO).
+Hecho por [toriikarii](https://github.com/jdmahecha1), estudiante universitario y aprendiz del SENA (ADSO).
