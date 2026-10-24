@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { layoutGraph } from '../lib/graph-layout';
-import { RELATION_KINDS, type RelationKind, type Saga } from '../lib/schema';
+import { RELATION_KINDS, type RelationKind } from '../lib/kinds';
+import type { Saga } from '../lib/schema';
 import { isCharacterKnown, isRelationVisible } from '../lib/spoilers';
 import { characterUrl } from '../lib/url';
 import { useShield } from '../lib/use-shield';

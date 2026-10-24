@@ -1,4 +1,7 @@
 import { z } from 'zod';
+import { RELATION_KINDS } from './kinds';
+
+export { RELATION_KINDS, type RelationKind } from './kinds';
 
 const slug = z
   .string()
@@ -9,8 +12,6 @@ export const markerSchema = z.object({
   game: slug,
   chapter: z.number().int().min(0),
 });
-
-export const RELATION_KINDS = ['aliado', 'enemigo', 'familia', 'romance', 'mentor', 'rival'] as const;
 
 export const gameSchema = z.object({
   id: slug,
@@ -69,5 +70,4 @@ export type Game = z.infer<typeof gameSchema>;
 export type Character = z.infer<typeof characterSchema>;
 export type LoreEvent = z.infer<typeof eventSchema>;
 export type Relation = z.infer<typeof relationSchema>;
-export type RelationKind = (typeof RELATION_KINDS)[number];
 export type Saga = z.infer<typeof sagaSchema>;
