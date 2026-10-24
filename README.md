@@ -55,6 +55,10 @@ Detalles que evitan spoilers por la puerta de atrás:
 - **Los personajes cuya sola existencia es un spoiler** no ponen su nombre en el título de la pestaña ni en la búsqueda, y no aparecen en el sitemap.
 - **El grafo no se mueve al avanzar.** Las posiciones se calculan con todas las relaciones y una semilla fija, así que el HTML del servidor y del cliente coinciden y revelar una conexión no reacomoda el mapa (ni delata cuántas faltan).
 
+## Seguridad
+
+Sin servidor, base de datos ni claves: la superficie de ataque es mínima y el hosting (GitHub Pages) absorbe el tráfico. Aun así, cada página lleva una CSP con hashes (sin `eval` ni scripts en línea ajenos), la búsqueda filtra el HTML que inserta, el progreso leído del navegador se valida, y la CI audita dependencias y prueba en el navegador que no haya violaciones de la CSP. Detalles en [SECURITY.md](SECURITY.md).
+
 ## Pila técnica
 
 - **[Astro 7](https://astro.build)**: generación estática, una página por saga y por personaje (79 páginas).

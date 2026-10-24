@@ -66,3 +66,44 @@ test('el índice de búsqueda no contiene texto protegido', async ({ page }) => 
   await page.getByLabel('Busca una saga, un personaje o un lugar').fill('tuberculosis');
   await expect(page.getByText('0 resultados', { exact: false })).toBeVisible();
 });
+
+test.describe('seguridad', () => {
+  for (const path of ['', 'sagas/the-witcher/', 'sagas/the-witcher/personajes/geralt/', 'buscar/?q=Geralt', 'acerca/']) {
+    test(`sin violaciones de la CSP ni errores en /${path}`, async ({ page }) => {
+      const problems: string[] = [];
+      page.on('console', (msg) => msg.type() === 'error' && problems.push(msg.text()));
+      page.on('pageerror', (err) => problems.push(err.message));
+      await page.addInitScript(() => {
+        document.addEventListener('securitypolicyviolation', (e) =>
+          console.error(`CSP: ${e.violatedDirective} ${e.blockedURI}`),
+        );
+      });
+      await page.goto(path);
+      await page.waitForLoadState('networkidle');
+      if (path.startsWith('buscar')) await expect(page.locator('.search__results a').first()).toBeVisible();
+      expect(problems).toEqual([]);
+    });
+  }
+
+  test('la página declara una CSP sin unsafe-inline ni unsafe-eval en scripts', async ({ page }) => {
+    await page.goto('');
+    const csp = await page.locator('meta[http-equiv="content-security-policy"]').getAttribute('content');
+    const scriptSrc = csp?.split(';').find((d) => d.trim().startsWith('script-src')) ?? '';
+    expect(scriptSrc).toContain("'self'");
+    expect(scriptSrc).not.toContain("'unsafe-inline'");
+    expect(scriptSrc).not.toContain("'unsafe-eval'");
+    expect(csp).toContain("object-src 'none'");
+  });
+
+  test('un ?q= malicioso no ejecuta código', async ({ page }) => {
+    let dialog = false;
+    page.on('dialog', async (d) => {
+      dialog = true;
+      await d.dismiss();
+    });
+    await page.goto('buscar/?q=' + encodeURIComponent('"><img src=x onerror=alert(1)><script>alert(2)</script>'));
+    await page.waitForLoadState('networkidle');
+    expect(dialog).toBe(false);
+    await expect(page.locator('#buscar')).toHaveValue(/onerror/);
+  });
+});

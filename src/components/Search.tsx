@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { safeExcerpt, safeResultUrl } from '../lib/search';
 
 interface Result {
   url: string;
@@ -65,7 +66,12 @@ export default function Search({ base }: Props) {
       if (!search || cancelled) return;
       const data = await Promise.all(search.results.slice(0, 12).map((r) => r.data()));
       if (cancelled) return;
-      setResults(data.map((d) => ({ url: d.url, title: d.meta.title ?? d.url, excerpt: d.excerpt })));
+      setResults(
+        data.flatMap((d) => {
+          const url = safeResultUrl(d.url);
+          return url ? [{ url, title: d.meta.title ?? url, excerpt: safeExcerpt(d.excerpt) }] : [];
+        }),
+      );
     })();
     return () => {
       cancelled = true;
@@ -100,7 +106,7 @@ export default function Search({ base }: Props) {
           <li key={r.url}>
             <a href={r.url}>
               <strong>{r.title.replace(/ · Crónicas$/, '')}</strong>
-              {/* Pagefind devuelve el extracto con <mark> ya escapado. */}
+              {/* Extracto filtrado con safeExcerpt: solo admite <mark>. */}
               <span dangerouslySetInnerHTML={{ __html: r.excerpt }} />
             </a>
           </li>
