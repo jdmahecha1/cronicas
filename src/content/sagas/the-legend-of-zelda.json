@@ -1,0 +1,814 @@
+{
+  "id": "the-legend-of-zelda",
+  "title": "The Legend of Zelda",
+  "tagline": "El eterno ciclo del héroe, la princesa y la calamidad a través de las eras.",
+  "studio": "Nintendo",
+  "genre": "Acción y aventura",
+  "accent": "#22c55e",
+  "synopsis": "El reino sagrado de Hyrule se encuentra bendecido por un poder divino conocido como la Trifuerza, codiciado por fuerzas oscuras a lo largo de las eras. Cuando el mal resurge y amenaza la estabilidad del mundo, el destino entrelaza el valor de un espíritu heroico y la sabiduría de la realeza. A través de incontables generaciones, una leyenda imperecedera renace para restaurar el equilibrio.",
+  "games": [
+    {
+      "id": "skyward-sword",
+      "title": "The Legend of Zelda: Skyward Sword",
+      "year": 2011,
+      "chapters": [
+        "El descenso desde Celéstea",
+        "La búsqueda en las tierras inferiores",
+        "El despertar de la Espada Maestra",
+        "El juicio supremo y la batalla ancestral"
+      ]
+    },
+    {
+      "id": "ocarina-of-time",
+      "title": "The Legend of Zelda: Ocarina of Time",
+      "year": 1998,
+      "chapters": [
+        "Las piedras espirituales de la infancia",
+        "El despertar en un futuro sombrío",
+        "La purificación de los templos ancestrales",
+        "La confrontación en el castillo del mal"
+      ]
+    },
+    {
+      "id": "the-wind-waker",
+      "title": "The Legend of Zelda: The Wind Waker",
+      "year": 2002,
+      "chapters": [
+        "La partida del Gran Mar",
+        "Las perlas de las diosas",
+        "El reino sumergido y los templos del poder",
+        "La reconstrucción de la Trifuerza y el duelo final"
+      ]
+    },
+    {
+      "id": "twilight-princess",
+      "title": "The Legend of Zelda: Twilight Princess",
+      "year": 2006,
+      "chapters": [
+        "La invasión de las sombras",
+        "La liberación de los espíritus de la luz",
+        "La búsqueda del Espejo del Crepúsculo",
+        "La reconquista de dos mundos"
+      ]
+    },
+    {
+      "id": "breath-of-the-wild",
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "year": 2017,
+      "chapters": [
+        "El despertar en la meseta",
+        "Los ecos del cataclismo",
+        "La liberación de las Bestias Divinas",
+        "El asalto al Castillo de Hyrule"
+      ]
+    },
+    {
+      "id": "tears-of-the-kingdom",
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "year": 2023,
+      "chapters": [
+        "El cataclismo subterráneo y las islas celestes",
+        "Los fenómenos regionales",
+        "Las lágrimas de dragón y el quinto sabio",
+        "El descenso final al abismo"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "link",
+      "name": "Link",
+      "role": "Caballero elegido y portador del espíritu heroico",
+      "intro": "Un joven de corazón noble que despierta en tiempos de crisis para empuñar la espada que repele el mal.",
+      "reveals": [
+        {
+          "text": "Su alma fue maldecida por el Heraldo de la Muerte a reencarnar perpetuamente en un conflicto sin fin frente al rencor primordial.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Según la cronología oficial, el espíritu guerrero que lo entrena en secreto es el Héroe del Tiempo de Ocarina of Time, que no halló descanso.",
+          "at": {
+            "game": "twilight-princess",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "zelda",
+      "name": "Zelda",
+      "role": "Princesa de Hyrule y guardiana del poder sagrado",
+      "intro": "Heredera del trono de Hyrule, bendecida con una sabiduría mística y un vínculo innato con el destino del reino.",
+      "reveals": [
+        {
+          "text": "Es la reencarnación mortal de la diosa ancestral Hylia, quien renunció a su divinidad para salvaguardar el sello del mal.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Al concluir la batalla contra Ganon en el futuro, utilizó la Ocarina del Tiempo para enviar a Link a su infancia, bifurcando la historia en líneas temporales divergentes.",
+          "at": {
+            "game": "ocarina-of-time",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "En la era moderna, ingirió voluntariamente una piedra secreta Zonnan para transformarse en el Dragón de la Luz y regenerar la Espada Maestra durante eones.",
+          "at": {
+            "game": "tears-of-the-kingdom",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "ganondorf",
+      "name": "Ganondorf",
+      "role": "Líder de los Gerudo y personificación del mal",
+      "intro": "Un poderoso hechicero y caudillo del desierto que busca apoderarse de la reliquia sagrada para dominar el reino.",
+      "reveals": [
+        {
+          "text": "Representa la manifestación viva y reencarnación del odio infinito del Heraldo de la Muerte tras la era fundacional.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Su rencor incorpóreo en la era moderna engendró la calamidad destructora tras haber sido inmovilizado bajo tierra por el primer monarca de Hyrule.",
+          "at": {
+            "game": "tears-of-the-kingdom",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "En su desesperación bélica final consumió su gema secreta Zonnan, renunciando a su mente para convertirse en el colosal Dragón Demonio.",
+          "at": {
+            "game": "tears-of-the-kingdom",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "impa",
+      "name": "Impa",
+      "role": "Líder de la tribu Sheikah y protectora real",
+      "intro": "Fiel guerrera y consejera de la corona, consagrada a custodiar a la realeza y preservar el legado secreto de su clan.",
+      "reveals": [
+        {
+          "text": "Vigiló en soledad durante milenios en el Templo del Tiempo sellado para asegurar el despertar y triunfo del héroe.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Despertó como la sabia custodia del Templo de la Sombra para brindar su poder en el confinamiento del rey demonio.",
+          "at": {
+            "game": "ocarina-of-time",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "fay",
+      "name": "Fay",
+      "role": "Espíritu guía de la Espada Divina",
+      "intro": "Una entidad etérea creada por la diosa antigua para guiar al héroe elegido con cálculos precisos y consejos racionales.",
+      "appears": {
+        "game": "skyward-sword",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Ingresó en un reposo perpetuo dentro de la Espada Maestra una vez cumplido el mandato asignado por la divinidad primordial.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Milenios después, la Espada Maestra aún le habla a Zelda: un eco del espíritu que la habitó.",
+          "at": {
+            "game": "breath-of-the-wild",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "el-heraldo-de-la-muerte",
+      "name": "El Heraldo de la Muerte",
+      "role": "Rey de los demonios y fuente del mal primordial",
+      "intro": "Una temible deidad oscura surgida de las profundidades de la tierra con el propósito de erradicar a los dioses y reclamar el poder absoluto.",
+      "appears": {
+        "game": "skyward-sword",
+        "chapter": 2
+      },
+      "reveals": [
+        {
+          "text": "Al ser derrotado, maldijo a los descendientes de la diosa y a los portadores del valor a enfrentarse eternamente a las reencarnaciones de su odio.",
+          "at": {
+            "game": "skyward-sword",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "midna",
+      "name": "Midna",
+      "role": "Misteriosa criatura de las sombras",
+      "intro": "Un ser enigmático y sarcástico que asiste a Link en el Reino del Crepúsculo a cambio de reunir reliquias prohibidas.",
+      "appears": {
+        "game": "twilight-princess",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es la legítima soberana y Princesa del Crepúsculo, despojada de su apariencia original y expulsada por un golpe de Estado instigado por Ganondorf.",
+          "at": {
+            "game": "twilight-princess",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Tras restaurar la luz en ambos mundos, destruyó voluntariamente el Espejo del Crepúsculo para clausurar el paso entre reinos de forma definitiva.",
+          "at": {
+            "game": "twilight-princess",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "zant",
+      "name": "Zant",
+      "role": "Tirano usurpador del Crepúsculo",
+      "intro": "Un siniestro emisario de las sombras que doblega el reino de Hyrule envolviéndolo en una penumbra mágica.",
+      "appears": {
+        "game": "twilight-princess",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Su hechicería procedía del espíritu desterrado de Ganondorf, a quien acogió y adoró con fanatismo como a una deidad viviente.",
+          "at": {
+            "game": "twilight-princess",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetra",
+      "name": "Tetra",
+      "role": "Capitana pirata de los mares abiertos",
+      "intro": "Una intrépida y orgullosa capitana que lidera una banda de corsarios a través de los vastos océanos en busca de tesoros.",
+      "appears": {
+        "game": "the-wind-waker",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es la descendiente directa del linaje imperial de Hyrule y la auténtica princesa Zelda, portadora de la Trifuerza de la Sabiduría.",
+          "at": {
+            "game": "the-wind-waker",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "rauru",
+      "name": "Rauru",
+      "role": "Primer Rey de Hyrule y señor de la luz",
+      "intro": "Un sabio gobernante de origen Zonnan provisto de dones lumínicos sagrados, recordado como artífice de la fundación del reino.",
+      "appears": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Sacrificó su vida en la Guerra del Destierro para contener físicamente el corazón de Ganondorf con su brazo sagrado a través de los siglos.",
+          "at": {
+            "game": "tears-of-the-kingdom",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "mipha",
+      "name": "Mipha",
+      "role": "Princesa de los Zora y campeona de Hyrule",
+      "intro": "Una dulce y diestra guerrera Zora dotada de poderes sanadores, designada para comandar a la Bestia Divina acuática.",
+      "appears": {
+        "game": "breath-of-the-wild",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Sentía un profundo amor hacia Link y confeccionó la armadura nupcial tradicional de su pueblo para él antes de perecer durante el gran cataclismo.",
+          "at": {
+            "game": "breath-of-the-wild",
+            "chapter": 2
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "la-guerra-contra-el-mal-primordial",
+      "title": "La guerra contra el mal primordial",
+      "date": "Era de la Diosa Hylia",
+      "order": 10,
+      "branch": "Origen",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 0
+      },
+      "text": "Hordas oscuras emergen de las entrañas terrestres en busca de la Trifuerza. La diosa Hylia desprende y eleva una porción de tierra hacia el firmamento para salvaguardar a los supervivientes mortales.",
+      "characters": [
+        "zelda",
+        "el-heraldo-de-la-muerte"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-forja-de-la-espada-maestra",
+      "title": "La forja de la Espada Maestra",
+      "date": "Era del Cielo",
+      "order": 20,
+      "branch": "Origen",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 2
+      },
+      "text": "Guiado por Fay, Link baña la hoja primigenia en las tres llamas sagradas para conferirle el poder divino. La espada adquiere la propiedad absoluta de repeler la maldad y disipar las tinieblas.",
+      "characters": [
+        "link",
+        "fay"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-maldicion-del-rencor-eterno",
+      "title": "La maldición del rencor eterno",
+      "date": "Fin de la Era del Cielo",
+      "order": 30,
+      "branch": "Origen",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 3
+      },
+      "text": "Al ser vencido en combate singular, el Heraldo de la Muerte proclama un maleficio eterno antes de desvanecerse. Sus palabras atan el espíritu del héroe y la estirpe de la diosa a un ciclo interminable de batallas.",
+      "characters": [
+        "link",
+        "zelda",
+        "el-heraldo-de-la-muerte"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-traicion-de-ganondorf-en-hyrule",
+      "title": "La traición de Ganondorf en Hyrule",
+      "date": "Era del Héroe del Tiempo",
+      "order": 40,
+      "branch": "Origen",
+      "at": {
+        "game": "ocarina-of-time",
+        "chapter": 0
+      },
+      "text": "Aparentando lealtad a la corona, el líder Gerudo maquina el acceso a la cámara sagrada del templo. La apertura del umbral temporal le permite alcanzar la reliquia divina y quebrar la armonía del reino.",
+      "characters": [
+        "link",
+        "zelda",
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-despertar-de-los-seis-sabios",
+      "title": "El despertar de los seis sabios",
+      "date": "Era del Héroe del Tiempo",
+      "order": 50,
+      "branch": "Origen",
+      "at": {
+        "game": "ocarina-of-time",
+        "chapter": 2
+      },
+      "text": "Tras despertar en un reino devastado, Link libera a los guardianes elegidos en sus templos. Unidos, los sabios combinan su poder para romper la barrera que protege la guarida del mal.",
+      "characters": [
+        "link",
+        "impa"
+      ],
+      "major": false
+    },
+    {
+      "id": "el-sellado-de-ganon-y-la-bifurcacion",
+      "title": "El sellado de Ganon y la partición temporal",
+      "date": "Clímax de la Era del Tiempo",
+      "order": 60,
+      "branch": "Origen",
+      "at": {
+        "game": "ocarina-of-time",
+        "chapter": 3
+      },
+      "text": "Con el respaldo de los sabios, la bestia Ganon es aprisionada en el Reino Sagrado. Deseando devolver a Link los años arrebatados, Zelda lo envía al pasado mediante la Ocarina del Tiempo, fragmentando la historia en ramas temporales.",
+      "characters": [
+        "link",
+        "zelda",
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-advertencia-y-el-juicio-en-el-patibulo",
+      "title": "La advertencia y el juicio de Ganondorf",
+      "date": "Era del Crepúsculo",
+      "order": 70,
+      "branch": "Niño",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 2
+      },
+      "text": "Al regresar a su juventud, Link alerta a la corte real sobre las conspiraciones de Ganondorf, frustrando sus planes antes del estallido bélico. Incapaces de ejecutarlo por manifestar la Trifuerza del Poder, los sabios lo destierran al Reino Crepuscular.",
+      "characters": [
+        "zelda",
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-eclipse-crepuscular-de-hyrule",
+      "title": "El eclipse crepuscular de Hyrule",
+      "date": "Era del Crepúsculo",
+      "order": 80,
+      "branch": "Niño",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 0
+      },
+      "text": "Zant usurpa el trono de las sombras empoderado por Ganondorf y esparce una densa oscuridad sobre Hyrule. La princesa Zelda cede el control del castillo para evitar una masacre, mientras Link es arrastrado al Crepúsculo.",
+      "characters": [
+        "zelda",
+        "midna",
+        "zant"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-restauracion-del-trono-sombrio",
+      "title": "La restauración del trono sombrío",
+      "date": "Era del Crepúsculo",
+      "order": 90,
+      "branch": "Niño",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 3
+      },
+      "text": "Link y Midna desmantelan la dominación de Zant y enfrentan a Ganondorf en un duelo a muerte por el destino de Hyrule. Tras el triunfo, Midna asume su soberanía legítima y quiebra el espejo dimensional para clausurar el portal entre ambos mundos.",
+      "characters": [
+        "link",
+        "ganondorf",
+        "midna",
+        "zant"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-gran-diluvio-y-el-mar-sin-fin",
+      "title": "El gran diluvio de Hyrule",
+      "date": "Era sin Héroe",
+      "order": 100,
+      "branch": "Adulto",
+      "at": {
+        "game": "the-wind-waker",
+        "chapter": 1
+      },
+      "text": "Siglos después de la marcha del Héroe del Tiempo, el sello sobre Ganondorf cede sin que aparezca un elegido para repelerlo. Las diosas responden a las súplicas del reino anegando las tierras ancestrales bajo un mar interminable.",
+      "characters": [
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-despertar-de-la-princesa-pirata",
+      "title": "El despertar de la princesa pirata",
+      "date": "Era del Gran Mar",
+      "order": 110,
+      "branch": "Adulto",
+      "at": {
+        "game": "the-wind-waker",
+        "chapter": 2
+      },
+      "text": "En el fondo marino donde reposa la Hyrule pretérita, la capitana Tetra descubre su auténtico linaje real como la princesa Zelda. Aceptando su deber dinástico, asume la custodia del fragmento de la Sabiduría para asistir al joven navegante.",
+      "characters": [
+        "link",
+        "tetra"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-deseo-del-rey-y-el-hundimiento-final",
+      "title": "El deseo del rey y el fin de Hyrule",
+      "date": "Fin del Gran Mar",
+      "order": 120,
+      "branch": "Adulto",
+      "at": {
+        "game": "the-wind-waker",
+        "chapter": 3
+      },
+      "text": "Antes de que Ganondorf reclame la Trifuerza reconstituida, el antiguo monarca toca la reliquia y ruega que Hyrule quede sepultada para siempre para abrir paso a las nuevas generaciones. Link abate al conquistador clavando la Espada Maestra en su frente.",
+      "characters": [
+        "link",
+        "tetra",
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-guerra-del-destierro-ancestral",
+      "title": "La Guerra del Destierro ancestral",
+      "date": "Era de la Fundación Zonnan",
+      "order": 35,
+      "branch": "Pasado remoto",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 2
+      },
+      "text": "Ganondorf se apodera de una piedra secreta y conduce legiones de pesadilla contra la joven confederación de Hyrule. El rey Rauru lidera a los sabios y entrega su propia esencia vital para inmovilizar al hechicero bajo las profundidades.",
+      "characters": [
+        "rauru",
+        "ganondorf"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-dragonificacion-de-zelda",
+      "title": "El sacrificio del Dragón de la Luz",
+      "date": "Era del Pasado Remoto",
+      "order": 36,
+      "branch": "Pasado remoto",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 2
+      },
+      "text": "Desplazada al pasado fundacional tras una fractura temporal, Zelda asume el irreversible sacrificio de tragar su gema sagrada. Mutada en un dragón inmortal, surca el cielo durante milenios para recargar la Espada Maestra quebrada con energía sacra.",
+      "characters": [
+        "zelda"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-primer-advenimiento-de-los-ancestros-tecnologicos",
+      "title": "El triunfo de la tecnología Sheikah",
+      "date": "Hace diez mil años",
+      "order": 150,
+      "branch": "Era moderna",
+      "at": {
+        "game": "breath-of-the-wild",
+        "chapter": 0
+      },
+      "text": "La avanzada civilización Sheikah desarrolla cuatro Bestias Divinas mecanizadas y millares de guardianes para contrarrestar la profetizada Calamidad. La alianza tecnológica y mágica permite sellar al mal de forma fulminante.",
+      "characters": [
+        "impa"
+      ],
+      "major": false
+    },
+    {
+      "id": "el-gran-cataclismo-de-los-cien-anos",
+      "title": "El gran cataclismo de hace un siglo",
+      "date": "Hace cien años",
+      "order": 160,
+      "branch": "Era moderna",
+      "at": {
+        "game": "breath-of-the-wild",
+        "chapter": 1
+      },
+      "text": "Ganon reaparece por sorpresa, se apodera de la tecnología Sheikah y acaba con los cuatro elegidos dentro de sus colosos. Link cae herido de muerte y Zelda despierta su poder sagrado para contener sola al monstruo.",
+      "characters": [
+        "link",
+        "zelda",
+        "mipha"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-liberacion-del-reino-calamitoso",
+      "title": "La liberación de Hyrule del Cataclismo",
+      "date": "Era de la Calamidad",
+      "order": 170,
+      "branch": "Era moderna",
+      "at": {
+        "game": "breath-of-the-wild",
+        "chapter": 3
+      },
+      "text": "Habiendo recuperado su memoria y reconciliado a los espíritus de las bestias sagradas, Link asalta el bastión real corrupto. Con el concurso de la flecha de luz de Zelda, extingue la forma física de la Calamidad tras un siglo de ruina.",
+      "characters": [
+        "link",
+        "zelda",
+        "mipha"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-despertar-del-rey-demonio-en-el-abismo",
+      "title": "El despertar del Rey Demonio",
+      "date": "Era del Cielo y el Abismo",
+      "order": 180,
+      "branch": "Era moderna",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 0
+      },
+      "text": "Durante una expedición a los cimientos del castillo, el sello del brazo de Rauru se extingue y la momia de Ganondorf despierta. La Espada Maestra queda desintegrada por miasma corrosivo y la geografía del reino se quiebra entre archipiélagos flotantes y abismos.",
+      "characters": [
+        "link",
+        "zelda",
+        "ganondorf",
+        "rauru"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-batalla-definitiva-sobre-el-firmamento",
+      "title": "La batalla definitiva sobre el firmamento",
+      "date": "Clímax de la Era Moderna",
+      "order": 190,
+      "branch": "Era moderna",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 3
+      },
+      "text": "Empuñando la hoja sagrada devuelta por el Dragón de la Luz, Link combate a Ganondorf en las entrañas de la tierra. Al transformarse el tirano en el Dragón Demonio, ambos libran una colosal contienda aérea que culmina con la disipación definitiva de la amenaza.",
+      "characters": [
+        "link",
+        "zelda",
+        "ganondorf"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "link",
+      "to": "zelda",
+      "kind": "aliado",
+      "detail": "Vínculo sagrado forjado por el destino para preservar el reino y contrarrestar la oscuridad.",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "link",
+      "to": "ganondorf",
+      "kind": "enemigo",
+      "detail": "Antagonismo milenario en un ciclo constante de reencarnaciones entre el valor y el afán tiránico.",
+      "at": {
+        "game": "ocarina-of-time",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "zelda",
+      "to": "ganondorf",
+      "kind": "enemigo",
+      "detail": "Oposición eterna entre la protectora de la sabiduría luminosa y el heraldo del rencor supremo.",
+      "at": {
+        "game": "ocarina-of-time",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "zelda",
+      "to": "impa",
+      "kind": "aliado",
+      "detail": "Devoción absoluta y protección marcial transmitida por el clan Sheikah a la princesa real.",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "link",
+      "to": "fay",
+      "kind": "aliado",
+      "detail": "Guía espiritual y confidente racional unida a la espada que orienta los pasos del elegido.",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "zelda",
+      "to": "el-heraldo-de-la-muerte",
+      "kind": "enemigo",
+      "detail": "Conflicto primigenio que motivó la renuncia a la condición divina para asegurar la salvación mortal.",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "link",
+      "to": "el-heraldo-de-la-muerte",
+      "kind": "enemigo",
+      "detail": "Combate inaugural donde el héroe vence al monarca demoníaco y sella el inicio de la leyenda.",
+      "at": {
+        "game": "skyward-sword",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "link",
+      "to": "midna",
+      "kind": "aliado",
+      "detail": "Alianza forjada por mutua conveniencia en las sombras que culmina en una lealtad indestructible.",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "midna",
+      "to": "zant",
+      "kind": "rival",
+      "detail": "Disputa dinástica frente al cortesano fanatizado que usurpó el mando del Reino Crepuscular.",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "ganondorf",
+      "to": "zant",
+      "kind": "mentor",
+      "detail": "Ganondorf le otorga su poder a cambio de una devoción fanática.",
+      "at": {
+        "game": "twilight-princess",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "link",
+      "to": "tetra",
+      "kind": "aliado",
+      "detail": "Camaradería marítima entre el explorador de las islas y la jefa pirata durante el rescate del océano.",
+      "at": {
+        "game": "the-wind-waker",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "tetra",
+      "to": "ganondorf",
+      "kind": "enemigo",
+      "detail": "Resistencia frontal contra el antiguo conquistador que persigue arrebatarle su herencia mística.",
+      "at": {
+        "game": "the-wind-waker",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "rauru",
+      "to": "zelda",
+      "kind": "mentor",
+      "detail": "Apoyo paternal y guía institucional brindada por el soberano fundacional a la princesa llegada del porvenir.",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "rauru",
+      "to": "ganondorf",
+      "kind": "enemigo",
+      "detail": "Confrontación decisiva que obligó al rey a ofrendar su existencia para aprisionar al usurpador.",
+      "at": {
+        "game": "tears-of-the-kingdom",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "mipha",
+      "to": "link",
+      "kind": "romance",
+      "detail": "Sentimiento romántico profundo y devoto silenciado por la urgencia de la batalla frente al cataclismo.",
+      "at": {
+        "game": "breath-of-the-wild",
+        "chapter": 2
+      }
+    }
+  ]
+}

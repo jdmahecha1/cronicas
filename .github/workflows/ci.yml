@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Tipos (Astro + TypeScript)
+        run: npm run check
+      - name: Pruebas unitarias y validación del contenido
+        run: npm test
+      - name: Compilación con índice de búsqueda
+        run: npm run build
+      - name: Navegador para las pruebas de punta a punta
+        run: npx playwright install --with-deps chromium
+      - name: Pruebas de punta a punta (escritorio y móvil)
+        run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-trazas
+          path: test-results
+          retention-days: 7

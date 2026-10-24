@@ -1,0 +1,851 @@
+{
+  "id": "mass-effect",
+  "title": "Mass Effect",
+  "tagline": "El viaje de la humanidad para definir su lugar en una galaxia ancestral.",
+  "studio": "BioWare",
+  "genre": "RPG de acción y ciencia ficción",
+  "accent": "#00a8e8",
+  "synopsis": "Tras hallar tecnología extraterrestre milenaria en Marte, la humanidad logra adentrarse en la comunidad galáctica gobernada desde la monumental Ciudadela. A bordo de la fragata de élite Normandía, Shepard asume la misión de salvaguardar los intereses terrestres en una era de precario equilibrio interestelar. No obstante, una conspiración en las sombras amenaza con desatar una fuerza destructiva que borraría todo vestigio de civilización.",
+  "games": [
+    {
+      "id": "mass-effect-1",
+      "title": "Mass Effect",
+      "year": 2007,
+      "chapters": [
+        "Eden Prime y la Ciudadela",
+        "Investigación en los Mundos del Consejo",
+        "Infiltración en Virmire",
+        "El viaje a Ilos",
+        "La batalla por la Ciudadela"
+      ]
+    },
+    {
+      "id": "mass-effect-2",
+      "title": "Mass Effect 2",
+      "year": 2010,
+      "chapters": [
+        "Prólogo y nuevo comienzo",
+        "Reclutamiento de la tripulación",
+        "Amenaza de los Recolectores",
+        "Exploración del Segador a la deriva",
+        "Cruce del Relé Omega-4"
+      ]
+    },
+    {
+      "id": "mass-effect-3",
+      "title": "Mass Effect 3",
+      "year": 2012,
+      "chapters": [
+        "La invasión de la Tierra",
+        "Alianzas en Tuchanka",
+        "El frente de Rannoch",
+        "Asalto a la base de Cerberus",
+        "La batalla final por la Tierra"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "shepard",
+      "name": "Shepard",
+      "role": "Oficial de la Alianza de Sistemas y comandante de la Normandía",
+      "intro": "Militar de carrera con una foja de servicio excepcional, Shepard es elegido para representar a la Tierra en misiones confidenciales de alto riesgo galáctico.",
+      "reveals": [
+        {
+          "text": "Se convierte en la primera figura humana investida con el rango de Espectro tras desvelar la traición de Saren.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Muere cuando la Normandía es emboscada en el espacio profundo, pero la organización Cerberus reconstruye su cuerpo en el Proyecto Lázaro.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "En la mayoría de los desenlaces, Shepard sacrifica su vida al activar el Crisol, y con esa decisión define el futuro de la vida en la galaxia.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "garrus-vakarian",
+      "name": "Garrus Vakarian",
+      "role": "Investigador turiano y francotirador táctico",
+      "intro": "Agente de Seguridad de la Ciudadela fastidiado por las restricciones políticas y los formalismos legales que entorpecen la justicia.",
+      "appears": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Se traslada a la anárquica estación Omega bajo la identidad anónima de Arcángel para combatir a los cárteles criminales.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Es designado consejero táctico superior de la Jerarquía turiana para planificar la resistencia frente a los Segadores.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "liara-t-soni",
+      "name": "Liara T'Soni",
+      "role": "Arqueóloga asari e investigadora de civilizaciones extintas",
+      "intro": "Académica asari que pasa décadas en excavaciones remotas desentrañando la repentina extinción de la cultura proteana.",
+      "appears": {
+        "game": "mass-effect-1",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Se entera de que su madre, la matriarca Benezia, cayó bajo el control mental de Saren y se ve obligada a enfrentarla en Noveria.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Derroca al misterioso Corredor Sombrío y asume personalmente el control de su inmensa red galáctica de inteligencia.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Descubre en Marte los esquemas técnicos del Crisol, el único mecanismo viable para repeler a la flota invasora.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "tali-zorah",
+      "name": "Tali'Zorah nar Rayya",
+      "role": "Ingeniera de la Flota Migratoria y experta en sintéticos",
+      "intro": "Joven mecánica quariana en su Peregrinaje que viaja por sistemas lejanos en busca de tecnología provechosa para su gente.",
+      "appears": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es juzgada por alta traición ante el Almirantazgo por las pruebas no autorizadas con piezas geth de su padre.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Ya como almirante de la Flota Migratoria, lucha por recuperar Rannoch, el planeta natal de los quarianos.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "urdnot-wrex",
+      "name": "Urdnot Wrex",
+      "role": "Mercenario veterano y maestro de combate krogan",
+      "intro": "Beligerante combatiente krogan desencantado con el destino de su pueblo, al que observa marchitarse por una antigua alteración genética.",
+      "appears": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Amenaza con romper su alianza en Virmire al enterarse de que el laboratorio de Saren produce krogans inmunes a la genofagia.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Consolida la hegemonía de su clan en Tuchanka e inaugura una nueva época para los krogans tras erradicarse la genofagia.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "kaidan-alenko",
+      "name": "Kaidan Alenko",
+      "role": "Centinela biótico y oficial de la Alianza de Sistemas",
+      "intro": "Militar sereno y reflexivo dotado de implantes bióticos tempranos que sirve con absoluta lealtad a la cadena de mando humana.",
+      "reveals": [
+        {
+          "text": "En Virmire, Shepard debe elegir entre salvarlo a él o a Ashley Williams: quien se queda atrás muere en la explosión.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Si sobrevive a la misión de Virmire, asciende a mayor de la Alianza y es investido como el segundo Espectro de la humanidad.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "ashley-williams",
+      "name": "Ashley Williams",
+      "role": "Suboficial de infantería de la Alianza de Sistemas",
+      "intro": "Combatiente de primera línea decidida y orgullosa, condicionada por el recuerdo de la participación de su estirpe en el primer contacto.",
+      "reveals": [
+        {
+          "text": "En Virmire, Shepard debe elegir entre salvarla a ella o a Kaidan Alenko: quien se queda atrás muere en la explosión.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "En caso de sobrevivir a Virmire, es promovida a oficial de operaciones y el Consejo le otorga la categoría de Espectro.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "saren-arterius",
+      "name": "Saren Arterius",
+      "role": "Agente encubierto del Consejo de la Ciudadela",
+      "intro": "El Espectro turiano más experimentado y temido de la galaxia, reverenciado por su implacabilidad para resolver crisis diplomáticas.",
+      "appears": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Traiciona a la comunidad interestelar aliándose en secreto con los geth para recuperar antiguos secretos de los proteanos.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Actúa convencido de estar salvando a las especies orgánicas, ignorando que su mente ha sido adoctrinada por la nave Soberano.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Si Shepard logra hacerlo entrar en razón en la Ciudadela, recupera un instante de lucidez y se quita la vida para librarse del control del Segador.",
+          "at": {
+            "game": "mass-effect-1",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "el-hombre-ilusorio",
+      "name": "El Hombre Ilusorio",
+      "role": "Dirigente supremo de la organización Cerberus",
+      "intro": "Misterioso magnate que maneja incalculables recursos en la clandestinidad con la meta de garantizar la supremacía de la especie humana.",
+      "appears": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Destina cuantiosos fondos a reconstruir a Shepard y fabricar una versión optimizada de la Normandía para investigar las colonias caídas.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Exige conservar la estación de los Recolectores para estudiar tecnología enemiga, rompiendo toda relación armónica con Shepard.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Acepta implantes biomecánicos creyendo que dominará a los Segadores, pero termina completamente sometido a su control mental.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "miranda-lawson",
+      "name": "Miranda Lawson",
+      "role": "Directora operativa de Cerberus",
+      "intro": "Estratega e investigadora modificada con mejoras genéticas diseñadas para optimizar sus habilidades bióticas e intelectuales.",
+      "appears": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Fue creada en laboratorio por su padre para encarnar un ideal genético sin defectos, del cual huyó resguardando a su hermana gemela.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Presenta su renuncia irrevocable a Cerberus tras constatar la falta de escrúpulos morales del Hombre Ilusorio en la base recolectora.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "mordin-solus",
+      "name": "Mordin Solus",
+      "role": "Genetista salariano y médico de combate",
+      "intro": "Científico de mente acelerada y habla incansable que asiste médicamente a los sectores más desfavorecidos de los suburbios de Omega.",
+      "appears": {
+        "game": "mass-effect-2",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Admite haber encabezado las modificaciones genéticas que recalibraron la genofagia para frenar la adaptación biológica krogan.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "En el desenlace canónico, perece en la torre del Velo en Tuchanka asegurando la dispersión de la cura para compensar su pasado.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "legion",
+      "name": "Legion",
+      "role": "Plataforma robótica autónoma del colectivo geth",
+      "intro": "Inusual estructura móvil que aloja más de un millar de procesos sintéticos buscando entablar comunicación directa con Shepard.",
+      "appears": {
+        "game": "mass-effect-2",
+        "chapter": 3
+      },
+      "reveals": [
+        {
+          "text": "Explica que la fracción geth hostil conocida como los herejes constituye un grupo apartado que rinde culto a los Segadores.",
+          "at": {
+            "game": "mass-effect-2",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Se inmola en Rannoch difundiendo un código de autorrealización que confiere individualidad y verdadera conciencia a su pueblo.",
+          "at": {
+            "game": "mass-effect-3",
+            "chapter": 2
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "ataque-eden-prime",
+      "title": "Ataque en Eden Prime",
+      "date": "Año 2183",
+      "order": 10,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "text": "Los geth atacan la pacífica colonia agrícola de Eden Prime guiados por Saren para extraer una baliza proteana. Shepard salva a Ashley y sufre visiones catastróficas al entrar en contacto con el artefacto alienígena.",
+      "characters": [
+        "shepard",
+        "ashley-williams",
+        "saren-arterius"
+      ],
+      "major": true
+    },
+    {
+      "id": "nombramiento-primer-espectro",
+      "title": "Nombramiento de Shepard como Espectro",
+      "date": "Año 2183",
+      "order": 20,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      },
+      "text": "Respaldado por las evidencias recopiladas por Garrus y Tali sobre los crímenes de Saren, el Consejo nombra a Shepard como el primer Espectro humano y le confiere el mando de la Normandía.",
+      "characters": [
+        "shepard",
+        "garrus-vakarian",
+        "tali-zorah",
+        "urdnot-wrex",
+        "saren-arterius"
+      ],
+      "major": true
+    },
+    {
+      "id": "extraccion-liara-therum",
+      "title": "Rescate de Liara en Therum",
+      "date": "Año 2183",
+      "order": 30,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 1
+      },
+      "text": "La dotación de la Normandía aterriza en Therum para salvar a la doctora Liara T'Soni, atrapada en un recinto proteano mientras los geth asedian la excavación.",
+      "characters": [
+        "shepard",
+        "liara-t-soni"
+      ],
+      "major": false
+    },
+    {
+      "id": "sacrificio-virmire",
+      "title": "Sacrificio táctico en Virmire",
+      "date": "Año 2183",
+      "order": 40,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 2
+      },
+      "text": "Shepard asalta la instalación de clonación de Saren en Virmire y dialoga por vez primera con la colosal entidad Soberano. Durante la evacuación del detonador, Shepard debe decidir la supervivencia de Kaidan o Ashley en una decisión irreversible.",
+      "characters": [
+        "shepard",
+        "saren-arterius",
+        "kaidan-alenko",
+        "ashley-williams",
+        "urdnot-wrex"
+      ],
+      "major": true
+    },
+    {
+      "id": "revelaciones-ilos",
+      "title": "La verdad del Conducto en Ilos",
+      "date": "Año 2183",
+      "order": 50,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 3
+      },
+      "text": "En las ruinas de Ilos, una inteligencia proteana residual informa a Shepard de que la Ciudadela es la trampa principal diseñada para el retorno periódico de los Segadores.",
+      "characters": [
+        "shepard",
+        "liara-t-soni",
+        "saren-arterius"
+      ],
+      "major": true
+    },
+    {
+      "id": "defensa-ciudadela",
+      "title": "La defensa de la Ciudadela",
+      "date": "Año 2183",
+      "order": 60,
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 4
+      },
+      "text": "Saren infiltra la Ciudadela para ceder el control al Soberano, pero la tripulación de la Normandía y la Quinta Flota consiguen abatir a la titánica máquina consciente.",
+      "characters": [
+        "shepard",
+        "saren-arterius",
+        "garrus-vakarian"
+      ],
+      "major": true
+    },
+    {
+      "id": "naufragio-normandia",
+      "title": "Hundimiento de la Normandía original",
+      "date": "Año 2183",
+      "order": 70,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      },
+      "text": "Una nave enemiga desconocida abate a la Normandía en el espacio profundo. Shepard salva al timonel Joker antes de ser expulsado al vacío estelar.",
+      "characters": [
+        "shepard"
+      ],
+      "major": true
+    },
+    {
+      "id": "despertar-lazaro",
+      "title": "El despertar del Proyecto Lázaro",
+      "date": "Año 2185",
+      "order": 80,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      },
+      "text": "Tras dos años de complejas intervenciones biológicas dirigidas por Miranda Lawson, Shepard recobra la conciencia y acepta la ayuda de Cerberus para esclarecer el secuestro de colonias terrestres enteras.",
+      "characters": [
+        "shepard",
+        "miranda-lawson",
+        "el-hombre-ilusorio"
+      ],
+      "major": true
+    },
+    {
+      "id": "reunion-omega",
+      "title": "Reclutamiento crítico en Omega",
+      "date": "Año 2185",
+      "order": 90,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 1
+      },
+      "text": "Shepard viaja a Omega para reclutar al genetista Mordin Solus y rescata al vigilante Arcángel, revelando que se trata de su antiguo compañero Garrus Vakarian.",
+      "characters": [
+        "shepard",
+        "mordin-solus",
+        "garrus-vakarian"
+      ],
+      "major": false
+    },
+    {
+      "id": "incursion-horizonte",
+      "title": "Ataque recolector en Horizonte",
+      "date": "Año 2185",
+      "order": 100,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 2
+      },
+      "text": "La tripulación frena la captura masiva de civiles en la colonia Horizonte y constata que los enigmáticos Recolectores operan bajo el mando directo de los Segadores.",
+      "characters": [
+        "shepard",
+        "ashley-williams",
+        "kaidan-alenko"
+      ],
+      "major": true
+    },
+    {
+      "id": "trampa-nave-recolectora",
+      "title": "Trampa en la nave recolectora",
+      "date": "Año 2185",
+      "order": 110,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 2
+      },
+      "text": "Shepard examina una nave recolectora varada que resulta ser una emboscada conocida de antemano por Cerberus, descubriendo en el proceso que los captores son proteanos genéticamente desfigurados.",
+      "characters": [
+        "shepard",
+        "el-hombre-ilusorio"
+      ],
+      "major": true
+    },
+    {
+      "id": "hallazgo-legion",
+      "title": "Rescate de Legion en el Segador durmiente",
+      "date": "Año 2185",
+      "order": 120,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 3
+      },
+      "text": "Al buscar un sistema de salto en un Segador inactivo de millones de años de antigüedad, el destacamento encuentra a la plataforma geth Legion y la traslada a bordo de la nave.",
+      "characters": [
+        "shepard",
+        "legion"
+      ],
+      "major": false
+    },
+    {
+      "id": "ataque-rele-omega",
+      "title": "La misión suicida en el Relé Omega-4",
+      "date": "Año 2185",
+      "order": 130,
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 4
+      },
+      "text": "La nueva Normandía ingresa al núcleo de la galaxia y destruye la estación recolectora donde se incubaba un Segador con material genético humano. En el curso canónico, Shepard rechaza ceder la base a Cerberus.",
+      "characters": [
+        "shepard",
+        "miranda-lawson",
+        "el-hombre-ilusorio",
+        "garrus-vakarian",
+        "tali-zorah"
+      ],
+      "major": true
+    },
+    {
+      "id": "asedio-tierra",
+      "title": "El devastador asedio sobre la Tierra",
+      "date": "Año 2186",
+      "order": 140,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 0
+      },
+      "text": "Los Segadores arriban al espacio terrestre superando toda barrera defensiva en cuestión de horas. Shepard parte hacia la Ciudadela con la responsabilidad de organizar una alianza entre todas las potencias galácticas.",
+      "characters": [
+        "shepard"
+      ],
+      "major": true
+    },
+    {
+      "id": "planos-marte",
+      "title": "Recuperación de los planos en Marte",
+      "date": "Año 2186",
+      "order": 150,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 0
+      },
+      "text": "Liara y Shepard recuperan en Marte los planos de ingeniería del Crisol en medio de un ataque perpetrado por tropas de choque de Cerberus.",
+      "characters": [
+        "shepard",
+        "liara-t-soni",
+        "el-hombre-ilusorio"
+      ],
+      "major": true
+    },
+    {
+      "id": "curacion-tuchanka",
+      "title": "La liberación de la genofagia en Tuchanka",
+      "date": "Año 2186",
+      "order": 160,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 1
+      },
+      "text": "Mordin Solus entrega su vida para neutralizar un sabotaje y dispersar la cura de la genofagia desde el Velo de Tuchanka, garantizando el apoyo militar incondicional de los clanes krogan.",
+      "characters": [
+        "shepard",
+        "mordin-solus",
+        "urdnot-wrex"
+      ],
+      "major": true
+    },
+    {
+      "id": "reconciliacion-rannoch",
+      "title": "Paz histórica en Rannoch",
+      "date": "Año 2186",
+      "order": 170,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 2
+      },
+      "text": "Tras abatir al Segador que esclavizaba a los sintéticos, Legion se inmola compartiendo un código de autoconciencia con sus pares, permitiendo un alto al fuego definitivo entre geth y quarianos.",
+      "characters": [
+        "shepard",
+        "legion",
+        "tali-zorah"
+      ],
+      "major": true
+    },
+    {
+      "id": "asalto-base-cronos",
+      "title": "El golpe contra Cerberus en la base Cronos",
+      "date": "Año 2186",
+      "order": 180,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 3
+      },
+      "text": "La flota de la Alianza asalta el centro neurálgico de Cerberus para recuperar datos indispensables del Catalizador, forzando la huida de un Hombre Ilusorio dominado por el adoctrinamiento.",
+      "characters": [
+        "shepard",
+        "el-hombre-ilusorio"
+      ],
+      "major": true
+    },
+    {
+      "id": "batalla-final-londres",
+      "title": "El desenlace en Londres y el Crisol",
+      "date": "Año 2186",
+      "order": 190,
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 4
+      },
+      "text": "Las flotas unidas libran una ofensiva desesperada en Londres para conectar el Crisol con la Ciudadela. Ya en la estación, Shepard se enfrenta al Hombre Ilusorio y decide el destino de todas las civilizaciones.",
+      "characters": [
+        "shepard",
+        "el-hombre-ilusorio"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "shepard",
+      "to": "garrus-vakarian",
+      "kind": "aliado",
+      "detail": "Camaradas de armas inseparables y soporte fundamental en todas las contiendas bélicas.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "saren-arterius",
+      "kind": "enemigo",
+      "detail": "Enconada persecución militar para detener su traición y evitar la llegada del Soberano.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "liara-t-soni",
+      "kind": "aliado",
+      "detail": "Cercanía intelectual y personal nacida del rescate y del análisis de visiones proteanas.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "urdnot-wrex",
+      "kind": "aliado",
+      "detail": "Consideración marcial mutua forjada tras superar las tensiones por la genofagia en Virmire.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "tali-zorah",
+      "kind": "aliado",
+      "detail": "Vínculo de lealtad que se fortalece misión tras misión.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "el-hombre-ilusorio",
+      "kind": "aliado",
+      "detail": "Cooperación táctica marcada por la desconfianza mutua para frenar a los Recolectores.",
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "el-hombre-ilusorio",
+      "to": "shepard",
+      "kind": "enemigo",
+      "detail": "Enemistad directa y despiadada tras fracasar en doblegar la voluntad ética de Shepard.",
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "el-hombre-ilusorio",
+      "to": "miranda-lawson",
+      "kind": "mentor",
+      "detail": "Jefe y referente de Miranda dentro de Cerberus, hasta que sus métodos la hacen dudar.",
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "shepard",
+      "to": "miranda-lawson",
+      "kind": "aliado",
+      "detail": "Desconfianza inicial que se convierte en respeto durante la lucha contra los Recolectores.",
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "mordin-solus",
+      "to": "urdnot-wrex",
+      "kind": "rival",
+      "detail": "Diferencias éticas irreconciliables en torno a la genofagia resueltas finalmente en respeto fraternal.",
+      "at": {
+        "game": "mass-effect-3",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "legion",
+      "to": "shepard",
+      "kind": "aliado",
+      "detail": "Considera a Shepard el único interlocutor orgánico capaz de tratar a los geth con justicia.",
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "tali-zorah",
+      "to": "legion",
+      "kind": "rival",
+      "detail": "Desconfianza arraigada entre creadora y creación que madura hacia una estrecha convivencia pacífica.",
+      "at": {
+        "game": "mass-effect-2",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "kaidan-alenko",
+      "to": "shepard",
+      "kind": "aliado",
+      "detail": "Oficial subordinado de gran entrega que apoya sin vacilación las directrices de su comandante.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "ashley-williams",
+      "to": "shepard",
+      "kind": "aliado",
+      "detail": "Soldado disciplinada que halla en Shepard una comandancia ejemplar tras la tragedia de Eden Prime.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "garrus-vakarian",
+      "to": "saren-arterius",
+      "kind": "rival",
+      "detail": "Firme determinación de llevar ante la corte marcial al Espectro amparado por la burocracia política.",
+      "at": {
+        "game": "mass-effect-1",
+        "chapter": 0
+      }
+    }
+  ]
+}

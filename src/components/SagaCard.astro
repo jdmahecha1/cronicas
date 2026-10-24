@@ -1,0 +1,128 @@
+---
+import type { Saga } from '../lib/schema';
+import { gamesByRelease } from '../lib/spoilers';
+import { sagaUrl } from '../lib/url';
+
+interface Props {
+  saga: Saga;
+}
+
+const { saga } = Astro.props;
+const games = gamesByRelease(saga);
+const years = `${games[0].year}–${games[games.length - 1].year}`;
+const monogram = saga.title
+  .replace(/^The\s+/i, '')
+  .split(/\s+/)
+  .filter((w) => /^[A-Z]/.test(w))
+  .slice(0, 2)
+  .map((w) => w[0])
+  .join('');
+---
+
+<article class="saga-card" style={`--accent: ${saga.accent}`}>
+  <div class="saga-card__cover" aria-hidden="true">
+    <span class="saga-card__monogram">{monogram}</span>
+    <span class="saga-card__years">{years}</span>
+  </div>
+  <div class="saga-card__body">
+    <p class="saga-card__studio">{saga.studio} · {saga.genre}</p>
+    <h3><a href={sagaUrl(saga.id)}>{saga.title}</a></h3>
+    <p class="saga-card__tagline">{saga.tagline}</p>
+    <p class="saga-card__stats">
+      <span>{saga.games.length} juegos</span>
+      <span>{saga.characters.length} personajes</span>
+      <span>{saga.events.length} eventos</span>
+    </p>
+  </div>
+</article>
+
+<style>
+  .saga-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+
+  .saga-card:hover,
+  .saga-card:focus-within {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  }
+
+  .saga-card__cover {
+    position: relative;
+    aspect-ratio: 16 / 7;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 60%),
+      repeating-linear-gradient(115deg, transparent 0 18px, rgb(255 255 255 / 0.025) 18px 19px),
+      linear-gradient(160deg, color-mix(in srgb, var(--accent) 30%, #0c0e13), #0c0e13 85%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .saga-card__monogram {
+    font-family: var(--font-display);
+    font-size: 4.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: color-mix(in srgb, var(--accent) 35%, white);
+    text-shadow: 0 6px 30px color-mix(in srgb, var(--accent) 70%, transparent);
+  }
+
+  .saga-card__years {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: rgb(255 255 255 / 0.7);
+  }
+
+  .saga-card__body {
+    padding: 1.1rem 1.2rem 1.25rem;
+  }
+
+  .saga-card__studio {
+    margin: 0 0 0.3rem;
+    font-size: 0.78rem;
+    color: var(--faint);
+  }
+
+  .saga-card h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  .saga-card h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  /* Toda la tarjeta es clicable, pero el enlace sigue siendo el título. */
+  .saga-card h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .saga-card__tagline {
+    color: var(--muted);
+    font-size: 0.93rem;
+  }
+
+  .saga-card__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--accent-text);
+  }
+</style>

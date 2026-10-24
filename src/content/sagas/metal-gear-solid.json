@@ -1,0 +1,858 @@
+{
+  "id": "metal-gear-solid",
+  "title": "Metal Gear Solid",
+  "tagline": "Espionaje táctico, conspiraciones globales y el destino de los soldados.",
+  "studio": "Konami",
+  "genre": "Acción y sigilo táctico",
+  "accent": "#4ade80",
+  "synopsis": "En un mundo marcado por las tensiones geopolíticas y la proliferación nuclear, soldados de élite y fuerzas clandestinas libran guerras en las sombras. Las superpotencias y corporaciones militares compiten por el control de armas bípedas capaces de lanzar ataques atómicos desde cualquier terreno. En medio de conspiraciones globales, héroes solitarios deben infiltrarse tras las líneas enemigas para evitar catástrofes a escala mundial.",
+  "games": [
+    {
+      "id": "mgs-1",
+      "title": "Metal Gear Solid",
+      "year": 1998,
+      "chapters": [
+        "Infiltración en Shadow Moses",
+        "Contacto con los rehenes",
+        "Las torres de comunicaciones",
+        "El hangar subterráneo"
+      ]
+    },
+    {
+      "id": "mgs-2",
+      "title": "Metal Gear Solid 2: Sons of Liberty",
+      "year": 2001,
+      "chapters": [
+        "Capítulo del petrolero",
+        "Infiltración en Big Shell",
+        "El núcleo del complejo",
+        "Arsenal Gear"
+      ]
+    },
+    {
+      "id": "mgs-3",
+      "title": "Metal Gear Solid 3: Snake Eater",
+      "year": 2004,
+      "chapters": [
+        "Misión Virtuosa",
+        "Operación Snake Eater: La selva soviética",
+        "Operación Snake Eater: Fortaleza de Groznyj Grad",
+        "Operación Snake Eater: Huida y desenlace"
+      ]
+    },
+    {
+      "id": "mgs-4",
+      "title": "Metal Gear Solid 4: Guns of the Patriots",
+      "year": 2008,
+      "chapters": [
+        "Acto 1: Liquid Sun",
+        "Acto 2: Solid Sun",
+        "Acto 3: Third Sun",
+        "Acto 4: Twin Suns",
+        "Acto 5: Old Sun"
+      ]
+    },
+    {
+      "id": "mgs-v",
+      "title": "Metal Gear Solid V: The Phantom Pain",
+      "year": 2015,
+      "chapters": [
+        "Prólogo: Despertar",
+        "Capítulo 1: Venganza",
+        "Capítulo 2: Raza"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "solid-snake",
+      "name": "Solid Snake",
+      "role": "Especialista en infiltración en solitario",
+      "intro": "Soldado legendario retirado de la unidad de élite FOXHOUND, experto en operaciones encubiertas en territorio hostil.",
+      "reveals": [
+        {
+          "text": "Descubre que es un clon genético de Big Boss, concebido en el marco del proyecto secreto Les Enfants Terribles.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Su organismo sufre un proceso acelerado de envejecimiento celular debido a las modificaciones genéticas implantadas durante su concepción.",
+          "at": {
+            "game": "mgs-4",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Fue infectado sin saberlo con una variante artificial del virus FOXDIE diseñada para eliminar selectivamente a sus antiguos camaradas.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "naked-snake",
+      "name": "Naked Snake",
+      "role": "Agente de operaciones especiales de FOX",
+      "intro": "Combatiente de élite enviado a peligrosas misiones en territorio soviético durante el punto álgido de la Guerra Fría.",
+      "reveals": [
+        {
+          "text": "Recibe el título de Big Boss tras verse obligado a abatir a su venerada mentora en cumplimiento de las órdenes de su gobierno.",
+          "at": {
+            "game": "mgs-3",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Funda la organización de Los Patriotas para preservar los ideales de The Boss, pero rompe con ellos para establecer ejércitos mercenarios independientes.",
+          "at": {
+            "game": "mgs-4",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-boss",
+      "name": "The Boss",
+      "role": "Madre de las fuerzas especiales estadounidenses",
+      "intro": "Heroína de la Segunda Guerra Mundial y fundadora de la unidad Cobra, respetada por aliados y rivales en todo el globo.",
+      "appears": {
+        "game": "mgs-3",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Al final de la Misión Virtuosa deserta a la Unión Soviética y se lleva consigo dos proyectiles nucleares portátiles.",
+          "at": {
+            "game": "mgs-3",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Su traición fue una orden secreta de su propio país para limpiar la responsabilidad de un incidente nuclear, aceptando morir como traidora histórica.",
+          "at": {
+            "game": "mgs-3",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Dio a luz a un hijo en pleno campo de batalla durante el desembarco de Normandía, quien más tarde creció como el combatiente Ocelot.",
+          "at": {
+            "game": "mgs-3",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "revolver-ocelot",
+      "name": "Revolver Ocelot",
+      "role": "Pistolero experto e interrogador",
+      "intro": "Tirador letal fascinado por los revólveres clásicos, con un amplio historial en unidades de inteligencia militar y organizaciones mercenarias.",
+      "appears": {
+        "game": "mgs-1",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Opera como agente secreto con múltiples lealtades ficticias, reportando de manera clandestina directamente al presidente de Estados Unidos.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Se somete a psicoterapia, hipnosis y nanomáquinas para asumir la identidad de Liquid Snake y burlar la vigilancia de Los Patriotas.",
+          "at": {
+            "game": "mgs-4",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "liquid-snake",
+      "name": "Liquid Snake",
+      "role": "Comandante insurgente de FOXHOUND",
+      "intro": "Líder militar de extraordinario carisma que encabeza un levantamiento armado en las instalaciones de Shadow Moses.",
+      "appears": {
+        "game": "mgs-1",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es el hermano gemelo biológico de Solid Snake, obsesionado con la idea errónea de haber recibido únicamente los genes recesivos de Big Boss.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Su verdadero propósito en Alaska es recuperar los restos genéticos de Big Boss para curar alteraciones celulares en sus soldados rebeldes.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "otacon",
+      "name": "Hal Emmerich",
+      "role": "Ingeniero jefe de sistemas armamentísticos",
+      "intro": "Científico afable apasionado por la robótica y las series de animación japonesa que diseña tecnología de vanguardia.",
+      "appears": {
+        "game": "mgs-1",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Fue engañado para desarrollar el bípode Metal Gear REX creyendo que se trataba de un sistema puramente defensivo de intercepción balística.",
+          "at": {
+            "game": "mgs-1",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Funda junto a Solid Snake la organización no gubernamental Philanthropy para rastrear y desmantelar derivados clandestinos de Metal Gear.",
+          "at": {
+            "game": "mgs-2",
+            "chapter": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "raiden",
+      "name": "Raiden",
+      "role": "Agente novato de infiltración",
+      "intro": "Operativo enviado a resolver la crisis de rehenes en la planta Big Shell tras haber superado un extenso entrenamiento en entornos virtuales.",
+      "appears": {
+        "game": "mgs-2",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Fue un feroz niño soldado en la guerra civil de Liberia apodado Jack el Destripador bajo la instrucción directa de Solidus Snake.",
+          "at": {
+            "game": "mgs-2",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Comprueba que toda su intervención en Big Shell fue un experimento controlado por Los Patriotas para evaluar el condicionamiento de masas.",
+          "at": {
+            "game": "mgs-2",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Tras ser capturado y sometido a cirugía cibernética forzosa, su cuerpo es reconstruido como un guerrero ninja con exoesqueleto metálico.",
+          "at": {
+            "game": "mgs-4",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "eva",
+      "name": "EVA",
+      "role": "Informante y piloto encubierta",
+      "intro": "Misteriosa agente que se presenta como desertora de la NSA con el objetivo de respaldar a la inteligencia norteamericana en territorio soviético.",
+      "appears": {
+        "game": "mgs-3",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Es en realidad una espía de la República Popular China enviada para sustraer los fondos reservados del Legado de los Filósofos.",
+          "at": {
+            "game": "mgs-3",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Actuó voluntariamente como madre de alquiler en el proyecto Les Enfants Terribles gestando a los clones Solid Snake y Liquid Snake.",
+          "at": {
+            "game": "mgs-4",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "kazuhira-miller",
+      "name": "Kazuhira Miller",
+      "role": "Oficial de operaciones y estratega",
+      "intro": "Experimentado consejero militar y diplomático a cargo de la gestión táctica y logística de compañías mercenarias privadas.",
+      "appears": {
+        "game": "mgs-v",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Sufrió la amputación de dos de sus extremidades al ser torturado tras el ataque por sorpresa que destruyó la primera Base Madre.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Al enterarse del uso de un doble sustituto para Big Boss, jura respaldar al fantasma para fortalecerlo y algún día propiciar la caída del verdadero líder.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "skull-face",
+      "name": "Skull Face",
+      "role": "Comandante del escuadrón clandestino XOF",
+      "intro": "Líder enigmático con el rostro desfigurado por el fuego que comanda una unidad paramilitar secreta carente de banderas oficiales.",
+      "appears": {
+        "game": "mgs-v",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Su comando actuaba en las sombras limpiando el rastro y dando apoyo secreto a Naked Snake durante la Operación Snake Eater.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Crea una cepa biológica de parásitos de las cuerdas vocales que ataca a los hablantes de lenguas específicas con la meta de erradicar el inglés.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "venom-snake",
+      "name": "Venom Snake",
+      "role": "Líder mercenario de Diamond Dogs",
+      "intro": "Veterano combatiente con un fragmento de metralla incrustado en la frente que despierta tras un largo coma para refundar su ejército.",
+      "reveals": [
+        {
+          "text": "No es el auténtico Big Boss, sino el cirujano de confianza de su unidad sometido a hipnosis regresiva y cirugía plástica para servir de señuelo.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Acepta plenamente su rol como réplica pública de Big Boss y asume el mando de la fortaleza de Outer Heaven hasta su final frente a Solid Snake.",
+          "at": {
+            "game": "mgs-v",
+            "chapter": 2
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "mision-virtuosa",
+      "title": "La Misión Virtuosa",
+      "date": "Año 1964",
+      "order": 10,
+      "at": {
+        "game": "mgs-3",
+        "chapter": 0
+      },
+      "text": "Naked Snake se infiltra en las junglas de Tselinoyarsk para rescatar a un científico desertor soviético. La operación termina en tragedia cuando su mentora The Boss deserta abiertamente entregando armamento nuclear al enemigo.",
+      "characters": [
+        "naked-snake",
+        "the-boss",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "inicio-operacion-snake-eater",
+      "title": "Inicio de la Operación Snake Eater",
+      "date": "Año 1964",
+      "order": 20,
+      "at": {
+        "game": "mgs-3",
+        "chapter": 1
+      },
+      "text": "Snake regresa al territorio hostil con la misión inexcusable de abatir a The Boss y frustrar una crisis entre las superpotencias nucleares. Recibe la colaboración en tierra de la misteriosa agente EVA mientras elude las emboscadas de la unidad Cobra.",
+      "characters": [
+        "naked-snake",
+        "eva",
+        "the-boss"
+      ],
+      "major": false
+    },
+    {
+      "id": "destruccion-del-shagohod",
+      "title": "Destrucción del Shagohod",
+      "date": "Año 1964",
+      "order": 30,
+      "at": {
+        "game": "mgs-3",
+        "chapter": 3
+      },
+      "text": "Snake sabotea el complejo militar de Groznyj Grad para impedir la fabricación en masa del tanque lanzador de misiles Shagohod. Tras una persecución motorizada a alta velocidad junto a EVA, logran neutralizar el prototipo blindado.",
+      "characters": [
+        "naked-snake",
+        "eva",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "duelo-final-con-the-boss",
+      "title": "El duelo final con The Boss",
+      "date": "Año 1964",
+      "order": 40,
+      "at": {
+        "game": "mgs-3",
+        "chapter": 3
+      },
+      "text": "Bajo un campo de flores blancas, Snake derrota a su maestra en combate singular y aprieta el gatillo para cumplir su asignación oficial. El gobierno le condecora con el título de Big Boss, pero conocer la verdad de su sacrificio le deja un profundo desencanto.",
+      "characters": [
+        "naked-snake",
+        "the-boss",
+        "eva"
+      ],
+      "major": true
+    },
+    {
+      "id": "proyecto-les-enfants-terribles",
+      "title": "Proyecto Les Enfants Terribles",
+      "date": "Año 1972",
+      "order": 50,
+      "at": {
+        "game": "mgs-1",
+        "chapter": 3
+      },
+      "text": "Un programa secreto del gobierno estadounidense clona a Big Boss para conservar a su mejor soldado. De ese proyecto nacen los gemelos Solid Snake y Liquid Snake.",
+      "characters": [
+        "naked-snake",
+        "solid-snake",
+        "liquid-snake"
+      ],
+      "major": true
+    },
+    {
+      "id": "destruccion-de-la-base-madre",
+      "title": "La caída de la primera Base Madre",
+      "date": "Año 1975",
+      "order": 60,
+      "at": {
+        "game": "mgs-v",
+        "chapter": 0
+      },
+      "text": "Bajo la coartada de una inspección de desarme atómico, la fuerza secreta XOF ataca por sorpresa las plataformas de Big Boss. El complejo marítimo queda destruido y una posterior detonación deja a Big Boss y a sus allegados en coma.",
+      "characters": [
+        "naked-snake",
+        "skull-face",
+        "kazuhira-miller"
+      ],
+      "major": true
+    },
+    {
+      "id": "despertar-en-chipre",
+      "title": "El despertar en Chipre",
+      "date": "Año 1984",
+      "order": 70,
+      "at": {
+        "game": "mgs-v",
+        "chapter": 0
+      },
+      "text": "El paciente conocido como Ahab despierta en un hospital de Chipre justo antes de que un comando armado lo ataque. Con la ayuda de un misterioso paciente vendado logra huir, y Ocelot lo recoge al final de la fuga.",
+      "characters": [
+        "venom-snake",
+        "skull-face",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "rescate-de-miller",
+      "title": "El rescate de Kazuhira Miller",
+      "date": "Año 1984",
+      "order": 80,
+      "at": {
+        "game": "mgs-v",
+        "chapter": 1
+      },
+      "text": "Snake viaja a las estepas afganas bajo ocupación soviética para extraer a su antiguo camarada de armas de un centro de detención. Una vez a salvo, reorganizan su fuerza armada bajo el estandarte de Diamond Dogs en una nueva plataforma marítima.",
+      "characters": [
+        "venom-snake",
+        "kazuhira-miller",
+        "revolver-ocelot"
+      ],
+      "major": false
+    },
+    {
+      "id": "caida-de-sahelanthropus",
+      "title": "La caída de Sahelanthropus",
+      "date": "Año 1984",
+      "order": 90,
+      "at": {
+        "game": "mgs-v",
+        "chapter": 1
+      },
+      "text": "Las fuerzas de Diamond Dogs irrumpen en el bastión de Skull Face y deshabilitan el bípode gigante Sahelanthropus. Skull Face es derribado y ajusticiado por sus víctimas, deteniendo la expansión planificada de los parásitos vocales.",
+      "characters": [
+        "venom-snake",
+        "skull-face",
+        "kazuhira-miller"
+      ],
+      "major": true
+    },
+    {
+      "id": "revelacion-del-fantasma",
+      "title": "La revelación del doble de Big Boss",
+      "date": "Año 1984",
+      "order": 100,
+      "at": {
+        "game": "mgs-v",
+        "chapter": 2
+      },
+      "text": "Venom Snake escucha una cinta clasificada en la que el auténtico Big Boss le confiesa el origen de su transformación mental y estética. Plenamente consciente de la farsa, el médico asume el mando de Outer Heaven para permitir al verdadero líder actuar en la clandestinidad.",
+      "characters": [
+        "venom-snake",
+        "naked-snake",
+        "kazuhira-miller",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "crisis-de-shadow-moses",
+      "title": "La rebelión en Shadow Moses",
+      "date": "Año 2005",
+      "order": 110,
+      "at": {
+        "game": "mgs-1",
+        "chapter": 0
+      },
+      "text": "Efectivos sublevados de FOXHOUND liderados por Liquid Snake capturan un almacén de reciclaje nuclear en el archipiélago de Alaska. Solid Snake abandona su vida solitaria para infiltrarse en el archipiélago y conjurar la amenaza de un lanzamiento atómico inminente.",
+      "characters": [
+        "solid-snake",
+        "liquid-snake"
+      ],
+      "major": true
+    },
+    {
+      "id": "rescate-de-otacon",
+      "title": "El encuentro con Hal Emmerich",
+      "date": "Año 2005",
+      "order": 120,
+      "at": {
+        "game": "mgs-1",
+        "chapter": 1
+      },
+      "text": "Snake llega hasta el laboratorio de armamento tras evadir el acoso de un misterioso guerrero cibernético con camuflaje óptico. Al constatar que el bípode REX es una máquina para ofensivas nucleares encubiertas, Otacon se alía con Snake para anularlo.",
+      "characters": [
+        "solid-snake",
+        "otacon",
+        "revolver-ocelot"
+      ],
+      "major": false
+    },
+    {
+      "id": "destruccion-de-rex",
+      "title": "La destrucción de Metal Gear REX",
+      "date": "Año 2005",
+      "order": 130,
+      "at": {
+        "game": "mgs-1",
+        "chapter": 3
+      },
+      "text": "Solid Snake inutiliza el blindado REX y derrota a Liquid en un brutal duelo cuerpo a cuerpo sobre el armazón derruido. Liquid fallece súbitamente por la activación del virus biológico FOXDIE, lo que posibilita la evacuación de Snake de las instalaciones.",
+      "characters": [
+        "solid-snake",
+        "liquid-snake",
+        "otacon",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "incidente-del-petrolero",
+      "title": "El sabotaje del buque Discovery",
+      "date": "Año 2007",
+      "order": 140,
+      "at": {
+        "game": "mgs-2",
+        "chapter": 0
+      },
+      "text": "Snake aborda en secreto una embarcación de transporte que resguarda un nuevo modelo militar denominado Metal Gear RAY. Ocelot ejecuta un asalto traicionero, se apodera del armamento y manda la nave al fondo del río, atribuyendo públicamente el desastre a Snake.",
+      "characters": [
+        "solid-snake",
+        "otacon",
+        "revolver-ocelot"
+      ],
+      "major": true
+    },
+    {
+      "id": "asalto-a-big-shell",
+      "title": "El despliegue en Big Shell",
+      "date": "Año 2009",
+      "order": 150,
+      "at": {
+        "game": "mgs-2",
+        "chapter": 1
+      },
+      "text": "El agente novato Raiden llega a la planta flotante Big Shell para rescatar a los rehenes de un grupo terrorista. Dentro conoce a Iroquois Pliskin, un soldado que dice pertenecer a los SEAL y colabora con él en la misión.",
+      "characters": [
+        "raiden"
+      ],
+      "major": false
+    },
+    {
+      "id": "crisis-de-arsenal-gear",
+      "title": "La revelación del sistema S3",
+      "date": "Año 2009",
+      "order": 160,
+      "at": {
+        "game": "mgs-2",
+        "chapter": 3
+      },
+      "text": "En el seno de la fortaleza móvil Arsenal Gear, Raiden descubre que toda la misión fue un ensayo orquestado por las inteligencias artificiales de Los Patriotas. Tras triunfar en el combate decisivo en el corazón de Manhattan, decide despojarse de manipulaciones y forjar su destino.",
+      "characters": [
+        "raiden",
+        "solid-snake",
+        "revolver-ocelot",
+        "otacon"
+      ],
+      "major": true
+    },
+    {
+      "id": "insurreccion-de-liquid-ocelot",
+      "title": "La insurrección del sistema SOP",
+      "date": "Año 2014",
+      "order": 170,
+      "at": {
+        "game": "mgs-4",
+        "chapter": 0
+      },
+      "text": "Un debilitado Old Snake es desplegado en Oriente Medio para neutralizar a Liquid Ocelot, quien domina las mayores corporaciones de seguridad privada del planeta. Ocelot demuestra tener la capacidad técnica de intervenir y anular los sistemas de nanomáquinas que gobiernan a los soldados.",
+      "characters": [
+        "solid-snake",
+        "revolver-ocelot",
+        "otacon"
+      ],
+      "major": true
+    },
+    {
+      "id": "retorno-a-shadow-moses",
+      "title": "El regreso a Shadow Moses",
+      "date": "Año 2014",
+      "order": 180,
+      "at": {
+        "game": "mgs-4",
+        "chapter": 3
+      },
+      "text": "Old Snake retorna al recinto helado de Alaska para impedir que las tropas rebeldes desmonten el cañón electromagnético de REX. Tras reactivar el viejo bípode en un combate contra el Metal Gear RAY capitaneado por Ocelot, el adversario logra fugarse con la pieza clave.",
+      "characters": [
+        "solid-snake",
+        "revolver-ocelot",
+        "raiden",
+        "otacon"
+      ],
+      "major": false
+    },
+    {
+      "id": "caida-de-los-patriotas",
+      "title": "La caída de Los Patriotas",
+      "date": "Año 2014",
+      "order": 190,
+      "at": {
+        "game": "mgs-4",
+        "chapter": 4
+      },
+      "text": "Snake cruza una mortífera cámara de microondas en el interior del buque insignia Outer Haven para inocular el código que apaga la red de inteligencias artificiales. En la cubierta tiene lugar la última pelea a puñetazos contra Ocelot, quien expira disolviendo el cerco informativo global.",
+      "characters": [
+        "solid-snake",
+        "revolver-ocelot",
+        "otacon",
+        "raiden"
+      ],
+      "major": true
+    },
+    {
+      "id": "despedida-en-el-cementerio",
+      "title": "El último encuentro en el cementerio",
+      "date": "Año 2014",
+      "order": 200,
+      "at": {
+        "game": "mgs-4",
+        "chapter": 4
+      },
+      "text": "Ante el monumento funerario de The Boss, un renacido Big Boss aparece ante Solid Snake para desentrañar el origen de décadas de hostilidades. Tras desconectar el soporte vital de Zero, Big Boss apaga su último cigarro y fallece en paz junto a su hijo genético.",
+      "characters": [
+        "solid-snake",
+        "naked-snake"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "the-boss",
+      "to": "naked-snake",
+      "kind": "mentor",
+      "detail": "Fue su guía de combate y filosofía operativa, moldeando su código como soldado.",
+      "at": {
+        "game": "mgs-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "naked-snake",
+      "to": "revolver-ocelot",
+      "kind": "rival",
+      "detail": "Mantienen duelos constantes que derivan en un profundo respeto y lealtad militar mutua.",
+      "at": {
+        "game": "mgs-3",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "the-boss",
+      "to": "revolver-ocelot",
+      "kind": "familia",
+      "detail": "Es su madre biológica; lo separaron de ella al nacer, en plena Segunda Guerra Mundial.",
+      "at": {
+        "game": "mgs-3",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "naked-snake",
+      "to": "eva",
+      "kind": "romance",
+      "detail": "Desarrollan una atracción apasionada mientras colaboran en la selva soviética.",
+      "at": {
+        "game": "mgs-3",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "naked-snake",
+      "to": "solid-snake",
+      "kind": "familia",
+      "detail": "Es su progenitor biológico y la matriz genética utilizada para crear a sus clones.",
+      "at": {
+        "game": "mgs-1",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "solid-snake",
+      "to": "liquid-snake",
+      "kind": "enemigo",
+      "detail": "Gemelos genéticos enfrentados a muerte por el peso y las heridas del legado paterno.",
+      "at": {
+        "game": "mgs-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "solid-snake",
+      "to": "otacon",
+      "kind": "aliado",
+      "detail": "Edifican una firme fraternidad personal y técnica enfocada en eliminar las armas nucleares.",
+      "at": {
+        "game": "mgs-1",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "solid-snake",
+      "to": "revolver-ocelot",
+      "kind": "rival",
+      "detail": "Se miden en múltiples conflictos a lo largo de décadas hasta saldar cuentas en su senectud.",
+      "at": {
+        "game": "mgs-1",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "solid-snake",
+      "to": "raiden",
+      "kind": "mentor",
+      "detail": "Orienta al joven soldado en Big Shell para que deje atrás las órdenes y elija su propio sendero.",
+      "at": {
+        "game": "mgs-2",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "venom-snake",
+      "to": "kazuhira-miller",
+      "kind": "aliado",
+      "detail": "Reconstruyen juntos un ejército mercenario independiente, sin bandera de ningún gobierno.",
+      "at": {
+        "game": "mgs-v",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "kazuhira-miller",
+      "to": "skull-face",
+      "kind": "enemigo",
+      "detail": "Alberga un resentimiento implacable hacia el agresor que desmembró su cuerpo y arrasó su base.",
+      "at": {
+        "game": "mgs-v",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "venom-snake",
+      "to": "naked-snake",
+      "kind": "aliado",
+      "detail": "Asume el rol de señuelo público y brazo armado de Big Boss para velar por sus planes secretos.",
+      "at": {
+        "game": "mgs-v",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "venom-snake",
+      "to": "revolver-ocelot",
+      "kind": "aliado",
+      "detail": "Ocelot lo ayuda a escapar y a reconstruir su ejército desde cero.",
+      "at": {
+        "game": "mgs-v",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "eva",
+      "to": "solid-snake",
+      "kind": "familia",
+      "detail": "Ejecutó el rol de madre gestante en el experimento clandestino Les Enfants Terribles.",
+      "at": {
+        "game": "mgs-4",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "raiden",
+      "to": "revolver-ocelot",
+      "kind": "enemigo",
+      "detail": "Combate los planes de Ocelot para evitar que se adueñe de las infraestructuras de Los Patriotas.",
+      "at": {
+        "game": "mgs-2",
+        "chapter": 3
+      }
+    }
+  ]
+}

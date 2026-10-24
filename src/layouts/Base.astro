@@ -1,0 +1,214 @@
+---
+import '../styles/global.css';
+import ShieldToggle from '../components/ShieldToggle';
+import { url } from '../lib/url';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Color de la saga; tiñe botones, enlaces y el brillo del fondo. */
+  accent?: string;
+  /** false en páginas cuyo contenido completo sería un spoiler: Pagefind no las indexa. */
+  indexable?: boolean;
+}
+
+const { title, description, accent, indexable = true } = Astro.props;
+const fullTitle = title === 'Crónicas' ? title : `${title} · Crónicas`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const nav = [
+  { href: url(), label: 'Sagas' },
+  { href: url('buscar/'), label: 'Buscar' },
+  { href: url('acerca/'), label: 'Cómo funciona' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="sitemap" href={url('sitemap-index.xml')} />
+    <meta name="theme-color" content="#0c0e13" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(url('og.png'), Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {!indexable && <meta name="robots" content="noindex" />}
+  </head>
+  <body style={accent ? `--accent: ${accent}` : undefined}>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="brand" href={url()} aria-label="Crónicas, inicio">
+          <svg viewBox="0 0 32 32" aria-hidden="true" class="brand__mark">
+            <path d="M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z" fill="currentColor" opacity=".18"></path>
+            <path d="M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+            <path d="M11 11h10M11 15.5h10M11 20h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+          <span>Crónicas</span>
+        </a>
+        <nav aria-label="Principal">
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <ShieldToggle client:load />
+      </div>
+    </header>
+
+    <main id="contenido" data-pagefind-body={indexable ? '' : undefined}>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p>
+          <strong>Crónicas</strong> es un proyecto de fans sin ánimo de lucro, sin relación con los estudios
+          ni editoras de los juegos. Los nombres pertenecen a sus dueños; los resúmenes son propios.
+        </p>
+        <p>
+          Hecho por <a href="https://github.com/jdmahecha1">Juan Diego Mahecha</a> ·
+          <a href="https://github.com/jdmahecha1/cronicas">Código en GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      import '../scripts/spoilers-dom';
+    </script>
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 600;
+  }
+
+  .skip:focus {
+    top: 12px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 64px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .brand__mark {
+    width: 28px;
+    height: 28px;
+    color: var(--accent-text);
+  }
+
+  nav {
+    margin-left: auto;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  nav a[aria-current='page'] {
+    color: var(--text);
+    background: var(--surface-2);
+  }
+
+  @media (max-width: 640px) {
+    .site-header__inner {
+      flex-wrap: wrap;
+      gap: 0.25rem 0.75rem;
+      padding-block: 0.5rem;
+    }
+
+    nav {
+      order: 3;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    nav ul {
+      justify-content: space-between;
+    }
+  }
+
+  .site-footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    color: var(--faint);
+    font-size: 0.88rem;
+  }
+
+  .site-footer__inner {
+    display: grid;
+    gap: 0.25rem;
+    padding-block: 2rem;
+  }
+
+  .site-footer p {
+    margin: 0;
+    max-width: 75ch;
+  }
+
+  .site-footer strong {
+    color: var(--muted);
+  }
+</style>

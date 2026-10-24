@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+---
+
+<Base
+  title="Cómo funciona"
+  description="Cómo decide Crónicas qué mostrar: el escudo de spoilers, de dónde sale el contenido y qué datos guarda."
+>
+  <article class="wrap about">
+    <p class="eyebrow">Cómo funciona</p>
+    <h1>El escudo de spoilers</h1>
+    <p class="about__lead">
+      Cada dato de una saga lleva una marca: el juego y la etapa (capítulo, acto o epílogo) en la que el
+      jugador lo descubre. Crónicas lo compara con tu progreso y solo muestra lo que ya viviste.
+    </p>
+
+    <section>
+      <h2>La regla</h2>
+      <p>
+        Un dato se revela cuando <strong>terminaste</strong> la etapa en la que aparece. Si marcas que
+        terminaste el Capítulo 2 de un juego, verás todo lo que pasa hasta el final del Capítulo 2 y
+        nada del Capítulo 3. Las sagas tienen cuatro tipos de contenido protegido:
+      </p>
+      <ul>
+        <li><strong>Eventos</strong> de la línea de tiempo.</li>
+        <li><strong>Personajes</strong> cuya sola existencia ya es una sorpresa (hasta su nombre se oculta).</li>
+        <li><strong>Datos</strong> sobre un personaje que descubres más adelante.</li>
+        <li><strong>Relaciones</strong>: una relación solo aparece cuando la conoces a ella y a los dos personajes.</li>
+      </ul>
+      <p>
+        Siempre puedes pulsar <em>Mostrar igual</em> en un bloque concreto, o apagar el escudo desde la
+        barra superior para verlo todo.
+      </p>
+    </section>
+
+    <section>
+      <h2>Lo que nunca llega a la pantalla</h2>
+      <p>
+        El texto protegido no está escondido con un simple desenfoque: vive en una plantilla HTML inerte
+        y solo se inserta en la página cuando corresponde. El buscador tampoco lo indexa, y los
+        personajes ocultos no aparecen en el mapa del sitio ni en los resultados de búsqueda.
+      </p>
+      <p>
+        Eso sí: el texto está en el código fuente de la página. El escudo te protege de leer algo
+        por accidente, no de quien lo busca a propósito.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tus datos</h2>
+      <p>
+        Tu progreso se guarda solo en este navegador (<code>localStorage</code>). No hay cuentas, ni
+        servidor, ni cookies de seguimiento. Si borras los datos del sitio, el progreso vuelve a cero.
+      </p>
+    </section>
+
+    <section>
+      <h2>De dónde sale el contenido</h2>
+      <p>
+        Los resúmenes están escritos con palabras propias a partir del canon de cada saga y se validan
+        automáticamente: cada referencia a un juego, etapa o personaje debe existir, y los textos
+        públicos no pueden nombrar personajes ocultos. Cuando una historia depende de decisiones del
+        jugador, se usa el desenlace más común y así se indica.
+      </p>
+      <p>
+        ¿Ves un error? Puedes reportarlo en
+        <a href="https://github.com/jdmahecha1/cronicas/issues">GitHub</a>.
+      </p>
+    </section>
+
+    <p><a class="btn btn--primary" href={url()}>Explorar las sagas</a></p>
+  </article>
+</Base>
+
+<style>
+  .about {
+    max-width: 760px;
+    padding-top: clamp(2rem, 6vw, 4rem);
+  }
+
+  .about__lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  .about section {
+    margin-top: 2.5rem;
+  }
+
+  .about li {
+    margin-bottom: 0.4rem;
+  }
+
+  code {
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    background: var(--surface-2);
+    font-size: 0.9em;
+  }
+</style>

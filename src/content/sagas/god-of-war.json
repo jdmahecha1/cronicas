@@ -1,0 +1,872 @@
+{
+  "id": "god-of-war",
+  "title": "God of War",
+  "tagline": "El largo y tortuoso viaje de un guerrero marcado por la sangre de los dioses.",
+  "studio": "Santa Monica Studio",
+  "genre": "Acción y aventura",
+  "accent": "#e53935",
+  "synopsis": "En un mundo dominado por deidades implacables y monstruos mitológicos, un guerrero marcado por el sufrimiento desafía las fuerzas del destino para encontrar redención. Su camino lo llevará desde los templos sangrientos de la antigua Grecia hasta las tierras gélidas del norte pagano. A lo largo de su travesía, deberá enfrentar tanto a los dioses que lo utilizan como a los fantasmas de su propio pasado.",
+  "games": [
+    {
+      "id": "gow-1",
+      "title": "God of War (2005)",
+      "year": 2005,
+      "chapters": [
+        "El Mar Egeo y el llamado de Atenea",
+        "La llegada a la ciudad de Atenas",
+        "El Desierto de las Almas Perdidas",
+        "El Templo de Pandora",
+        "El Inframundo y el enfrentamiento final"
+      ]
+    },
+    {
+      "id": "gow-2",
+      "title": "God of War II (2007)",
+      "year": 2007,
+      "chapters": [
+        "El Asedio de Rodas y la caída de la divinidad",
+        "La Guarida de Tifón y la Isla de la Creación",
+        "El Templo de Láquesis y el Pantano",
+        "Las Tierras Bajas y los Corceles del Tiempo",
+        "El Palacio de los Hados y el destino del Olimpo"
+      ]
+    },
+    {
+      "id": "gow-3",
+      "title": "God of War III (2010)",
+      "year": 2010,
+      "chapters": [
+        "El Asalto al Monte Olimpo",
+        "El descenso al Reino de Hades",
+        "La Ciudad de Olimpia y los dominios divinos",
+        "El Laberinto de Dédalo y la Caja de Pandora",
+        "El Santuario del Olimpo y la Llama sagrada"
+      ]
+    },
+    {
+      "id": "gow-2018",
+      "title": "God of War (2018)",
+      "year": 2018,
+      "chapters": [
+        "El Bosque Salvaje y el viaje hacia la montaña",
+        "El Lago de los Nueve y la Luz de Alfheim",
+        "El Corazón de la Montaña y el Cincel Mágico",
+        "El Reino de Helheim y la Runa Negra",
+        "El portal de Jotunheim y la cumbre más alta"
+      ]
+    },
+    {
+      "id": "gow-ragnarok",
+      "title": "God of War Ragnarök (2022)",
+      "year": 2022,
+      "chapters": [
+        "El invierno de Fimbulvetr y Svartalfheim",
+        "El Templo de la Luz y el Bosque de Hierro",
+        "Las tierras salvajes de Vanaheim y el Destino",
+        "La estancia en Asgard y la Cacería del Destino",
+        "El asedio final y el destino de los Nueve Reinos"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "kratos",
+      "name": "Kratos",
+      "role": "Guerrero espartano marcado por la tragedia",
+      "intro": "Un temible guerrero espartano que sirve a los dioses del Olimpo buscando alivio para las pesadillas que atormentan su mente.",
+      "reveals": [
+        {
+          "text": "Fue engañado por Ares para asesinar a su propia esposa Calíope y a su hija Lisandra en un templo consagrado.",
+          "at": {
+            "game": "gow-1",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Es en realidad un semidiós e hijo biológico del propio rey del Olimpo, Zeus.",
+          "at": {
+            "game": "gow-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Acepta su rol como dios de la esperanza y pacificador de los reinos en lugar de continuar el ciclo de venganza.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "atenea",
+      "name": "Atenea",
+      "role": "Diosa olímpica de la sabiduría y la estrategia",
+      "intro": "La deidad que guía los pasos de Kratos con la promesa de que los dioses perdonarán sus pecados si cumple con sus mandatos.",
+      "reveals": [
+        {
+          "text": "Se interpone en el golpe mortal de Kratos para proteger a Zeus y muere sacrificándose por el Olimpo.",
+          "at": {
+            "game": "gow-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Regresa en forma de espíritu astral corrompido por la ambición de gobernar a la humanidad mediante el poder de la esperanza.",
+          "at": {
+            "game": "gow-3",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "ares",
+      "name": "Ares",
+      "role": "Dios olímpico de la guerra",
+      "intro": "El violento dios de la guerra que asedia la ciudad de Atenas sembrando el caos y desafiando el orden impuesto por los demás dioses.",
+      "reveals": [
+        {
+          "text": "Pretendía convertir a Kratos en el guerrero definitivo despojándolo de toda humanidad para derrocar a Zeus del trono celestial.",
+          "at": {
+            "game": "gow-1",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "zeus",
+      "name": "Zeus",
+      "role": "Rey de los dioses del Olimpo y señor del rayo",
+      "intro": "La máxima autoridad del panteón griego, portador del rayo y custodio del orden frente a las amenazas que acechan al mundo.",
+      "reveals": [
+        {
+          "text": "Traiciona a Kratos en Rodas despojándolo de sus poderes divinos y atravesándolo con la Hoja del Olimpo por temor a su poder.",
+          "at": {
+            "game": "gow-2",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Quedó infectado por el mal del Miedo liberado de la Caja de Pandora, lo que consumió su juicio y desató su paranoia extrema.",
+          "at": {
+            "game": "gow-3",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "gaia",
+      "name": "Gaia",
+      "role": "Titán primordial y madre de la Tierra",
+      "intro": "Una entidad milenaria que ofrece refugio a las almas caídas y busca vengarse de los dioses que aprisionaron a su estirpe.",
+      "appears": {
+        "game": "gow-2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Rescata a Kratos del Inframundo para usarlo como peón en la gran guerra de los titanes contra los dioses olímpicos.",
+          "at": {
+            "game": "gow-2",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Abandona a Kratos a su suerte durante la escalada al Olimpo, declarando que nunca fue más que un simple instrumento desechable.",
+          "at": {
+            "game": "gow-3",
+            "chapter": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "atreus",
+      "name": "Atreus",
+      "role": "Joven arquero e hijo de Kratos",
+      "intro": "Un muchacho compasivo que emprende un largo viaje junto a su severo padre para cumplir la última voluntad de su difunta madre.",
+      "reveals": [
+        {
+          "text": "Desconoce su origen divino hasta que la enfermedad causada por reprimir su verdadera naturaleza obliga a su padre a revelárselo.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Descubre en los murales de Jotunheim que su madre y los gigantes profetizaron su existencia bajo el nombre de Loki.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "freya",
+      "name": "Freya",
+      "role": "Misteriosa bruja versada en la magia vanir",
+      "intro": "Una hechicera solitaria de los bosques que asiste a Kratos y su hijo curando sus heridas y compartiendo su conocimiento de las runas.",
+      "appears": {
+        "game": "gow-2018",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es la antigua reina de las valquirias y la esposa repudiada del Padre de Todo, Odín.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Lanzó un hechizo de invulnerabilidad total sobre su hijo Baldur que lo privó para siempre del sentido del tacto y el gusto.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Logra canalizar su dolor y sed de venganza para forjar una alianza decisiva con Kratos contra la tiranía de Asgard.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "baldur",
+      "name": "Baldur",
+      "role": "Feroz emisario y rastreador asgardiano",
+      "intro": "Un guerrero de fuerza colosal cubierto de runas que irrumpe violentamente en el hogar de Kratos exigiendo respuestas.",
+      "appears": {
+        "game": "gow-2018",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Una antigua maldición lo hace invulnerable, pero también le impide sentir dolor o placer.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "El muérdago es la única sustancia en todos los reinos capaz de romper su invulnerabilidad y volverlo mortal.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "mimir",
+      "name": "Mimir",
+      "role": "El hombre más sabio de los nueve reinos",
+      "intro": "Una figura elocuente atrapada mágicamente en las raíces de un árbol centenario en la cumbre más alta de Midgard.",
+      "appears": {
+        "game": "gow-2018",
+        "chapter": 2
+      },
+      "reveals": [
+        {
+          "text": "Fue el principal consejero de Odín hasta que el rey de Asgard lo encadenó y torturó diariamente por desconfianza.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Kratos le corta la cabeza a petición suya para que Freya la reviva, convirtiéndose en el compañero inseparable del viaje.",
+          "at": {
+            "game": "gow-2018",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "odin",
+      "name": "Odín",
+      "role": "Padre de Todo y soberano supremo de Asgard",
+      "intro": "El monarca absoluto del panteón nórdico, célebre por su obsesión insaciable con el conocimiento arcano y el control del porvenir.",
+      "appears": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Se infiltró disfrazado como el dios Tyr entre los aliados de Kratos para espiar sus planes y sabotear la rebelión.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Asesina a sangre fría al enano Brok cuando su engaño queda expuesto ante el grupo en el refugio de Sindri.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "thor",
+      "name": "Thor",
+      "role": "Campeón de Asgard y dios del trueno",
+      "intro": "El devastador ejecutor del reino celestial, portador del legendario martillo Mjölnir y azote temido por gigantes y mortales.",
+      "appears": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Carga con un profundo dolor familiar y alcoholismo a causa de los abusos psicológicos constantes de su padre Odín.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Se niega a seguir matando por órdenes de Odín tras escuchar a Kratos, siendo ejecutado de inmediato por su propio padre.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "sindri",
+      "name": "Sindri",
+      "role": "Maestro herrero huldra de modales meticulosos",
+      "intro": "Un talentoso artesano enano obsesionado con la limpieza que ayuda a mejorar las armas y armaduras de los viajeros.",
+      "appears": {
+        "game": "gow-2018",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Le ocultó a su hermano Brok que, tiempo atrás, lo había traído de vuelta de la muerte con magia.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Tras la muerte de Brok, destruye la canica que contenía el alma de Odín para consumar su venganza definitiva.",
+          "at": {
+            "game": "gow-ragnarok",
+            "chapter": 4
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "pacto-sangriento-ares",
+      "title": "El juramento ante Ares",
+      "date": "Años antes de la Guerra de Atenas",
+      "order": 10,
+      "at": {
+        "game": "gow-1",
+        "chapter": 0
+      },
+      "text": "A punto de ser derrotado por un ejército bárbaro, Kratos clama por la ayuda de Ares ofreciendo su lealtad a cambio de la victoria. El dios de la guerra desciende, aniquila a sus enemigos y ata a los brazos del espartano las Espadas del Caos.",
+      "characters": [
+        "kratos",
+        "ares"
+      ],
+      "major": true
+    },
+    {
+      "id": "tragedia-en-el-templo",
+      "title": "La matanza de la aldea y las cenizas",
+      "date": "Años antes de la Guerra de Atenas",
+      "order": 20,
+      "at": {
+        "game": "gow-1",
+        "chapter": 2
+      },
+      "text": "Cegado por la sed de sangre que Ares infundió en él, Kratos asalta un templo dedicado a Atenea sin advertir que su esposa e hija estaban dentro. Tras cometer el crimen sin saberlo, las cenizas de su familia quedan adheridas para siempre a su piel como maldición indeleble.",
+      "characters": [
+        "kratos",
+        "ares"
+      ],
+      "major": true
+    },
+    {
+      "id": "apertura-caja-pandora",
+      "title": "La apertura de la Caja de Pandora",
+      "date": "Durante la Gran Guerra de Atenas",
+      "order": 30,
+      "at": {
+        "game": "gow-1",
+        "chapter": 3
+      },
+      "text": "Guiado por Atenea, Kratos supera los mortales laberintos del Templo de Pandora para obtener la legendaria caja. Al abrirla adquiere un poder desmesurado que le permite luchar cara a cara contra un dios, liberando sin saberlo males que corrompen el Olimpo.",
+      "characters": [
+        "kratos",
+        "ares",
+        "atenea"
+      ],
+      "major": true
+    },
+    {
+      "id": "caida-de-ares",
+      "title": "La caída de Ares y el nuevo dios",
+      "date": "Fin de la Gran Guerra de Atenas",
+      "order": 40,
+      "at": {
+        "game": "gow-1",
+        "chapter": 4
+      },
+      "text": "En un cruento combate a las afueras de Atenas, Kratos logra atravesar a Ares poniendo fin al reinado del dios bélico. Ante la negativa divina de borrar sus recuerdos, el espartano ocupa el trono vacante convirtiéndose en el nuevo Dios de la Guerra.",
+      "characters": [
+        "kratos",
+        "ares",
+        "atenea"
+      ],
+      "major": true
+    },
+    {
+      "id": "traicion-en-rodas",
+      "title": "La traición de Zeus en Rodas",
+      "date": "Años después del ascenso de Kratos",
+      "order": 50,
+      "at": {
+        "game": "gow-2",
+        "chapter": 0
+      },
+      "text": "Kratos desciende a la tierra para liderar a sus tropas espartanas en Rodas, desoyendo las advertencias celestiales. Zeus le engaña para que deposite su poder en la Hoja del Olimpo, momento en el que el rey de los dioses se manifiesta para darle muerte y reclamar su sumisión.",
+      "characters": [
+        "kratos",
+        "zeus"
+      ],
+      "major": true
+    },
+    {
+      "id": "pacto-con-gaia",
+      "title": "El pacto primordial con Gaia",
+      "date": "Tras la muerte de Kratos en Rodas",
+      "order": 60,
+      "at": {
+        "game": "gow-2",
+        "chapter": 0
+      },
+      "text": "En las profundidades del inframundo, la titán Gaia interviene para evitar que el alma de Kratos sea arrastrada al abismo eterno. Gaia propone una alianza para viajar a los dominios de las Hermanas del Hado y reescribir el momento de su caída.",
+      "characters": [
+        "kratos",
+        "gaia"
+      ],
+      "major": false
+    },
+    {
+      "id": "control-del-hilo-temporal",
+      "title": "La alteración de los hilos del destino",
+      "date": "En el Templo de los Hados",
+      "order": 70,
+      "at": {
+        "game": "gow-2",
+        "chapter": 4
+      },
+      "text": "Tras vencer a las tres Hermanas del Hado, Kratos asume el control del Telar del Destino y viaja en el tiempo hasta el instante de la traición en Rodas. Kratos recupera la Hoja del Olimpo y combate ferozmente a Zeus hasta arrinconarlo al borde de la muerte.",
+      "characters": [
+        "kratos",
+        "zeus"
+      ],
+      "major": true
+    },
+    {
+      "id": "sacrificio-de-atenea",
+      "title": "El sacrificio fatal de Atenea",
+      "date": "Durante el enfrentamiento en el Olimpo",
+      "order": 80,
+      "at": {
+        "game": "gow-2",
+        "chapter": 4
+      },
+      "text": "Cuando Kratos se dispone a asestar el golpe final contra Zeus, Atenea se interpone y recibe la herida mortal. Antes de morir revela que Zeus es el padre de Kratos y que el miedo a ser derrocado por su hijo lo consumió.",
+      "characters": [
+        "kratos",
+        "zeus",
+        "atenea"
+      ],
+      "major": true
+    },
+    {
+      "id": "escalada-y-traicion-de-gaia",
+      "title": "La gran marcha de los titanes y la traición",
+      "date": "Inicio del asalto final al Monte Olimpo",
+      "order": 90,
+      "at": {
+        "game": "gow-3",
+        "chapter": 0
+      },
+      "text": "Kratos cabalga a espaldas de Gaia liderando a los titanes en una embestida frontal contra el Monte Olimpo. Tras un contraataque fulminante de los dioses, Gaia rechaza socorrer al guerrero y lo deja caer al Tártaro, dejándole claro que solo era un instrumento de guerra.",
+      "characters": [
+        "kratos",
+        "gaia",
+        "zeus"
+      ],
+      "major": true
+    },
+    {
+      "id": "caida-del-panteon-griego",
+      "title": "La ruina y el colapso del Olimpo",
+      "date": "Durante la venganza de Kratos",
+      "order": 100,
+      "at": {
+        "game": "gow-3",
+        "chapter": 3
+      },
+      "text": "En su sangriento ascenso desde el Inframundo, Kratos extermina uno a uno a los dioses del Olimpo. La muerte sistemática de cada deidad desata plagas, inundaciones oceánicas y oscuridad total sobre Grecia, arrasando la civilización mortal.",
+      "characters": [
+        "kratos",
+        "zeus",
+        "atenea"
+      ],
+      "major": true
+    },
+    {
+      "id": "liberacion-de-la-esperanza",
+      "title": "El despertar de la Esperanza para el mundo",
+      "date": "Tras la destrucción total de Zeus",
+      "order": 110,
+      "at": {
+        "game": "gow-3",
+        "chapter": 4
+      },
+      "text": "Tras erradicar a Zeus, el espíritu de Atenea exige a Kratos la devolución del poder guardado en la Caja de Pandora. Kratos se clava a sí mismo la Hoja del Olimpo para entregar la llama de la Esperanza a la humanidad agonizante en lugar de cederla a la diosa.",
+      "characters": [
+        "kratos",
+        "atenea"
+      ],
+      "major": true
+    },
+    {
+      "id": "legado-de-faye",
+      "title": "La cremación de Faye y la partida",
+      "date": "Siglos después, en los bosques nórdicos",
+      "order": 120,
+      "at": {
+        "game": "gow-2018",
+        "chapter": 0
+      },
+      "text": "Tras años de vida apartada en Midgard, muere Faye, la esposa de Kratos, y deja a padre e hijo la misión de esparcir sus cenizas desde el pico más alto de los reinos. Kratos tala un árbol que ella misma había marcado para levantar su pira funeraria.",
+      "characters": [
+        "kratos",
+        "atreus"
+      ],
+      "major": true
+    },
+    {
+      "id": "visita-del-desconocido",
+      "title": "El enfrentamiento con el Desconocido",
+      "date": "Poco después de la partida de Midgard",
+      "order": 130,
+      "at": {
+        "game": "gow-2018",
+        "chapter": 0
+      },
+      "text": "Un misterioso forastero invulnerable a los golpes ataca salvajemente a Kratos en su propia puerta preguntando por el guardián de la cumbre. Tras una demoledora batalla en la que Kratos le rompe el cuello aparentemente, el espartano comprende que debe marcharse de inmediato con su hijo.",
+      "characters": [
+        "kratos",
+        "baldur"
+      ],
+      "major": true
+    },
+    {
+      "id": "rescate-de-mimir",
+      "title": "La liberación de la cabeza de Mimir",
+      "date": "En la cumbre más alta de Midgard",
+      "order": 140,
+      "at": {
+        "game": "gow-2018",
+        "chapter": 2
+      },
+      "text": "Al alcanzar la cima montañosa descubren a Mimir confinado en un tronco encantado por Odín. Para guiarlos hacia el reino inaccesible de los gigantes, Mimir solicita que Kratos le corte la cabeza para que la bruja del bosque la reanime mediante magia antigua.",
+      "characters": [
+        "kratos",
+        "mimir",
+        "atreus"
+      ],
+      "major": false
+    },
+    {
+      "id": "muerte-de-baldur",
+      "title": "La ruptura del maleficio y la caída de Baldur",
+      "date": "A las afueras del templo de Freya",
+      "order": 150,
+      "at": {
+        "game": "gow-2018",
+        "chapter": 4
+      },
+      "text": "Una flecha de muérdago sostenida por Atreus vulnera el hechizo inmortal de Baldur durante una cruenta contienda. Kratos decide quebrar el cuello de Baldur para salvar la vida de Freya, quien no obstante jura vengarse con rencor implacable por arrebatarle a su hijo.",
+      "characters": [
+        "kratos",
+        "baldur",
+        "freya",
+        "atreus"
+      ],
+      "major": true
+    },
+    {
+      "id": "revelacion-en-jotunheim",
+      "title": "El mural profético de Jotunheim",
+      "date": "Al culminar el viaje en la cumbre más alta",
+      "order": 160,
+      "at": {
+        "game": "gow-2018",
+        "chapter": 4
+      },
+      "text": "Al dispersar las cenizas de Faye en la cúspide de Jotunheim, contemplan murales que detallan cada paso de su viaje antes de que ocurriese. Atreus descubre que su madre era una giganta y que su nombre profetizado por su pueblo natal es Loki.",
+      "characters": [
+        "kratos",
+        "atreus"
+      ],
+      "major": true
+    },
+    {
+      "id": "emboscada-en-el-invierno",
+      "title": "La visita de Odín y Thor en el Fimbulvetr",
+      "date": "Tres años después de la caída de Baldur",
+      "order": 170,
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      },
+      "text": "En pleno invierno eterno del Fimbulvetr, Odín y Thor se presentan inesperadamente en la morada de Kratos para ofrecer un pacto de no agresión condicionado. Tras rechazar la oferta, Thor mide sus fuerzas contra Kratos en un duelo atronador que confirma la inminencia de la guerra.",
+      "characters": [
+        "kratos",
+        "odin",
+        "thor",
+        "atreus"
+      ],
+      "major": true
+    },
+    {
+      "id": "pacto-de-paz-con-freya",
+      "title": "La reconciliación y alianza con Freya",
+      "date": "Durante la liberación de Vanaheim",
+      "order": 180,
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 2
+      },
+      "text": "Kratos acompaña a Freya a su reino natal de Vanaheim para destruir la maldición que la retenía atada a Midgard. Al comprender que ambas almas comparten el dolor de perder a sus seres queridos por causa de Odín, Freya perdona al espartano y sella un pacto de armas.",
+      "characters": [
+        "kratos",
+        "freya"
+      ],
+      "major": true
+    },
+    {
+      "id": "traicion-del-falso-tyr",
+      "title": "El desenmascaramiento del espía asgardiano",
+      "date": "En el refugio de Sindri",
+      "order": 190,
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 3
+      },
+      "text": "El dios de la guerra nórdico Tyr rescatado meses atrás resulta ser Odín disfrazado mediante magia ilusoria para espiar la rebelión. Al ser descubierto, el Padre de Todo hiere de muerte a Brok antes de huir, dejando al herrero Sindri quebrado de aflicción y furia.",
+      "characters": [
+        "odin",
+        "sindri",
+        "atreus",
+        "kratos"
+      ],
+      "major": true
+    },
+    {
+      "id": "batalla-del-ragnarok",
+      "title": "El asalto a Asgard y la caída del Padre de Todo",
+      "date": "El ocaso de los Nueve Reinos",
+      "order": 200,
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 4
+      },
+      "text": "Los pueblos libres de los reinos marchan contra las murallas de Asgard mientras el coloso Surtr desencadena el Ragnarök profetizado. Tras vencer a Odín y atrapar su alma, Sindri aplasta la vasija espiritual, inaugurando una era de reconstrucción donde Kratos es aclamado como protector benevolente.",
+      "characters": [
+        "kratos",
+        "atreus",
+        "odin",
+        "thor",
+        "freya",
+        "sindri"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "kratos",
+      "to": "ares",
+      "kind": "enemigo",
+      "detail": "Kratos consagró su existencia a destruir al dios que lo engañó para asesinar a su propia familia.",
+      "at": {
+        "game": "gow-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "atenea",
+      "to": "kratos",
+      "kind": "mentor",
+      "detail": "Atenea aconsejó y protegió a Kratos durante años como enlace directo con las órdenes del Olimpo.",
+      "at": {
+        "game": "gow-1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "zeus",
+      "kind": "familia",
+      "detail": "Padre e hijo enfrentados en una cruenta guerra de parricidio impulsada por la paranoia y el odio.",
+      "at": {
+        "game": "gow-2",
+        "chapter": 4
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "gaia",
+      "kind": "aliado",
+      "detail": "Formaron una alianza temporal para cambiar el destino y derrocar el dominio de los dioses olímpicos.",
+      "at": {
+        "game": "gow-2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "zeus",
+      "to": "atenea",
+      "kind": "familia",
+      "detail": "Atenea era la hija predilecta de Zeus y la más leal defensora de la supremacía olímpica.",
+      "at": {
+        "game": "gow-1",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "atreus",
+      "kind": "familia",
+      "detail": "Padre e hijo aprendiendo a respetarse mutuamente y a controlar su naturaleza divina compartida.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "atreus",
+      "kind": "mentor",
+      "detail": "Kratos instruye a su hijo en el arte de la supervivencia y la templanza en el combate.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "baldur",
+      "kind": "enemigo",
+      "detail": "Enemigo implacable que persigue a la familia espartana buscando desesperadamente sentir algún dolor.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "baldur",
+      "to": "freya",
+      "kind": "familia",
+      "detail": "Hijo resentido que aborrece a su madre por haberle arrebatado cualquier sensación con su hechizo.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 4
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "freya",
+      "kind": "aliado",
+      "detail": "Antiguos adversarios marcados por la pérdida que unen fuerzas para poner fin al reinado tiránico de Asgard.",
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "mimir",
+      "kind": "aliado",
+      "detail": "Compañero leal y consejero sabio cuyas reflexiones guían a Kratos y Atreus a través de los reinos.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "odin",
+      "to": "thor",
+      "kind": "familia",
+      "detail": "Padre manipulador que utiliza a su hijo como un despiadado instrumento de intimidación bélica.",
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "odin",
+      "to": "freya",
+      "kind": "enemigo",
+      "detail": "Antiguo matrimonio roto por la crueldad y las ambiciones desmedidas del monarca asgardiano.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 4
+      }
+    },
+    {
+      "from": "kratos",
+      "to": "thor",
+      "kind": "rival",
+      "detail": "Poderosos dioses guerreros marcados por la tragedia que miden sus descomunales fuerzas en el campo de batalla.",
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "sindri",
+      "to": "kratos",
+      "kind": "aliado",
+      "detail": "Herrero generoso que equipa y ofrece su hogar a los viajeros durante su cruzada por los reinos.",
+      "at": {
+        "game": "gow-2018",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "odin",
+      "to": "kratos",
+      "kind": "enemigo",
+      "detail": "Gobernante astuto y desconfiado que percibe al guerrero espartano como la mayor amenaza para su destino.",
+      "at": {
+        "game": "gow-ragnarok",
+        "chapter": 0
+      }
+    }
+  ]
+}

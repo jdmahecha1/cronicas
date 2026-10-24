@@ -1,0 +1,231 @@
+---
+import Spoiler from '../../../../components/Spoiler.astro';
+import Base from '../../../../layouts/Base.astro';
+import { getSagas } from '../../../../lib/data';
+import type { Character, Saga } from '../../../../lib/schema';
+import { charactersById, sortEvents } from '../../../../lib/spoilers';
+import { characterUrl, sagaUrl, url } from '../../../../lib/url';
+import { KIND_STYLE } from '../../../../components/RelationGraph';
+
+export function getStaticPaths() {
+  return getSagas().flatMap((saga) =>
+    saga.characters.map((character) => ({
+      params: { saga: saga.id, personaje: character.id },
+      props: { saga, character },
+    })),
+  );
+}
+
+interface Props {
+  saga: Saga;
+  character: Character;
+}
+
+const { saga, character } = Astro.props;
+const people = charactersById(saga);
+const hidden = !!character.appears;
+const relations = saga.relations.filter((r) => r.from === character.id || r.to === character.id);
+const events = sortEvents(saga, 'universo').filter((e) => e.characters.includes(character.id));
+const gameTitle = new Map(saga.games.map((g) => [g.id, g.title]));
+
+// Si su existencia ya es un spoiler, ni el título de la pestaña ni el buscador dicen quién es.
+const title = hidden ? `Personaje oculto · ${saga.title}` : `${character.name} · ${saga.title}`;
+const description = hidden
+  ? `Un personaje de ${saga.title} que se desbloquea según tu progreso.`
+  : `${character.name}, ${character.role.toLowerCase()} en ${saga.title}. ${character.intro}`;
+---
+
+<Base title={title} description={description} accent={saga.accent} indexable={!hidden}>
+  <article class="wrap person-page">
+    <nav aria-label="Ruta" class="crumbs">
+      <a href={url()}>Sagas</a> / <a href={sagaUrl(saga.id)}>{saga.title}</a> / <span>Personaje</span>
+    </nav>
+
+    {
+      hidden ? (
+        <Spoiler saga={saga} at={character.appears!} label="Personaje oculto">
+          <header class="person-page__head">
+            <p class="eyebrow">{character.role}</p>
+            <h1>{character.name}</h1>
+            <p class="person-page__intro">{character.intro}</p>
+          </header>
+        </Spoiler>
+      ) : (
+        <header class="person-page__head">
+          <p class="eyebrow">{character.role}</p>
+          <h1>{character.name}</h1>
+          <p class="person-page__intro">{character.intro}</p>
+        </header>
+      )
+    }
+
+    {
+      character.reveals.length > 0 && (
+        <section class="person-page__block" aria-labelledby="datos">
+          <h2 id="datos">Lo que descubres después</h2>
+          <ul class="reveals">
+            {character.reveals.map((r) => (
+              <Spoiler as="li" saga={saga} at={r.at} label="Dato oculto">
+                <p class="reveal">{r.text}</p>
+              </Spoiler>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      relations.length > 0 && (
+        <section class="person-page__block" aria-labelledby="relaciones">
+          <h2 id="relaciones">Relaciones</h2>
+          <ul class="relations">
+            {relations.map((r) => {
+              const other = people.get(r.from === character.id ? r.to : r.from)!;
+              const style = KIND_STYLE[r.kind];
+              // Mostrar la relación revela al otro personaje: se espera a lo más tardío de los dos.
+              const content = (
+                <div class="relation card" style={`--kind: ${style.color}`}>
+                  <span class="relation__kind">{style.label}</span>
+                  <a href={characterUrl(saga.id, other.id)}>{other.name}</a>
+                  <p>{r.detail}</p>
+                </div>
+              );
+              return (
+                <Spoiler as="li" saga={saga} at={r.at} label="Relación oculta">
+                  {other.appears ? (
+                    <Spoiler saga={saga} at={other.appears} label="Personaje oculto">
+                      {content}
+                    </Spoiler>
+                  ) : (
+                    content
+                  )}
+                </Spoiler>
+              );
+            })}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      events.length > 0 && (
+        <section class="person-page__block" aria-labelledby="momentos">
+          <h2 id="momentos">Momentos en la historia</h2>
+          <ol class="moments">
+            {events.map((e) => (
+              <Spoiler as="li" saga={saga} at={e.at} label="Evento oculto">
+                <div class="moment">
+                  <p class="moment__date">
+                    {e.date} · {gameTitle.get(e.at.game)}
+                  </p>
+                  <h3>{e.title}</h3>
+                  <p>{e.text}</p>
+                </div>
+              </Spoiler>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    <p><a class="btn" href={sagaUrl(saga.id)}>← Volver a {saga.title}</a></p>
+  </article>
+</Base>
+
+<style>
+  .person-page {
+    max-width: 860px;
+    padding-top: clamp(2rem, 6vw, 4rem);
+  }
+
+  .crumbs {
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    color: var(--faint);
+  }
+
+  .crumbs a {
+    color: var(--muted);
+  }
+
+  .person-page__intro {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+
+  .person-page__block {
+    margin-top: 2.75rem;
+  }
+
+  .reveals,
+  .relations,
+  .moments {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .relations {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  }
+
+  .reveal {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+
+  .relation {
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border-top: 3px solid var(--kind);
+  }
+
+  .relation__kind {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--kind);
+  }
+
+  .relation a {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .relation p {
+    margin: 0.35rem 0 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .moment {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+
+  .moment__date {
+    margin: 0 0 0.2rem;
+    font-size: 0.8rem;
+    color: var(--accent-text);
+  }
+
+  .moment h3 {
+    margin-bottom: 0.3rem;
+  }
+
+  .moment p:last-child {
+    margin: 0;
+  }
+</style>

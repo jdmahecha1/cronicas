@@ -1,0 +1,869 @@
+{
+  "id": "the-witcher",
+  "title": "The Witcher",
+  "tagline": "Un brujo errante busca su destino entre monstruos y la vileza humana.",
+  "studio": "CD Projekt Red",
+  "genre": "RPG de acción y fantasía oscura",
+  "accent": "#e69a28",
+  "synopsis": "En un continente asolado por la guerra, la magia y bestias de otras dimensiones, los brujos son mutantes creados para cazar criaturas a cambio de monedas. Geralt de Rivia, un veterano espadachín sin recuerdos, debe desentrañar conspiraciones políticas y amenazas sobrenaturales mientras protege a sus seres queridos. Su camino lo enfrenta de forma constante al dilema moral de elegir entre el mal menor y la indiferencia.",
+  "games": [
+    {
+      "id": "the-witcher",
+      "title": "The Witcher",
+      "year": 2007,
+      "chapters": [
+        "Prólogo: Kaer Morhen",
+        "Capítulo I: Afueras de Wyzima",
+        "Capítulo II: Barrio del Templo",
+        "Capítulo III: Barrio Comercial",
+        "Capítulo IV: Aguas Turbias",
+        "Capítulo V: Vieja Wyzima",
+        "Epílogo"
+      ]
+    },
+    {
+      "id": "the-witcher-2",
+      "title": "The Witcher 2: Assassins of Kings",
+      "year": 2011,
+      "chapters": [
+        "Prólogo: La Valette",
+        "Acto I: Flotsam",
+        "Acto II: El valle del Pontar",
+        "Acto III: Loc Muinne",
+        "Epílogo"
+      ]
+    },
+    {
+      "id": "the-witcher-3",
+      "title": "The Witcher 3: Wild Hunt",
+      "year": 2015,
+      "chapters": [
+        "Prólogo: Huerto Blanco",
+        "Acto I: Velen, Novigrado y Skellige",
+        "Acto II",
+        "Acto III",
+        "Epílogo"
+      ]
+    },
+    {
+      "id": "hearts-of-stone",
+      "title": "The Witcher 3: Hearts of Stone",
+      "year": 2015,
+      "chapters": [
+        "Etapa 1: El hombre de cristal",
+        "Etapa 2: Los tres deseos",
+        "Etapa 3",
+        "Etapa 4: Desenlace"
+      ]
+    },
+    {
+      "id": "blood-and-wine",
+      "title": "The Witcher 3: Blood and Wine",
+      "year": 2016,
+      "chapters": [
+        "Etapa 1: Llegada a Toussaint",
+        "Etapa 2: La Bestia de Beauclair",
+        "Etapa 3",
+        "Etapa 4",
+        "Epílogo"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "geralt",
+      "name": "Geralt de Rivia",
+      "role": "Brujo y cazador de monstruos a sueldo",
+      "intro": "Un mutante solitario de pelo blanco que recorre los caminos ofreciendo su espada de plata contra bestias por unas monedas. Al despertar sin recuerdos cerca de Kaer Morhen, intenta reconstruir su propia identidad.",
+      "reveals": [
+        {
+          "text": "Descubre que el Gran Maestre de la Orden, Jacques de Aldersberg, era en realidad el joven Alvin guiado al pasado por sus propios poderes mágicos descontrolados.",
+          "at": {
+            "game": "the-witcher",
+            "chapter": 6
+          }
+        },
+        {
+          "text": "Recupera la memoria: tras los sucesos de Rivia se entregó a la Cacería Salvaje a cambio de la libertad de Yennefer.",
+          "at": {
+            "game": "the-witcher-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "En el desenlace canónico más extendido, se retira como brujo errante para residir pacíficamente en su finca vinícola de Corvo Bianco en Toussaint.",
+          "at": {
+            "game": "blood-and-wine",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "triss",
+      "name": "Triss Merigold",
+      "role": "Hechicera de Temeria y consejera",
+      "intro": "Una hábil hechicera de cabello cobrizo y miembro destacado de la Logia, conocida por su estrecha afinidad con los brujos de Kaer Morhen.",
+      "reveals": [
+        {
+          "text": "Ocultó a Geralt detalles cruciales sobre su pasado y su amor por Yennefer aprovechando la amnesia del brujo para consolidar una relación romántica.",
+          "at": {
+            "game": "the-witcher-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Organiza y lidera una arriesgada evacuación clandestina por el alcantarillado para rescatar a todos los magos perseguidos de Novigrado y trasladarlos a Kovir.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "yennefer",
+      "name": "Yennefer de Vengerberg",
+      "role": "Poderosa hechicera de Vengerberg",
+      "intro": "Una distinguida hechicera de ojos violeta y aroma a lilas y grosellas, célebre por su carácter indomable y su fuerte lazo de destino con Geralt.",
+      "reveals": [
+        {
+          "text": "Pactó una colaboración pragmática con el emperador nilfgaardiano para emplear todos los recursos de la corona imperial en el rescate de Ciri.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Captura a un genio elemental en Skellige para revocar el deseo que la ataba místicamente a Geralt, comprobando que su amor mutuo sigue intacto.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "ciri",
+      "name": "Ciri",
+      "role": "Heredera de la Vieja Sangre",
+      "intro": "Una joven de cabello ceniciento con entrenamiento de bruja que posee un linaje antiguo capaz de rasgar el tejido del tiempo y el espacio.",
+      "reveals": [
+        {
+          "text": "Es la hija biológica legítima del emperador Emhyr var Emreis, lo que la sitúa en el centro de las ambiciones dinásticas de todo el continente.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Entra en la torre de Tor Gvalch'ca para detener la helada del Frío Blanco y, en el desenlace más común, regresa para adoptar formalmente la vida de bruja.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "dandelion",
+      "name": "Jaskier",
+      "role": "Trovador legendario y cronista",
+      "intro": "Un afamado poeta y músico de espíritu libre cuyas composiciones y crónicas relatan las aventuras y hazañas de Geralt de Rivia.",
+      "reveals": [
+        {
+          "text": "Planeó un asalto al tesoro del criminal Sigismund Dijkstra en Novigrado para financiar un mecanismo mágico necesario para proteger a Ciri.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Convierte una antigua propiedad del bajo mundo en un respetado cabaret y centro cultural llamado El Camaleón con el apoyo de sus amigos.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "vernon-roche",
+      "name": "Vernon Roche",
+      "role": "Comandante de las fuerzas especiales",
+      "intro": "El severo y disciplinado líder de los Franjas Azules, dedicado en cuerpo y alma a defender los intereses y la soberanía del reino de Temeria.",
+      "appears": {
+        "game": "the-witcher-2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Facilita la huida de Geralt tras el magnicidio de Foltest al comprender que el brujo no es el verdadero ejecutor del crimen real.",
+          "at": {
+            "game": "the-witcher-2",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Negocia un acuerdo secreto con emisarios nilfgaardianos para restaurar a Temeria como estado autónomo a cambio de derrocar la corona de Redania.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "letho",
+      "name": "Letho de Guleta",
+      "role": "Brujo errante de la Escuela de la Víbora",
+      "intro": "Un brujo de porte corpulento y mirada calculadora que actúa en las sombras desestabilizando las cortes de los Reinos del Norte.",
+      "appears": {
+        "game": "the-witcher-2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Asesinó a los monarcas norteños bajo encargo de Nilfgaard a cambio de la promesa imperial de restaurar su escuela de brujos.",
+          "at": {
+            "game": "the-witcher-2",
+            "chapter": 4
+          }
+        },
+        {
+          "text": "Si sobrevivió al segundo juego, reaparece buscando refugio y Geralt puede ayudarlo a escapar de quienes lo persiguen.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "emhyr",
+      "name": "Emhyr var Emreis",
+      "role": "Emperador de Nilfgaard",
+      "intro": "El implacable monarca del imperio más extenso del mundo conocido, conocido como la Llama Blanca que Baila sobre los Túmulos de sus Enemigos.",
+      "appears": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Su urgencia por hallar a Ciri responde al plan de proclamarla emperatriz para sofocar las rebeliones internas de la nobleza mercantil.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Según las decisiones del jugador, Nilfgaard conquista el Norte o debe firmar la paz; en ese último caso, Emhyr cae víctima de una conspiración de sus propios nobles.",
+          "at": {
+            "game": "the-witcher-3",
+            "chapter": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "olgierd",
+      "name": "Olgierd von Everec",
+      "role": "Caudillo cosaco y noble inmortal",
+      "intro": "Un elegante atamán de refinados gustos artísticos y audacia temeraria que comanda a la feroz banda de los Jabalíes Desenfrenados.",
+      "appears": {
+        "game": "hearts-of-stone",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Su aparente falta de piedad y dolor físico se debe a un pacto místico que petrificó su corazón en piedra pura a cambio de inmortalidad.",
+          "at": {
+            "game": "hearts-of-stone",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "El precio de sus favores fue la muerte de su hermano y la reclusión espectral de su esposa Iris dentro de sus propias memorias ilustradas.",
+          "at": {
+            "game": "hearts-of-stone",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "gaunter-odimm",
+      "name": "Gaunter O'Dimm",
+      "role": "Entidad mística y tejedor de pactos",
+      "intro": "Un misterioso mercader que ofrece favores providenciales y asistencia milagrosa a cambio de compromisos futuros en apariencia sencillos.",
+      "appears": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Es una encarnación sobrenatural del engaño que disfruta atrapando a incautos en cláusulas contractuales para devorar sus almas.",
+          "at": {
+            "game": "hearts-of-stone",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Solo puede ser contenido o expulsado temporalmente de este mundo si alguien descifra con éxito su enigma en su propio plano espectral.",
+          "at": {
+            "game": "hearts-of-stone",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "regis",
+      "name": "Emiel Regis",
+      "role": "Vampiro superior y cirujano herbolario",
+      "intro": "Un culto barbero y erudito de maneras intachables que prioriza el debate intelectual y la botánica antes que la confrontación violenta.",
+      "appears": {
+        "game": "blood-and-wine",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Logró reconstruir su cuerpo tras haber sido pulverizado en el pasado gracias a la transfusión y regeneración de su semejante Dettlaff.",
+          "at": {
+            "game": "blood-and-wine",
+            "chapter": 1
+          }
+        },
+        {
+          "text": "Rompe la ley absoluta de su raza al matar a Dettlaff para salvar a los inocentes, quedando desterrado como un paria entre los suyos.",
+          "at": {
+            "game": "blood-and-wine",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "dettlaff",
+      "name": "Dettlaff van der Eretein",
+      "role": "Vampiro superior y la Bestia de Beauclair",
+      "intro": "Un vampiro superior de conducta solitaria y pasional que percibe las relaciones afectivas con una intensidad ajena a la razón humana.",
+      "appears": {
+        "game": "blood-and-wine",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Ejecutó los brutales homicidios en la corte ducal coaccionado por una red de extorsión que fingía tener prisionera a su amante humana.",
+          "at": {
+            "game": "blood-and-wine",
+            "chapter": 2
+          }
+        },
+        {
+          "text": "Al enterarse de que su amada manipuló deliberadamente sus emociones para fines políticos, lanza una plaga de vampiros sobre toda la urbe.",
+          "at": {
+            "game": "blood-and-wine",
+            "chapter": 3
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "asalto-a-kaer-morhen",
+      "title": "El asalto a Kaer Morhen",
+      "date": "Año 1270",
+      "order": 10,
+      "at": {
+        "game": "the-witcher",
+        "chapter": 0
+      },
+      "text": "La organización criminal de la Salamandra asalta el baluarte de los brujos con ayuda de un mago renegado y una criatura mutante. En la refriega roban las fórmulas secretas que permiten crear nuevos brujos.",
+      "characters": [
+        "geralt",
+        "triss"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-bestia-de-las-afueras",
+      "title": "El juicio de la Bestia",
+      "date": "Año 1270",
+      "order": 20,
+      "at": {
+        "game": "the-witcher",
+        "chapter": 1
+      },
+      "text": "Geralt investiga una serie de muertes atribuidas a un espectro canino en los arrabales de Wyzima. Al purgar a la criatura, expone la corrupción moral de las autoridades del pueblo y halla los primeros rastros de los traficantes de la Salamandra.",
+      "characters": [
+        "geralt"
+      ],
+      "major": false
+    },
+    {
+      "id": "conspiracion-en-el-templo",
+      "title": "La sombra sobre el Templo",
+      "date": "Año 1270",
+      "order": 30,
+      "at": {
+        "game": "the-witcher",
+        "chapter": 3
+      },
+      "text": "Ya en la capital, Geralt se reencuentra con Jaskier y emprende una compleja investigación criminal junto a un detective privado, hasta descubrir que el investigador había sido suplantado por un hechicero enemigo.",
+      "characters": [
+        "geralt",
+        "dandelion"
+      ],
+      "major": false
+    },
+    {
+      "id": "caida-de-la-salamandra",
+      "title": "El colapso de la Salamandra",
+      "date": "Año 1270",
+      "order": 40,
+      "at": {
+        "game": "the-witcher",
+        "chapter": 5
+      },
+      "text": "Geralt asalta el laboratorio principal de la organización y ajusticia a sus cabecillas en medio de la insurrección armada de Wyzima. La intervención de Triss confirma que la red delictiva recibía financiamiento directo de la jerarquía de la Orden.",
+      "characters": [
+        "geralt",
+        "triss"
+      ],
+      "major": true
+    },
+    {
+      "id": "duelo-contra-el-gran-maestre",
+      "title": "La visión helada de Jacques",
+      "date": "Año 1270",
+      "order": 50,
+      "at": {
+        "game": "the-witcher",
+        "chapter": 6
+      },
+      "text": "En el corazón de una ilusión glacial generada por magia profética, Geralt confronta y vence a Jacques de Aldersberg. De vuelta al palacio, neutraliza a un asesino encapuchado con ojos de gato que intentaba liquidar al monarca temeriano.",
+      "characters": [
+        "geralt"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-regicidio-de-foltest",
+      "title": "El asedio de los La Valette",
+      "date": "Año 1271",
+      "order": 60,
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 0
+      },
+      "text": "Durante el asedio al bastión de los La Valette, un asesino disfrazado de monje mata al rey Foltest. Geralt es acusado del crimen y encerrado en las mazmorras del castillo.",
+      "characters": [
+        "geralt",
+        "vernon-roche",
+        "letho"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-duelo-en-los-banos-de-flotsam",
+      "title": "El choque en las ruinas del bosque",
+      "date": "Año 1271",
+      "order": 70,
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 1
+      },
+      "text": "Tras viajar al puesto fronterizo de Flotsam para limpiar su reputación, Geralt rastrea la pista de Letho hasta unas termas élficas sumergidas. Tras un feroz combate cuerpo a cuerpo, Letho desarma al brujo y escapa secuestrando a Triss para forzarla a teletransportarlo.",
+      "characters": [
+        "geralt",
+        "triss",
+        "letho"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-maldicion-del-campo-espectral",
+      "title": "La batalla espectral del Pontar",
+      "date": "Año 1271",
+      "order": 80,
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 2
+      },
+      "text": "Una niebla espectral alimentada por odios del pasado revive perpetuamente la guerra civil en el valle de Aedirn. Geralt reúne reliquias de valor bélico y político para disipar el maleficio y salvar al ejército aliado liderado por Roche.",
+      "characters": [
+        "geralt",
+        "vernon-roche"
+      ],
+      "major": false
+    },
+    {
+      "id": "la-tragedia-de-loc-muinne",
+      "title": "La cumbre de Loc Muinne",
+      "date": "Año 1271",
+      "order": 90,
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 3
+      },
+      "text": "Monarcas y delegaciones diplomáticas se congregan en las ruinas de una metrópoli antigua para pactar un nuevo tratado de paz. Las maniobras encubiertas salen a la luz, desatando el pánico con la aparición de un dragón dominado y el arresto masivo de hechiceras.",
+      "characters": [
+        "geralt",
+        "triss",
+        "vernon-roche",
+        "letho"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-testimonio-de-la-vibora",
+      "title": "El pacto de la Víbora",
+      "date": "Año 1271",
+      "order": 100,
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 4
+      },
+      "text": "Letho se reúne con Geralt entre las ruinas y relata cómo la corte de Nilfgaard orquestó los regicidios para dejar al Norte sin liderazgo ante una inminente invasión. Con la verdad revelada, Geralt recuerda por fin su conexión con Yennefer y emprende su marcha hacia el sur.",
+      "characters": [
+        "geralt",
+        "letho"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-audiencia-imperial",
+      "title": "La audiencia con la Llama Blanca",
+      "date": "Año 1272",
+      "order": 110,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      },
+      "text": "Tras reunirse con Yennefer en Huerto Blanco, Geralt es conducido de urgencia ante el emperador Emhyr en el palacio real de Wyzima. El soberano demanda formalmente la ayuda del brujo para rescatar a su hija Ciri antes de que la Cacería Salvaje alcance su poder.",
+      "characters": [
+        "geralt",
+        "yennefer",
+        "emhyr"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-horror-del-cenagal",
+      "title": "Las sombras del Cenagal del Jorobado",
+      "date": "Año 1272",
+      "order": 120,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 1
+      },
+      "text": "Durante la búsqueda en las ciénagas de Velen, Geralt pacta con las tres Moiras para recabar noticias sobre el paradero de Ciri. Mediante testimonios locales reconstruye la milagrosa huida de la joven de las fauces de bestias del pantano.",
+      "characters": [
+        "geralt",
+        "ciri"
+      ],
+      "major": false
+    },
+    {
+      "id": "la-liberacion-del-trovador",
+      "title": "La fuga de Novigrado",
+      "date": "Año 1272",
+      "order": 130,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 1
+      },
+      "text": "Geralt y Triss preparan una audaz emboscada para rescatar a Jaskier de sus captores. Ya libre, el poeta cuenta lo que sabe del paso de Ciri por Novigrado.",
+      "characters": [
+        "geralt",
+        "triss",
+        "dandelion",
+        "ciri"
+      ],
+      "major": false
+    },
+    {
+      "id": "el-reencuentro-en-la-niebla",
+      "title": "La cabaña de la Isla de las Brumas",
+      "date": "Año 1272",
+      "order": 140,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 2
+      },
+      "text": "Guiado por una lumbre feérica, Geralt arriba a una solitaria morada donde yace Ciri en un trance similar a la muerte. Una chispa de energía mágica reanima a la joven, sellando un cálido abrazo que pone fin a largos años de incansable búsqueda.",
+      "characters": [
+        "geralt",
+        "ciri"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-asedio-de-kaer-morhen",
+      "title": "La defensa del baluarte",
+      "date": "Año 1272",
+      "order": 150,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 2
+      },
+      "text": "La fortaleza de los brujos resiste un despiadado ataque de los guerreros de la Cacería Salvaje liderados por Eredin. Aunque los defensores logran rechazar el asalto, el veterano Vesemir muere a manos del general Imlerith al interponerse para salvar a Ciri.",
+      "characters": [
+        "geralt",
+        "yennefer",
+        "triss",
+        "ciri"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-combate-de-skellige",
+      "title": "La derrota de la Cacería Salvaje",
+      "date": "Año 1272",
+      "order": 160,
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 3
+      },
+      "text": "En aguas de Skellige, Geralt aborda el Naglfar y derrota a Eredin en combate. Después, Ciri se enfrenta al Frío Blanco; su destino depende de las decisiones tomadas a lo largo del juego.",
+      "characters": [
+        "geralt",
+        "yennefer",
+        "ciri"
+      ],
+      "major": true
+    },
+    {
+      "id": "la-trampa-del-principe-sapo",
+      "title": "La trampa de las cloacas de Oxenfurt",
+      "date": "Año 1272",
+      "order": 170,
+      "at": {
+        "game": "hearts-of-stone",
+        "chapter": 0
+      },
+      "text": "Geralt cumple una encomienda de Olgierd exterminando a una aberración batracia en los subterráneos urbanos. El monstruo resulta ser un heredero ophiriano hechizado, provocando el arresto de Geralt por una guardia imperial extranjera hasta que Gaunter interviene a su favor.",
+      "characters": [
+        "geralt",
+        "olgierd",
+        "gaunter-odimm"
+      ],
+      "major": false
+    },
+    {
+      "id": "el-acertijo-en-el-templo-de-lilvani",
+      "title": "La apuesta final",
+      "date": "Año 1272",
+      "order": 180,
+      "at": {
+        "game": "hearts-of-stone",
+        "chapter": 3
+      },
+      "text": "Gaunter O'Dimm acude a cobrar el alma de Olgierd. Geralt puede apostar la suya en un acertijo: si lo resuelve, destierra al ente y Olgierd queda libre de su pacto.",
+      "characters": [
+        "geralt",
+        "olgierd",
+        "gaunter-odimm"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-asedio-vampirico-de-beauclair",
+      "title": "La noche de los colmillos",
+      "date": "Año 1275",
+      "order": 190,
+      "at": {
+        "game": "blood-and-wine",
+        "chapter": 3
+      },
+      "text": "Sintiéndose traicionado por su antigua amante, Dettlaff comanda a una legión de vampiros menores sobre las calles del ducado de Toussaint. Geralt y Regis recorren la ciudad protegiendo a los ciudadanos y buscando frenar el exterminio desatado.",
+      "characters": [
+        "geralt",
+        "regis",
+        "dettlaff"
+      ],
+      "major": true
+    },
+    {
+      "id": "el-duelo-en-tesham-mutna",
+      "title": "La tragedia de Tesham Mutna",
+      "date": "Año 1275",
+      "order": 200,
+      "at": {
+        "game": "blood-and-wine",
+        "chapter": 3
+      },
+      "text": "En las ruinas de una fortaleza milenaria, Geralt debilita la forma monstruosa de Dettlaff tras una violenta batalla. Regis asesta el golpe de gracia consumiendo a su semejante para salvar el ducado, sellando su propio destierro definitivo de la comunidad vampírica.",
+      "characters": [
+        "geralt",
+        "regis",
+        "dettlaff"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "geralt",
+      "to": "ciri",
+      "kind": "familia",
+      "detail": "Unidos por la Ley de la Sorpresa y un lazo filial protector más fuerte que cualquier vínculo sanguíneo.",
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "yennefer",
+      "kind": "romance",
+      "detail": "El amor predilecto de su existencia, forjado por el destino y reconciliado tras superar años de separación.",
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "triss",
+      "kind": "romance",
+      "detail": "Compañera incondicional y apasionada que veló por su bienestar cuando perdió la memoria de su pasado.",
+      "at": {
+        "game": "the-witcher",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "dandelion",
+      "kind": "aliado",
+      "detail": "Amigo leal de toda la vida y biógrafo personal que nunca duda en apoyarlo frente al peligro.",
+      "at": {
+        "game": "the-witcher",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "vernon-roche",
+      "kind": "aliado",
+      "detail": "Camaradas respetuosos surgidos de la desconfianza inicial tras el asesinato del monarca de Temeria.",
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "letho",
+      "kind": "rival",
+      "detail": "Hermanos de oficio enfrentados por manipulaciones imperiales pero unidos por un respeto mutuo profesional.",
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "regis",
+      "kind": "aliado",
+      "detail": "Antiguo y entrañable amigo vampiro que desafió todos los prejuicios de Geralt hacia las criaturas de la noche.",
+      "at": {
+        "game": "blood-and-wine",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "gaunter-odimm",
+      "kind": "enemigo",
+      "detail": "Una perturbadora relación deudor-acreedor que termina en una contienda a muerte por salvar almas humanas.",
+      "at": {
+        "game": "hearts-of-stone",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "geralt",
+      "to": "olgierd",
+      "kind": "aliado",
+      "detail": "Pasa de ser un cliente hostil a un camarada redimido al que Geralt libera de su corazón petrificado.",
+      "at": {
+        "game": "hearts-of-stone",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "ciri",
+      "to": "yennefer",
+      "kind": "familia",
+      "detail": "Figura materna fundamental que la cuidó y la instruyó con rectitud en las disciplinas de la hechicería.",
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "ciri",
+      "to": "emhyr",
+      "kind": "familia",
+      "detail": "Vínculo de padre e hija fuertemente desgastado por la ambición de poder del emperador.",
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "regis",
+      "to": "dettlaff",
+      "kind": "aliado",
+      "detail": "Compañeros de sangre unidos por una profunda deuda vital tras haber compartido la resurrección de Regis.",
+      "at": {
+        "game": "blood-and-wine",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "dettlaff",
+      "to": "geralt",
+      "kind": "enemigo",
+      "detail": "Criatura acorralada que percibe al brujo como un estorbo letal para ejecutar su venganza contra el ducado.",
+      "at": {
+        "game": "blood-and-wine",
+        "chapter": 3
+      }
+    },
+    {
+      "from": "letho",
+      "to": "emhyr",
+      "kind": "aliado",
+      "detail": "Ejecutor contratado por la corona nilfgaardiana bajo la promesa de refundar la Escuela de la Víbora.",
+      "at": {
+        "game": "the-witcher-2",
+        "chapter": 4
+      }
+    },
+    {
+      "from": "olgierd",
+      "to": "gaunter-odimm",
+      "kind": "enemigo",
+      "detail": "Prisionero de un engaño demoníaco que le otorgó riquezas e inmortalidad a costa de perder toda su humanidad.",
+      "at": {
+        "game": "hearts-of-stone",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "triss",
+      "to": "yennefer",
+      "kind": "rival",
+      "detail": "Hermanas del cónclave de hechiceras cuya prolongada amistad sufre roces por el amor que ambas profesan a Geralt.",
+      "at": {
+        "game": "the-witcher-3",
+        "chapter": 1
+      }
+    }
+  ]
+}
