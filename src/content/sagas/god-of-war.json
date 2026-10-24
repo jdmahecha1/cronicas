@@ -24,11 +24,11 @@
       "title": "God of War II (2007)",
       "year": 2007,
       "chapters": [
-        "El Asedio de Rodas y la caída de la divinidad",
-        "La Guarida de Tifón y la Isla de la Creación",
-        "El Templo de Láquesis y el Pantano",
-        "Las Tierras Bajas y los Corceles del Tiempo",
-        "El Palacio de los Hados y el destino del Olimpo"
+        "Prólogo: El asedio de Rodas",
+        "La Isla de la Creación",
+        "Los Corceles del Tiempo",
+        "El Templo de las Hermanas",
+        "Desenlace"
       ]
     },
     {
@@ -76,7 +76,7 @@
       "intro": "Un temible guerrero espartano que sirve a los dioses del Olimpo buscando alivio para las pesadillas que atormentan su mente.",
       "reveals": [
         {
-          "text": "Fue engañado por Ares para asesinar a su propia esposa Calíope y a su hija Lisandra en un templo consagrado.",
+          "text": "Fue engañado por Ares para asesinar a su propia esposa, Lisandra, y a su hija, Calíope, en un templo consagrado.",
           "at": {
             "game": "gow-1",
             "chapter": 2
@@ -252,7 +252,7 @@
           "text": "Una antigua maldición lo hace invulnerable, pero también le impide sentir dolor o placer.",
           "at": {
             "game": "gow-2018",
-            "chapter": 1
+            "chapter": 3
           }
         },
         {
@@ -330,7 +330,7 @@
           "text": "Carga con un profundo dolor familiar y alcoholismo a causa de los abusos psicológicos constantes de su padre Odín.",
           "at": {
             "game": "gow-ragnarok",
-            "chapter": 1
+            "chapter": 3
           }
         },
         {
@@ -409,7 +409,7 @@
       "order": 30,
       "at": {
         "game": "gow-1",
-        "chapter": 3
+        "chapter": 4
       },
       "text": "Guiado por Atenea, Kratos supera los mortales laberintos del Templo de Pandora para obtener la legendaria caja. Al abrirla adquiere un poder desmesurado que le permite luchar cara a cara contra un dios, liberando sin saberlo males que corrompen el Olimpo.",
       "characters": [
@@ -487,7 +487,7 @@
     {
       "id": "sacrificio-de-atenea",
       "title": "El sacrificio fatal de Atenea",
-      "date": "Durante el enfrentamiento en el Olimpo",
+      "date": "En Rodas, tras viajar al pasado",
       "order": 80,
       "at": {
         "game": "gow-2",
@@ -570,7 +570,7 @@
     {
       "id": "visita-del-desconocido",
       "title": "El enfrentamiento con el Desconocido",
-      "date": "Poco después de la partida de Midgard",
+      "date": "Antes de partir de su hogar en Midgard",
       "order": 130,
       "at": {
         "game": "gow-2018",
@@ -603,7 +603,7 @@
     {
       "id": "muerte-de-baldur",
       "title": "La ruptura del maleficio y la caída de Baldur",
-      "date": "A las afueras del templo de Freya",
+      "date": "Al final del viaje",
       "order": 150,
       "at": {
         "game": "gow-2018",
@@ -841,7 +841,7 @@
     {
       "from": "kratos",
       "to": "thor",
-      "kind": "rival",
+      "kind": "enemigo",
       "detail": "Poderosos dioses guerreros marcados por la tragedia que miden sus descomunales fuerzas en el campo de batalla.",
       "at": {
         "game": "gow-ragnarok",
