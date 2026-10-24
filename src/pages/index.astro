@@ -1,0 +1,160 @@
+---
+import SagaCard from '../components/SagaCard.astro';
+import Base from '../layouts/Base.astro';
+import { getSagas } from '../lib/data';
+import { url } from '../lib/url';
+
+const sagas = getSagas();
+const totals = {
+  games: sagas.reduce((n, s) => n + s.games.length, 0),
+  characters: sagas.reduce((n, s) => n + s.characters.length, 0),
+  events: sagas.reduce((n, s) => n + s.events.length, 0),
+};
+---
+
+<Base
+  title="Crónicas"
+  description="Explora la historia de tus sagas de videojuegos favoritas —línea de tiempo, personajes y relaciones— sin spoilers de lo que aún no has jugado."
+>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Explorador de historias de videojuegos</p>
+      <h1>Toda la historia de la saga.<br /><em>Solo hasta donde has llegado.</em></h1>
+      <p class="hero__lead">
+        Líneas de tiempo, personajes y mapas de relaciones de {sagas.length} sagas. Dile a Crónicas
+        hasta qué capítulo has jugado y el escudo de spoilers esconde todo lo que viene después.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#sagas">Elegir una saga</a>
+        <a class="btn btn--ghost" href={url('acerca/')}>Cómo funciona el escudo</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>Juegos</dt><dd>{totals.games}</dd></div>
+        <div><dt>Personajes</dt><dd>{totals.characters}</dd></div>
+        <div><dt>Eventos</dt><dd>{totals.events}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="sagas" aria-labelledby="sagas-titulo">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Biblioteca</p>
+          <h2 id="sagas-titulo">Sagas</h2>
+        </div>
+        <p class="muted">Cada saga guarda tu progreso por separado, en tu navegador.</p>
+      </div>
+      <div class="saga-grid">
+        {sagas.map((saga) => <SagaCard saga={saga} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps" aria-labelledby="pasos-titulo">
+    <div class="wrap">
+      <p class="eyebrow">En tres pasos</p>
+      <h2 id="pasos-titulo">Repasa la historia sin arruinarte el final</h2>
+      <ol class="steps__list">
+        <li class="card">
+          <span class="steps__n">1</span>
+          <h3>Elige tu saga</h3>
+          <p class="muted">Seis sagas con su cronología interna y su orden de lanzamiento.</p>
+        </li>
+        <li class="card">
+          <span class="steps__n">2</span>
+          <h3>Marca tu progreso</h3>
+          <p class="muted">Indica el último capítulo que terminaste en cada juego. No hace falta cuenta.</p>
+        </li>
+        <li class="card">
+          <span class="steps__n">3</span>
+          <h3>Explora tranquilo</h3>
+          <p class="muted">
+            Lo que aún no has visto aparece tapado, con la etapa exacta en la que se desbloquea.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding-block: clamp(3.5rem, 10vw, 7rem) clamp(2rem, 6vw, 4rem);
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent-text);
+  }
+
+  .hero__lead {
+    max-width: 62ch;
+    font-size: 1.12rem;
+    color: var(--muted);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 2.75rem 0 0;
+  }
+
+  .hero__stats dt {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  .hero__stats dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .saga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 1.25rem;
+  }
+
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .steps__list li {
+    padding: 1.4rem;
+  }
+
+  .steps__n {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.75rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    color: var(--accent-text);
+    font-weight: 700;
+  }
+
+  .steps__list p {
+    margin: 0;
+  }
+</style>

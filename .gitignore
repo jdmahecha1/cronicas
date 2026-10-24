@@ -1,0 +1,25 @@
+# Compilación
+dist/
+.astro/
+
+# Dependencias
+node_modules/
+
+# Pruebas
+test-results/
+playwright-report/
+coverage/
+
+# Registros
+npm-debug.log*
+*.log
+
+# Variables de entorno (este proyecto no necesita ninguna)
+.env
+.env.*
+
+# Sistema y editores
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

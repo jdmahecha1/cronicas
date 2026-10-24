@@ -1,0 +1,19 @@
+---
+import Search from '../components/Search';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Buscar" description="Busca sagas, personajes y lugares en Crónicas sin toparte con spoilers." indexable={false}>
+  <section class="wrap search-page">
+    <p class="eyebrow">Buscar</p>
+    <h1>Encuentra lo que buscas</h1>
+    <Search client:load base={import.meta.env.BASE_URL} />
+  </section>
+</Base>
+
+<style>
+  .search-page {
+    max-width: 760px;
+    padding-top: clamp(2rem, 6vw, 4rem);
+  }
+</style>

@@ -1,0 +1,755 @@
+{
+  "id": "red-dead-redemption",
+  "title": "Red Dead Redemption",
+  "tagline": "La agonía del salvaje oeste y la búsqueda imposible de redención.",
+  "studio": "Rockstar Games",
+  "genre": "Western de acción y aventura",
+  "accent": "#b11a22",
+  "synopsis": "A finales del siglo XIX, la civilización y el imperio de la ley avanzan sobre la frontera estadounidense acorralando a los últimos forajidos. Entre lealtades puestas a prueba y dilemas morales, miembros de bandas criminales intentan encontrar un lugar en un mundo que ya no los necesita ni los perdona.",
+  "games": [
+    {
+      "id": "rdr2",
+      "title": "Red Dead Redemption 2",
+      "year": 2018,
+      "chapters": [
+        "Capítulo 1: Colter",
+        "Capítulo 2: Mirador de la Herradura",
+        "Capítulo 3: Clemens Point",
+        "Capítulo 4: Saint Denis",
+        "Capítulo 5: Guarma",
+        "Capítulo 6: Beaver Hollow",
+        "Epílogo 1: Pronghorn Ranch",
+        "Epílogo 2: Beecher's Hope"
+      ]
+    },
+    {
+      "id": "rdr1",
+      "title": "Red Dead Redemption",
+      "year": 2010,
+      "chapters": [
+        "New Austin",
+        "Nuevo Paraíso (México)",
+        "West Elizabeth",
+        "Beecher's Hope"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "arthur-morgan",
+      "name": "Arthur Morgan",
+      "role": "Lugarteniente y ejecutor principal de la banda",
+      "intro": "Forajido leal criado por Dutch desde su juventud, encargado de velar por el campamento y conseguir recursos para el grupo.",
+      "reveals": [
+        {
+          "text": "Descubre que padece tuberculosis avanzada contraída al cobrar una deuda, lo que transforma su perspectiva de vida hacia la rectitud.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 5
+          }
+        },
+        {
+          "text": "Se sacrifica en la montaña protegiendo la huida de John Marston para permitir que este comience una vida honrada junto a su familia.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "john-marston",
+      "name": "John Marston",
+      "role": "Pistolero veterano y padre de familia",
+      "intro": "Antiguo huérfano rescatado por Dutch que lucha por equilibrar la devoción a sus camaradas con sus responsabilidades familiares.",
+      "reveals": [
+        {
+          "text": "Abandona definitivamente el crimen y edifica su propio rancho en Beecher's Hope para establecerse con Abigail y Jack.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 7
+          }
+        },
+        {
+          "text": "Es traicionado por agentes federales y abatido a tiros en su granero tras asegurar el escape de su esposa e hijo.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "dutch-van-der-linde",
+      "name": "Dutch van der Linde",
+      "role": "Líder carismático e ideólogo de la banda",
+      "intro": "Orador apasionado que rechaza la modernización estatal y promete guiar a sus seguidores hacia una tierra de libertad individual.",
+      "reveals": [
+        {
+          "text": "Cae en una espiral de desconfianza extrema, manipulado por Micah Bell hasta abandonar a miembros históricos a su suerte.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 5
+          }
+        },
+        {
+          "text": "Acorralado por el ejército y John en West Elizabeth, decide quitarse la vida lanzándose al vacío antes que ser juzgado.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "hosea-matthews",
+      "name": "Hosea Matthews",
+      "role": "Cofundador de la banda y consejero principal",
+      "intro": "Estafador curtido y la voz de la sensatez del grupo, partidario de resolver conflictos con diplomacia antes que con violencia.",
+      "reveals": [
+        {
+          "text": "Es asesinado a sangre fría por el agente federal Milton frente al banco de Saint Denis durante un atraco fallido.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "micah-bell",
+      "name": "Micah Bell",
+      "role": "Pistolero agresivo y tirador implacable",
+      "intro": "Tirador errático incorporado recientemente a la cuadrilla que propone acciones violentas y lucrativas sin reparos morales.",
+      "reveals": [
+        {
+          "text": "Se descubre que operaba en secreto como informante de los agentes de Pinkerton tras su regreso de la isla caribeña.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 5
+          }
+        },
+        {
+          "text": "Es acorralado y abatido por John Marston y Dutch en la cima nevada del monte Hagen.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "sadie-adler",
+      "name": "Sadie Adler",
+      "role": "Superviviente acogida por la banda",
+      "intro": "Mujer en duelo rescatada de su hacienda en las montañas que busca recomponer su vida tras una profunda tragedia personal.",
+      "appears": {
+        "game": "rdr2",
+        "chapter": 0
+      },
+      "reveals": [
+        {
+          "text": "Se establece con éxito como una temida cazarrecompensas profesional y ayuda a John a rastrear pistas sobre sus viejos adversarios.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": "abigail-roberts",
+      "name": "Abigail Roberts",
+      "role": "Madre protectora del campamento",
+      "intro": "Mujer decidida que hace frente a las penurias del nomadismo para procurar un entorno seguro y estable a su pequeño hijo.",
+      "reveals": [
+        {
+          "text": "Es capturada por los Pinkerton; Arthur y Sadie la rescatan y ella huye para reunirse con Jack, lejos del colapso de la banda.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 5
+          }
+        },
+        {
+          "text": "Es retenida como rehén por autoridades gubernamentales para forzar a su marido a cooperar con la justicia.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "charles-smith",
+      "name": "Charles Smith",
+      "role": "Rastreador y cazador de la banda",
+      "intro": "Hombre sereno y formidable combatiente que se unió al grupo valorando el trato equitativo que imperaba en la cuadrilla.",
+      "reveals": [
+        {
+          "text": "Presta su fuerza para construir el rancho de Beecher's Hope y posteriormente viaja hacia el norte para formar una familia propia.",
+          "at": {
+            "game": "rdr2",
+            "chapter": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": "bill-williamson",
+      "name": "Bill Williamson",
+      "role": "Hombre de armas de carácter rudo",
+      "intro": "Exmilitar impulsivo de temperamento volátil que cumple sin dudar las misiones de combate asignadas por el líder.",
+      "reveals": [
+        {
+          "text": "Funda su propia cuadrilla en Nuevo Austin y atenta contra la vida de John cuando este intenta convencerlo de entregarse.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 0
+          }
+        },
+        {
+          "text": "Huye a México bajo la protección del ejército, pero tras el asalto rebelde a Escalera es acorralado y abatido por John Marston.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "javier-escuella",
+      "name": "Javier Escuella",
+      "role": "Jinete y explorador rebelde",
+      "intro": "Revolucionario que encontró en la banda un refugio seguro y una hermandad unida contra la tiranía.",
+      "reveals": [
+        {
+          "text": "Retorna a México colaborando como ejecutor de jerarcas opresores y es capturado o eliminado por John Marston.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "edgar-ross",
+      "name": "Edgar Ross",
+      "role": "Agente de la ley que persigue a la banda",
+      "intro": "Agente inflexible convencido de utilizar métodos sin escrúpulos para erradicar a los forajidos de los territorios nacionales.",
+      "appears": {
+        "game": "rdr2",
+        "chapter": 1
+      },
+      "reveals": [
+        {
+          "text": "Lidera la fuerza armada gubernamental que masacra a John Marston en su rancho tras haber obtenido su colaboración.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 3
+          }
+        },
+        {
+          "text": "Ya retirado de la agencia oficial, es localizado y abatido en un duelo por Jack Marston en venganza por la muerte de su padre.",
+          "at": {
+            "game": "rdr1",
+            "chapter": 3
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "masacre-de-blackwater",
+      "title": "El fallido golpe del ferry de Blackwater",
+      "date": "Mayo de 1899",
+      "order": 10,
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      },
+      "text": "La banda intenta asaltar una embarcación con caudales bajo un plan precipitado que concluye en un cerco policial masivo y la fuga urgente a las cumbres nevadas.",
+      "characters": [
+        "dutch-van-der-linde",
+        "micah-bell"
+      ],
+      "major": true
+    },
+    {
+      "id": "refugio-en-colter",
+      "title": "Supervivencia en el refugio invernal",
+      "date": "Mayo de 1899",
+      "order": 20,
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      },
+      "text": "El grupo encuentra cobijo en un asentamiento minero abandonado durante una tormenta, rescata a Sadie Adler de pistoleros rivales y asalta un convoy ferroviario privado.",
+      "characters": [
+        "arthur-morgan",
+        "dutch-van-der-linde",
+        "sadie-adler",
+        "john-marston"
+      ],
+      "major": true
+    },
+    {
+      "id": "campamento-mirador-herradura",
+      "title": "Asentamiento en el Mirador de la Herradura",
+      "date": "Primavera de 1899",
+      "order": 30,
+      "at": {
+        "game": "rdr2",
+        "chapter": 1
+      },
+      "text": "La cuadrilla desciende a las verdes llanuras del valle central para recomponerse, mientras Arthur libera a Micah de una celda local y reactiva las finanzas colectivas.",
+      "characters": [
+        "arthur-morgan",
+        "micah-bell",
+        "john-marston"
+      ],
+      "major": false
+    },
+    {
+      "id": "encuentro-con-los-pinkerton",
+      "title": "La intimidación de los agentes federales",
+      "date": "Primavera de 1899",
+      "order": 40,
+      "at": {
+        "game": "rdr2",
+        "chapter": 1
+      },
+      "text": "Los investigadores Milton y Ross interceptan a Arthur a orillas del río advirtiéndole que apresarán a Dutch y ofreciéndole una salida que el pistolero rechaza.",
+      "characters": [
+        "arthur-morgan",
+        "edgar-ross"
+      ],
+      "major": false
+    },
+    {
+      "id": "enredo-en-rhodes",
+      "title": "El juego entre clanes rivales",
+      "date": "Verano de 1899",
+      "order": 50,
+      "at": {
+        "game": "rdr2",
+        "chapter": 2
+      },
+      "text": "Dutch intenta engañar a dos poderosas familias sureñas enfrentadas entre sí, pero el engaño es descubierto y desencadena el rapto del hijo de John.",
+      "characters": [
+        "arthur-morgan",
+        "dutch-van-der-linde",
+        "hosea-matthews"
+      ],
+      "major": true
+    },
+    {
+      "id": "asalto-mansion-braithwaite",
+      "title": "La quema de la hacienda Braithwaite",
+      "date": "Verano de 1899",
+      "order": 60,
+      "at": {
+        "game": "rdr2",
+        "chapter": 2
+      },
+      "text": "La banda al completo combate hasta arrasar la propiedad señorial tras enterarse de que el niño fue entregado a un jerarca mafioso radicado en la urbe cercana.",
+      "characters": [
+        "dutch-van-der-linde",
+        "arthur-morgan",
+        "john-marston",
+        "hosea-matthews"
+      ],
+      "major": true
+    },
+    {
+      "id": "venganza-contra-bronte",
+      "title": "La incursión contra Angelo Bronte",
+      "date": "Verano de 1899",
+      "order": 70,
+      "at": {
+        "game": "rdr2",
+        "chapter": 3
+      },
+      "text": "Tras recuperar a Jack, la cuadrilla asalta la mansión del magnate criminal en Saint Denis; allí Dutch lo ejecuta con saña revelando su creciente frialdad.",
+      "characters": [
+        "arthur-morgan",
+        "dutch-van-der-linde",
+        "john-marston"
+      ],
+      "major": false
+    },
+    {
+      "id": "desastre-banco-saint-denis",
+      "title": "El desastre del banco de Saint Denis",
+      "date": "Otoño de 1899",
+      "order": 80,
+      "at": {
+        "game": "rdr2",
+        "chapter": 3
+      },
+      "text": "El asalto a la entidad bancaria metropolitana culmina en emboscada estatal. Hosea es ejecutado frente a sus socios, John resulta capturado y varios forajidos escapan por mar.",
+      "characters": [
+        "dutch-van-der-linde",
+        "arthur-morgan",
+        "hosea-matthews",
+        "john-marston",
+        "edgar-ross"
+      ],
+      "major": true
+    },
+    {
+      "id": "conmocion-en-guarma",
+      "title": "La travesía en la isla caribeña",
+      "date": "Otoño de 1899",
+      "order": 90,
+      "at": {
+        "game": "rdr2",
+        "chapter": 4
+      },
+      "text": "Los supervivientes del naufragio quedan varados en una plantación azucarera insular, uniéndose a la insurgencia de esclavos locales para asegurar una embarcación de vuelta.",
+      "characters": [
+        "arthur-morgan",
+        "dutch-van-der-linde",
+        "micah-bell",
+        "bill-williamson",
+        "javier-escuella"
+      ],
+      "major": true
+    },
+    {
+      "id": "resquebrajamiento-de-la-banda",
+      "title": "La fractura final del campamento",
+      "date": "Otoño de 1899",
+      "order": 100,
+      "at": {
+        "game": "rdr2",
+        "chapter": 5
+      },
+      "text": "Con Arthur consumido por su padecimiento físico y Dutch ciego a las advertencias, Arthur y Sadie rescatan a John de prisión desafiando la voluntad del cabecilla.",
+      "characters": [
+        "arthur-morgan",
+        "john-marston",
+        "dutch-van-der-linde",
+        "micah-bell",
+        "sadie-adler"
+      ],
+      "major": true
+    },
+    {
+      "id": "redencion-de-arthur",
+      "title": "El sacrificio de Arthur Morgan",
+      "date": "Noviembre de 1899",
+      "order": 110,
+      "at": {
+        "game": "rdr2",
+        "chapter": 5
+      },
+      "text": "En el desenlace más canónico con alto honor, Arthur desenmascara la traición de Micah, frena el avance de las tropas y perece en paz en la montaña mientras John huye.",
+      "characters": [
+        "arthur-morgan",
+        "john-marston",
+        "micah-bell",
+        "dutch-van-der-linde"
+      ],
+      "major": true
+    },
+    {
+      "id": "fundacion-beechers-hope",
+      "title": "El levantamiento de Beecher's Hope",
+      "date": "Año 1907",
+      "order": 120,
+      "at": {
+        "game": "rdr2",
+        "chapter": 7
+      },
+      "text": "Con respaldo financiero obtenido en misiones de captura y la colaboración de Charles, John compra una parcela y edifica una vivienda campestre para su hogar.",
+      "characters": [
+        "john-marston",
+        "abigail-roberts",
+        "charles-smith",
+        "sadie-adler"
+      ],
+      "major": false
+    },
+    {
+      "id": "ajuste-en-monte-hagen",
+      "title": "El enfrentamiento en el monte Hagen",
+      "date": "Año 1907",
+      "order": 130,
+      "at": {
+        "game": "rdr2",
+        "chapter": 7
+      },
+      "text": "John, Sadie y Charles escalan la cumbre para ajustar cuentas con Micah; Dutch reaparece para herirlo de muerte y John lo liquida, despertando el rastreo de Ross.",
+      "characters": [
+        "john-marston",
+        "micah-bell",
+        "dutch-van-der-linde",
+        "sadie-adler",
+        "charles-smith"
+      ],
+      "major": true
+    },
+    {
+      "id": "extorsion-gubernamental",
+      "title": "La coacción de los agentes del Bureau",
+      "date": "Año 1911",
+      "order": 140,
+      "at": {
+        "game": "rdr1",
+        "chapter": 0
+      },
+      "text": "Edgar Ross secuestra a Abigail y a su hijo para forzar a John a operar como cazador encubierto del Estado y perseguir a los forajidos con los que cabalgó.",
+      "characters": [
+        "john-marston",
+        "edgar-ross",
+        "abigail-roberts"
+      ],
+      "major": true
+    },
+    {
+      "id": "batalla-en-fort-mercer",
+      "title": "El asedio armado a Fort Mercer",
+      "date": "Año 1911",
+      "order": 150,
+      "at": {
+        "game": "rdr1",
+        "chapter": 0
+      },
+      "text": "Tras sobrevivir al ataque inicial de Bill, John agrupa a combatientes y marshals de la región fronteriza para expugnar la fortaleza amurallada de la banda.",
+      "characters": [
+        "john-marston",
+        "bill-williamson"
+      ],
+      "major": true
+    },
+    {
+      "id": "operacion-en-la-frontera-sur",
+      "title": "La campaña en territorio mexicano",
+      "date": "Año 1911",
+      "order": 160,
+      "at": {
+        "game": "rdr1",
+        "chapter": 1
+      },
+      "text": "John navega el conflicto de una guerra civil para neutralizar a Javier Escuella y poner fin definitivo a los crímenes de Bill Williamson en suelo extranjero.",
+      "characters": [
+        "john-marston",
+        "javier-escuella",
+        "bill-williamson"
+      ],
+      "major": true
+    },
+    {
+      "id": "ultimo-salto-de-dutch",
+      "title": "La caída final de Dutch van der Linde",
+      "date": "Año 1911",
+      "order": 170,
+      "at": {
+        "game": "rdr1",
+        "chapter": 2
+      },
+      "text": "Cercado por el destacamento militar en los riscos de Cochinay, Dutch reconoce ante John la futilidad de su resistencia y se arroja a las profundidades de la garganta.",
+      "characters": [
+        "john-marston",
+        "dutch-van-der-linde",
+        "edgar-ross"
+      ],
+      "major": true
+    },
+    {
+      "id": "defensa-en-el-granero",
+      "title": "La traición en Beecher's Hope",
+      "date": "Año 1911",
+      "order": 180,
+      "at": {
+        "game": "rdr1",
+        "chapter": 3
+      },
+      "text": "El destacamento gubernamental asedia la granja violando el pacto acordado. John encierra a su familia para ponerla a salvo y encara en solitario a los soldados hasta caer.",
+      "characters": [
+        "john-marston",
+        "abigail-roberts",
+        "edgar-ross"
+      ],
+      "major": true
+    },
+    {
+      "id": "venganza-en-el-rio",
+      "title": "El ajuste de cuentas junto al río",
+      "date": "Año 1914",
+      "order": 190,
+      "at": {
+        "game": "rdr1",
+        "chapter": 3
+      },
+      "text": "Tres años después de la pérdida de sus progenitores, un adulto Jack Marston localiza al retirado agente Ross cazando a orillas del agua y lo abate en un duelo limpio.",
+      "characters": [
+        "edgar-ross"
+      ],
+      "major": true
+    }
+  ],
+  "relations": [
+    {
+      "from": "dutch-van-der-linde",
+      "to": "arthur-morgan",
+      "kind": "mentor",
+      "detail": "Figura paterna y referente doctrinario a quien Arthur obedeció ciegamente a lo largo de décadas.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "arthur-morgan",
+      "to": "john-marston",
+      "kind": "familia",
+      "detail": "Lazo fraternal complejo que evoluciona desde viejos reproches hacia una entrega absoluta para garantizar su salvación.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "hosea-matthews",
+      "to": "arthur-morgan",
+      "kind": "mentor",
+      "detail": "Vínculo de enorme respeto mutuo sustentado en la búsqueda de prudencia frente a los desvaríos del grupo.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "arthur-morgan",
+      "to": "micah-bell",
+      "kind": "rival",
+      "detail": "Tensión y enemistad manifiesta por el rumbo ético de la cuadrilla y la cercanía con el mando.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "arthur-morgan",
+      "to": "sadie-adler",
+      "kind": "aliado",
+      "detail": "Camaradería blindada surgida del respaldo mutuo en situaciones de peligro y de una afinidad por la lealtad.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "dutch-van-der-linde",
+      "to": "hosea-matthews",
+      "kind": "aliado",
+      "detail": "Socios pioneros que complementaban la visión utópica del primero con la cautela reflexiva del segundo.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "dutch-van-der-linde",
+      "to": "micah-bell",
+      "kind": "aliado",
+      "detail": "Alianza tóxica propiciada por adulaciones constantes que aceleran el colapso del buen juicio del cabecilla.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "abigail-roberts",
+      "kind": "romance",
+      "detail": "Compañeros sentimentales que perseveran frente al peligro constante para criar a su hijo en libertad.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "charles-smith",
+      "kind": "aliado",
+      "detail": "Hermandad fundamentada en la dignidad compartida y el soporte fundamental para afianzar el rancho.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "dutch-van-der-linde",
+      "kind": "enemigo",
+      "detail": "Antigua admiración convertida en persecución inexorable por mandamiento oficial y desengaño personal.",
+      "at": {
+        "game": "rdr1",
+        "chapter": 2
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "bill-williamson",
+      "kind": "enemigo",
+      "detail": "Vieja amistad rota por el resentimiento y convertida en hostilidad mortal a través de la frontera.",
+      "at": {
+        "game": "rdr1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "javier-escuella",
+      "kind": "enemigo",
+      "detail": "Compañeros de andanzas distanciados por visiones opuestas de la lealtad y el honor tras la diáspora.",
+      "at": {
+        "game": "rdr1",
+        "chapter": 1
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "edgar-ross",
+      "kind": "enemigo",
+      "detail": "Acérrimo perseguidor que lo coacciona amenazando el bienestar de su familia para liquidar a la vieja banda.",
+      "at": {
+        "game": "rdr1",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "john-marston",
+      "to": "micah-bell",
+      "kind": "enemigo",
+      "detail": "Rencor irreversible por haber socavado la cuadrilla y provocado la muerte del hombre que le salvó la vida.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 5
+      }
+    },
+    {
+      "from": "charles-smith",
+      "to": "arthur-morgan",
+      "kind": "aliado",
+      "detail": "Confianza absoluta entre combatientes que anteponen la rectitud moral al provecho personal.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 0
+      }
+    },
+    {
+      "from": "sadie-adler",
+      "to": "john-marston",
+      "kind": "aliado",
+      "detail": "Compañeros de armas que unen fuerzas en la captura de forajidos honrando el legado de Arthur.",
+      "at": {
+        "game": "rdr2",
+        "chapter": 6
+      }
+    }
+  ]
+}
