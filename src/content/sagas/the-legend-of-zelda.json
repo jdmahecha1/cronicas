@@ -12,7 +12,7 @@
       "title": "The Legend of Zelda: Skyward Sword",
       "year": 2011,
       "chapters": [
-        "El descenso desde Celéstea",
+        "El descenso desde Altárea",
         "La búsqueda en las tierras inferiores",
         "El despertar de la Espada Maestra",
         "El juicio supremo y la batalla ancestral"
@@ -162,7 +162,7 @@
       "intro": "Fiel guerrera y consejera de la corona, consagrada a custodiar a la realeza y preservar el legado secreto de su clan.",
       "reveals": [
         {
-          "text": "Vigiló en soledad durante milenios en el Templo del Tiempo sellado para asegurar el despertar y triunfo del héroe.",
+          "text": "Vigiló en soledad durante milenios un templo sellado para asegurar el despertar y el triunfo del héroe.",
           "at": {
             "game": "skyward-sword",
             "chapter": 3
@@ -493,7 +493,7 @@
       "branch": "Adulto",
       "at": {
         "game": "the-wind-waker",
-        "chapter": 1
+        "chapter": 2
       },
       "text": "Siglos después de la marcha del Héroe del Tiempo, el sello sobre Ganondorf cede sin que aparezca un elegido para repelerlo. Las diosas responden a las súplicas del reino anegando las tierras ancestrales bajo un mar interminable.",
       "characters": [
@@ -580,9 +580,7 @@
         "chapter": 0
       },
       "text": "La avanzada civilización Sheikah desarrolla cuatro Bestias Divinas mecanizadas y millares de guardianes para contrarrestar la profetizada Calamidad. La alianza tecnológica y mágica permite sellar al mal de forma fulminante.",
-      "characters": [
-        "impa"
-      ],
+      "characters": [],
       "major": false
     },
     {
@@ -616,8 +614,7 @@
       "text": "Habiendo recuperado su memoria y reconciliado a los espíritus de las bestias sagradas, Link asalta el bastión real corrupto. Con el concurso de la flecha de luz de Zelda, extingue la forma física de la Calamidad tras un siglo de ruina.",
       "characters": [
         "link",
-        "zelda",
-        "mipha"
+        "zelda"
       ],
       "major": true
     },
@@ -697,7 +694,7 @@
       "detail": "Devoción absoluta y protección marcial transmitida por el clan Sheikah a la princesa real.",
       "at": {
         "game": "skyward-sword",
-        "chapter": 0
+        "chapter": 1
       }
     },
     {
@@ -743,7 +740,7 @@
     {
       "from": "midna",
       "to": "zant",
-      "kind": "rival",
+      "kind": "enemigo",
       "detail": "Disputa dinástica frente al cortesano fanatizado que usurpó el mando del Reino Crepuscular.",
       "at": {
         "game": "twilight-princess",
