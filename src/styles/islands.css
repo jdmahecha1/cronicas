@@ -1,113 +1,57 @@
 /* Estilos de las islas de React (no admiten <style> con alcance de Astro). */
 
+.landscape__fog {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 /* Interruptor del escudo */
 .shield-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  min-height: 36px;
-  padding: 0.3rem 0.8rem;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-4);
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--border));
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent-text);
+  border: 1px solid var(--accent);
+  background: color-mix(in oklab, var(--accent) 12%, transparent);
+  color: var(--accent);
   font: inherit;
-  font-size: 0.85rem;
+  font-size: var(--step-0);
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .shield-toggle.is-off {
-  border-color: color-mix(in srgb, var(--danger) 60%, var(--border));
-  background: color-mix(in srgb, var(--danger) 12%, transparent);
-  color: var(--danger);
+  border-color: var(--line);
+  background: transparent;
+  color: var(--muted);
 }
 
-/* Panel de progreso */
-.progress {
-  padding: 1.25rem;
+@media (max-width: 560px) {
+  .shield-toggle__state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
 }
 
-.progress__head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.progress h2 {
-  font-size: 1.3rem;
-  margin: 0;
-}
-
-.progress__percent {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent-text);
-}
-
-.progress__bar {
-  height: 6px;
-  margin: 0.6rem 0 0.9rem;
-  border-radius: 999px;
-  background: var(--border);
-  overflow: hidden;
-}
-
-.progress__bar span {
-  display: block;
-  height: 100%;
-  background: var(--accent);
-  transition: width 0.3s;
-}
-
-.progress__hint {
-  font-size: 0.85rem;
-}
-
-.progress__games {
-  display: grid;
-  gap: 0.85rem;
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
-}
-
-.progress__games label {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.3rem;
-  font-size: 0.88rem;
-}
-
-.progress__game {
-  font-weight: 600;
-}
-
-.progress__year {
-  color: var(--faint);
-}
-
-.progress__row {
-  display: flex;
-  gap: 0.4rem;
-}
-
+/* Campos nativos */
 select {
-  min-height: 36px;
+  min-height: 44px;
   min-width: 0;
-  flex: 1;
-  padding: 0.35rem 2rem 0.35rem 0.65rem;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  background: var(--bg)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23a3abbd' stroke-width='1.8'/%3E%3C/svg%3E")
-    no-repeat right 0.7rem center;
+  padding: 0 2.25rem 0 var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-field);
+  background: var(--surface)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23aab1bf' stroke-width='1.8'/%3E%3C/svg%3E")
+    no-repeat right var(--space-4) center;
   color: var(--text);
   font: inherit;
-  font-size: 0.88rem;
+  font-size: var(--step-0);
   appearance: none;
   cursor: pointer;
 }
@@ -116,18 +60,239 @@ select:hover {
   border-color: var(--accent);
 }
 
-.progress__status {
-  padding: 0.65rem 0.8rem;
-  border-radius: var(--radius-sm);
-  background: var(--bg);
-  font-size: 0.85rem;
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
   color: var(--muted);
+  font-size: var(--step-0);
+  cursor: pointer;
 }
 
-.progress__actions {
+.check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+}
+
+/* Partida guardada */
+.save {
+  padding: var(--space-5);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-card);
+  background:
+    radial-gradient(120% 60% at 0% 0%, color-mix(in oklab, var(--accent) 10%, transparent), transparent 70%),
+    var(--surface);
+}
+
+.save.is-fresh {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+.save__head {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.save__icon {
+  margin-top: 0.2em;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.save h2 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--step-2);
+}
+
+.save__hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--step-0);
+}
+
+.save__games {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.save__title {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: var(--step-0);
+  font-weight: 600;
+}
+
+.save__year {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* El camino: puntos unidos por una línea; los terminados se encienden. */
+.save__path {
+  display: flex;
+  align-items: center;
+}
+
+.save__node {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-width: 26px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.save__node::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  right: 50%;
+  height: 2px;
+  background: var(--line);
+  transform: translateY(-50%);
+  /* La línea pertenece al punto siguiente: no debe robarle el clic al anterior. */
+  pointer-events: none;
+}
+
+.save__node:first-child::before {
+  display: none;
+}
+
+.save__node.is-lit::before {
+  background: var(--accent);
+}
+
+.save__node input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.save__node span {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  transition:
+    transform 0.2s var(--ease-out),
+    background 0.2s var(--ease-out);
+}
+
+/* "Sin jugar": un punto más pequeño y hueco al inicio del camino. */
+.save__node.is-start span {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+.save__node.is-start input:checked + span {
+  transform: scale(1.3);
+  background: var(--bg);
+}
+
+.save__node.is-lit span {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.save__node:hover span {
+  transform: scale(1.35);
+  border-color: var(--accent);
+}
+
+.save__node input:checked + span {
+  transform: scale(1.45);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 25%, transparent);
+  border-color: var(--accent);
+}
+
+.save__node input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.save__current {
+  margin: var(--space-1) 0 0;
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.save__status {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--step-0);
+}
+
+.save__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-2);
+}
+
+/* Barra de partida fija en móvil */
+.savebar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line-soft);
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.savebar__meter {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.savebar__meter span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.savebar__text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 auto 0 0;
+  font-size: var(--step-0);
+  font-weight: 600;
+}
+
+@media (min-width: 980px) {
+  .savebar {
+    display: none;
+  }
 }
 
 /* Línea de tiempo */
@@ -135,46 +300,27 @@ select:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.timeline__filter select {
-  min-width: 200px;
-}
-
-.timeline__check {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  color: var(--muted);
-  cursor: pointer;
-}
-
-.timeline__check input {
-  width: 1rem;
-  height: 1rem;
-  accent-color: var(--accent);
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
 }
 
 .segmented {
   display: inline-flex;
   padding: 3px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--surface);
 }
 
 .segmented button {
-  min-height: 32px;
-  padding: 0.25rem 0.85rem;
+  min-height: 38px;
+  padding: 0 var(--space-4);
   border: 0;
   border-radius: 999px;
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 0.85rem;
+  font-size: var(--step-0);
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -185,201 +331,222 @@ select:hover {
 }
 
 .timeline__summary {
-  font-size: 0.85rem;
+  margin-bottom: var(--space-4);
+  font-size: var(--step--1);
 }
 
-.timeline__list {
+.timeline__path {
   position: relative;
   margin: 0;
-  padding: 0 0 0 1.75rem;
+  padding: 0 0 0 2.25rem;
   list-style: none;
 }
 
-.timeline__list::before {
+/* El sendero: sólido hasta donde llegaste, punteado en la niebla. */
+.timeline__path::before {
   content: '';
   position: absolute;
-  left: 7px;
-  top: 6px;
-  bottom: 6px;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
   width: 2px;
-  background: linear-gradient(var(--accent), var(--border) 30%, var(--border) 70%, transparent);
+  background: linear-gradient(var(--accent), color-mix(in oklab, var(--accent) 30%, var(--line)));
 }
 
-.timeline__item {
+.timeline__stop {
   position: relative;
-  margin-bottom: 0.9rem;
+  margin-bottom: var(--space-4);
 }
 
 .timeline__dot {
   position: absolute;
-  left: -1.75rem;
-  top: 1.1rem;
-  width: 16px;
-  height: 16px;
-  border: 3px solid var(--bg);
+  left: -2.25rem;
+  top: 1.25rem;
+  width: 24px;
+  height: 24px;
+  border: 5px solid var(--bg);
   border-radius: 50%;
-  background: var(--border-strong);
-}
-
-.timeline__item.is-major .timeline__dot {
   background: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
-.timeline__item.is-hidden .timeline__dot {
-  background: var(--surface-2);
-  border-color: var(--border-strong);
+.timeline__stop.is-major .timeline__dot {
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+.timeline__stop.is-fog .timeline__dot {
+  background: var(--bg);
+  border: 2px dashed var(--line);
 }
 
 .timeline__card {
-  padding: 1rem 1.15rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-card);
   background: var(--surface);
 }
 
-.timeline__item.is-major .timeline__card {
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+.timeline__stop.is-major .timeline__card {
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line-soft));
 }
 
 .timeline__card h3 {
-  margin-bottom: 0.35rem;
-}
-
-.timeline__card > p {
-  margin-bottom: 0.7rem;
-  color: var(--muted);
+  margin-bottom: var(--space-2);
 }
 
 .timeline__date {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 0.25rem;
-  font-size: 0.8rem;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+  color: var(--accent);
+  font-size: var(--step--1);
   font-weight: 600;
-  color: var(--accent-text);
 }
 
-.chip--branch {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.chip--unknown {
-  font-style: italic;
+.timeline__text {
+  color: var(--muted);
 }
 
 .timeline__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: var(--space-2);
 }
 
-.timeline__card--veiled {
+.chip--unknown {
+  border-style: dashed;
+  font-style: italic;
+}
+
+.timeline__fog {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 0.75rem;
-  border-style: dashed;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--surface),
-    var(--surface) 8px,
-    color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 8px,
-    color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 16px
-  );
+  gap: var(--space-3) var(--space-4);
+  padding: var(--space-5);
 }
 
-.timeline__veil-text {
-  margin: 0;
-  font-size: 0.88rem;
+.timeline__fog-icon {
   color: var(--muted);
+  font-size: 1.6rem;
 }
 
-.timeline__veil-text strong {
-  color: var(--text);
+.timeline__fog p {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  flex: 1;
+  min-width: 14rem;
+  font-size: var(--step-0);
 }
 
-.timeline__card--veiled .btn {
-  margin-left: auto;
+.timeline__fog strong {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
 }
 
 /* Mapa de relaciones */
+.graph__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
 .graph__legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.75rem;
+  gap: var(--space-2);
 }
 
 .graph__kind {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  min-height: 32px;
-  padding: 0.2rem 0.7rem;
-  border: 1px solid var(--border);
+  gap: var(--space-2);
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--line-soft);
   border-radius: 999px;
   background: var(--surface);
   color: var(--text);
   font: inherit;
-  font-size: 0.82rem;
+  font-size: var(--step--1);
   cursor: pointer;
 }
 
 .graph__kind[aria-pressed='false'] {
-  opacity: 0.45;
-  text-decoration: line-through;
+  color: var(--muted);
+  border-style: dashed;
+}
+
+.graph__kind[aria-pressed='false'] svg {
+  opacity: 0.35;
 }
 
 .graph__canvas {
-  overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-card);
   background:
-    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%),
+    radial-gradient(60% 60% at 50% 45%, color-mix(in oklab, var(--accent) 7%, transparent), transparent 70%),
     var(--surface);
+}
+
+.graph__canvas {
+  position: relative;
+}
+
+.graph__empty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: min(420px, 86%);
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--step-0);
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .graph__canvas svg {
   display: block;
   width: 100%;
-  min-width: 540px;
   height: auto;
 }
 
 .graph__node {
-  fill: color-mix(in srgb, var(--accent) 30%, var(--surface-2));
+  fill: var(--raised);
   stroke: var(--accent);
-  stroke-width: 2;
-  transition: fill 0.15s;
+  stroke-width: 2.5;
 }
 
-.graph__node--unknown {
-  fill: var(--surface-2);
-  stroke: var(--border-strong);
-  stroke-dasharray: 3 3;
+.graph__node.is-fog {
+  fill: var(--bg);
+  stroke: var(--line);
+  stroke-dasharray: 4 4;
 }
 
-.graph__nodes a:hover .graph__node,
-.graph__nodes a:focus .graph__node {
-  fill: var(--accent);
+.graph a:hover .graph__node,
+.graph a:focus .graph__node {
+  fill: color-mix(in oklab, var(--accent) 35%, var(--raised));
 }
 
-.graph__nodes a:focus {
+.graph a:focus {
   outline: none;
 }
 
-.graph__nodes a:focus-visible .graph__node {
+.graph a:focus-visible .graph__node {
   stroke: var(--text);
-  stroke-width: 3;
+  stroke-width: 4;
 }
 
 .graph__initial {
   fill: var(--text);
-  font-size: 11px;
+  font-family: var(--font-display);
+  font-size: 13px;
   font-weight: 700;
   text-anchor: middle;
   pointer-events: none;
@@ -387,65 +554,105 @@ select:hover {
 
 .graph__label {
   fill: var(--text);
-  font-size: 13px;
-  font-weight: 550;
+  font-size: 14px;
+  font-weight: 600;
   text-anchor: middle;
   paint-order: stroke;
   stroke: var(--surface);
-  stroke-width: 4px;
+  stroke-width: 5px;
   stroke-linejoin: round;
   pointer-events: none;
 }
 
+.graph__list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.graph__list li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--surface);
+  font-size: var(--step-0);
+}
+
+.graph__list svg {
+  flex: none;
+}
+
+.graph__kind-name {
+  color: var(--muted);
+}
+
 .graph__note {
-  margin-top: 0.6rem;
-  font-size: 0.85rem;
+  margin-top: var(--space-3);
+  font-size: var(--step--1);
+}
+
+@media (max-width: 640px) {
+  .graph__canvas {
+    overflow-x: auto;
+  }
+
+  .graph__canvas svg {
+    min-width: 560px;
+  }
 }
 
 /* Búsqueda */
 .search__label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2);
   font-weight: 600;
 }
 
 .search__input {
   width: 100%;
-  min-height: 52px;
-  padding: 0.75rem 1.1rem;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
+  min-height: 56px;
+  padding: 0 var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
   background: var(--surface);
   color: var(--text);
   font: inherit;
-  font-size: 1.05rem;
+  font-size: var(--step-2);
+}
+
+.search__input::placeholder {
+  color: var(--muted);
 }
 
 .search__input:focus {
   border-color: var(--accent);
   outline: none;
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 22%, transparent);
 }
 
 .search__status {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
+  margin-top: var(--space-2);
+  font-size: var(--step--1);
 }
 
 .search__results {
   display: grid;
-  gap: 0.6rem;
-  margin: 1rem 0 0;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
   padding: 0;
   list-style: none;
 }
 
 .search__results a {
   display: grid;
-  gap: 0.2rem;
-  padding: 0.9rem 1.1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-card);
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
@@ -456,12 +663,12 @@ select:hover {
 }
 
 .search__results span {
-  font-size: 0.88rem;
   color: var(--muted);
+  font-size: var(--step-0);
 }
 
 .search__results mark {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
   color: var(--text);
   border-radius: 2px;
 }

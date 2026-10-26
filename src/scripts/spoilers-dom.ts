@@ -38,14 +38,45 @@ function update(el: HTMLElement) {
  */
 function process(root: ParentNode) {
   root.querySelectorAll<HTMLElement>('[data-spoiler]').forEach(update);
+  updateFogGroups();
+}
+
+/** Spoilers de primer nivel de un grupo (sin contar los anidados dentro de cada uno). */
+function groupItems(group: HTMLElement): HTMLElement[] {
+  return [...group.querySelectorAll<HTMLElement>(':scope > ul > [data-spoiler], :scope > ol > [data-spoiler]')];
+}
+
+/** Cada grupo de niebla resume cuántos elementos siguen ocultos dentro de él. */
+function updateFogGroups() {
+  document.querySelectorAll<HTMLElement>('[data-fog-group]').forEach((group) => {
+    const count = groupItems(group).filter((el) => el.dataset.revealed !== 'true').length;
+    const summary = group.querySelector<HTMLElement>(':scope > [data-fog-summary]');
+    const label = group.querySelector<HTMLElement>('[data-fog-count]');
+    if (label) label.textContent = `${count} ${count === 1 ? group.dataset.singular : group.dataset.plural}`;
+    if (summary) summary.hidden = count === 0;
+  });
 }
 
 document.addEventListener('click', (e) => {
-  const button = (e.target as Element).closest<HTMLElement>('[data-spoiler-reveal]');
+  const target = e.target as Element;
+  const groupButton = target.closest<HTMLElement>('[data-fog-reveal]');
+  const group = groupButton?.closest<HTMLElement>('[data-fog-group]');
+  if (group) {
+    const items = groupItems(group).filter((el) => el.dataset.revealed !== 'true');
+    for (const el of items) {
+      el.dataset.forced = 'true';
+      update(el);
+    }
+    updateFogGroups();
+    items[0]?.querySelector<HTMLElement>(':scope > [data-spoiler-body]')?.focus();
+    return;
+  }
+  const button = target.closest<HTMLElement>('[data-spoiler-reveal]');
   const el = button?.closest<HTMLElement>('[data-spoiler]');
   if (!el) return;
   el.dataset.forced = 'true';
   update(el);
+  updateFogGroups();
   el.querySelector<HTMLElement>(':scope > [data-spoiler-body]')?.focus();
 });
 

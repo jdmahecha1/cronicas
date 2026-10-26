@@ -1,17 +1,17 @@
 ---
+import { CloudIcon, EyeIcon } from '@phosphor-icons/react/dist/ssr';
 import type { Marker, Saga } from '../lib/schema';
 import { describeMarker } from '../lib/spoilers';
-import LockIcon from './LockIcon.astro';
 
 interface Props {
   saga: Saga;
   at: Marker;
-  /** Qué se oculta, para el velo: "Dato oculto", "Personaje oculto"… */
+  /** Qué se oculta, para el velo: "Un dato", "Una relación"… */
   label?: string;
   as?: 'div' | 'li';
 }
 
-const { saga, at, label = 'Spoiler', as: Tag = 'div' } = Astro.props;
+const { saga, at, label = 'Un spoiler', as: Tag = 'div' } = Astro.props;
 const when = describeMarker(saga, at);
 ---
 
@@ -24,10 +24,13 @@ const when = describeMarker(saga, at);
   data-revealed="false"
   data-pagefind-ignore="all"
 >
-  <div class="spoiler__veil">
-    <LockIcon />
-    <span><strong>{label}</strong> · se desbloquea al terminar {when}</span>
-    <button type="button" class="btn btn--sm btn--ghost" data-spoiler-reveal>Mostrar igual</button>
+  <div class="spoiler__veil fog-card">
+    <CloudIcon className="icon" aria-hidden="true" weight="duotone" />
+    <span><strong>{label}</strong> en la niebla. Se despeja al terminar {when}.</span>
+    <button type="button" class="btn btn--sm" data-spoiler-reveal>
+      <EyeIcon className="icon" aria-hidden="true" weight="bold" />
+      Ver spoiler
+    </button>
   </div>
   <template><slot /></template>
   <div data-spoiler-body tabindex="-1" hidden></div>

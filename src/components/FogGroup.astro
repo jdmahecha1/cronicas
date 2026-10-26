@@ -1,0 +1,29 @@
+---
+import { CloudIcon, EyeIcon } from '@phosphor-icons/react/dist/ssr';
+
+interface Props {
+  /** "personaje por conocer" / "personajes por conocer". */
+  singular: string;
+  plural: string;
+  /** Cuántos <Spoiler> hay dentro: el texto inicial antes de que corra el script. */
+  count: number;
+  /** Clase de la lista que envuelve los elementos. */
+  listClass?: string;
+  ordered?: boolean;
+}
+
+const { singular, plural, count, listClass, ordered = false } = Astro.props;
+const List = ordered ? 'ol' : 'ul';
+---
+
+<div class="fog-group" data-fog-group data-singular={singular} data-plural={plural} data-pagefind-ignore="all">
+  <List class={listClass}><slot /></List>
+  <div class="fog-card fog-group__summary" data-fog-summary hidden={count === 0}>
+    <CloudIcon className="icon" aria-hidden="true" weight="duotone" />
+    <p><strong data-fog-count>{count} {count === 1 ? singular : plural}</strong> en la niebla</p>
+    <button type="button" class="btn btn--sm" data-fog-reveal>
+      <EyeIcon className="icon" aria-hidden="true" weight="bold" />
+      Ver spoilers
+    </button>
+  </div>
+</div>

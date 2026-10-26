@@ -5,30 +5,45 @@ async function hydrated(page: Page) {
   await page.waitForFunction(() => document.querySelectorAll('astro-island[ssr]').length === 0);
 }
 
+/** El camino de puntos de un juego en la partida guardada. */
+const savePath = (page: Page, game: string) => page.getByRole('radiogroup', { name: game, exact: true });
+
 test.describe('escudo de spoilers', () => {
-  test('sin progreso, la historia de Red Dead queda oculta', async ({ page }) => {
+  test('sin partida, la historia de Red Dead queda en la niebla', async ({ page }) => {
     await page.goto('sagas/red-dead-redemption/');
     await hydrated(page);
     await expect(page.getByRole('heading', { level: 1, name: 'Red Dead Redemption' })).toBeVisible();
-    await expect(page.locator('.timeline__card--veiled').first()).toBeVisible();
-    await expect(page.getByText('Ocultando', { exact: false })).toBeVisible();
+    await expect(page.getByRole('heading', { name: '¿Hasta dónde jugaste?' })).toBeVisible();
+    // Los eventos ocultos se agrupan en un solo banco de niebla, no en una tarjeta cada uno.
+    await expect(page.locator('.timeline__fog')).toHaveCount(1);
+    await expect(page.locator('.timeline__fog')).toContainText('19 eventos en la niebla');
     // El texto de un evento oculto no está en el DOM, ni siquiera escondido con CSS.
     await expect(page.locator('body')).not.toContainText('Hosea es ejecutado');
   });
 
-  test('al marcar progreso se revela lo vivido y nada más', async ({ page }) => {
+  test('al guardar la partida se revela lo vivido y nada más', async ({ page }) => {
     await page.goto('sagas/red-dead-redemption/');
     await hydrated(page);
-    await page.getByRole('combobox', { name: 'Red Dead Redemption 2', exact: true }).selectOption('3');
+    await savePath(page, 'Red Dead Redemption 2').getByRole('radio').nth(3).check();
     await expect(page.getByRole('heading', { name: 'El fallido golpe del ferry de Blackwater' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Tu partida' })).toBeVisible();
     // El banco de Saint Denis ocurre en el capítulo 4: debe seguir oculto.
     await expect(page.locator('body')).not.toContainText('Hosea es ejecutado');
 
-    // El progreso persiste al recargar.
+    // La partida persiste al recargar.
     await page.reload();
     await hydrated(page);
-    await expect(page.getByRole('combobox', { name: 'Red Dead Redemption 2', exact: true })).toHaveValue('3');
+    await expect(savePath(page, 'Red Dead Redemption 2').getByRole('radio').nth(3)).toBeChecked();
     await expect(page.getByRole('heading', { name: 'El fallido golpe del ferry de Blackwater' })).toBeVisible();
+  });
+
+  test('los nombres de capítulos futuros no se muestran', async ({ page }) => {
+    await page.goto('sagas/red-dead-redemption/');
+    await hydrated(page);
+    const radios = savePath(page, 'Red Dead Redemption 2').getByRole('radio');
+    await expect(radios.nth(5)).toHaveAccessibleName('Terminé: etapa 5 de 8');
+    await radios.nth(4).check();
+    await expect(radios.nth(4)).toHaveAccessibleName('Terminé: Capítulo 4: Saint Denis');
   });
 
   test('apagar el escudo muestra toda la historia', async ({ page }) => {
@@ -36,25 +51,44 @@ test.describe('escudo de spoilers', () => {
     await hydrated(page);
     await page.getByRole('button', { name: /Escudo activo/ }).click();
     await expect(page.getByRole('button', { name: /Escudo apagado/ })).toHaveAttribute('aria-pressed', 'false');
-    await expect(page.locator('.timeline__card--veiled')).toHaveCount(0);
+    await expect(page.locator('.timeline__fog')).toHaveCount(0);
     await expect(page.locator('body')).toContainText('Hosea es ejecutado');
   });
 
-  test('"Mostrar igual" revela un solo evento', async ({ page }) => {
+  test('"Ver spoilers" despeja un banco de niebla', async ({ page }) => {
     await page.goto('sagas/red-dead-redemption/');
     await hydrated(page);
-    const veiled = page.locator('.timeline__card--veiled');
-    const before = await veiled.count();
-    await veiled.first().getByRole('button', { name: 'Mostrar igual' }).click();
-    await expect(veiled).toHaveCount(before - 1);
+    await page.locator('.timeline__fog').getByRole('button', { name: 'Ver spoilers' }).click();
+    await expect(page.locator('.timeline__fog')).toHaveCount(0);
+    await expect(page.locator('body')).toContainText('Hosea es ejecutado');
+  });
+
+  test('los personajes por conocer se agrupan y se pueden revelar', async ({ page }) => {
+    await page.goto('sagas/red-dead-redemption/');
+    await hydrated(page);
+    const group = page.locator('#personajes [data-fog-group]');
+    await expect(group.locator('[data-fog-count]')).toHaveText('2 personajes por conocer');
+    await expect(page.locator('#personajes')).not.toContainText('Edgar Ross');
+    await group.getByRole('button', { name: 'Ver spoilers' }).click();
+    await expect(page.locator('#personajes')).toContainText('Edgar Ross');
+    await expect(group.locator('[data-fog-summary]')).toBeHidden();
   });
 
   test('la página de un personaje oculto no revela su nombre', async ({ page }) => {
     await page.goto('sagas/red-dead-redemption/personajes/edgar-ross/');
     await expect(page).toHaveTitle(/Personaje oculto/);
     await expect(page.getByRole('heading', { level: 1 })).toHaveCount(0);
-    await page.getByRole('button', { name: 'Mostrar igual' }).first().click();
+    await page.getByRole('button', { name: 'Ver spoiler', exact: true }).first().click();
     await expect(page.getByRole('heading', { level: 1, name: 'Edgar Ross' })).toBeVisible();
+  });
+
+  test('el mapa de relaciones también se puede leer como lista', async ({ page }) => {
+    await page.goto('sagas/red-dead-redemption/');
+    await hydrated(page);
+    await page.getByRole('button', { name: /Escudo activo/ }).click();
+    await page.getByRole('button', { name: 'Ver como lista' }).click();
+    await expect(page.locator('.graph__list li').first()).toBeVisible();
+    await expect(page.locator('.graph__list')).toContainText('Arthur Morgan');
   });
 });
 

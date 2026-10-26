@@ -80,6 +80,25 @@ export function sortEvents(saga: Saga, mode: TimelineMode): LoreEvent[] {
   return [...saga.events].sort(mode === 'universo' ? byUniverse : byRelease);
 }
 
+export type FogRun<T> = { kind: 'visible'; item: T } | { kind: 'fog'; items: T[] };
+
+/**
+ * Agrupa los elementos ocultos consecutivos en un solo "banco de niebla", para no
+ * mostrar una tarjeta de candado por cada evento que el jugador aún no vio.
+ */
+export function groupFog<T>(items: T[], visible: (item: T) => boolean): FogRun<T>[] {
+  const runs: FogRun<T>[] = [];
+  for (const item of items) {
+    if (visible(item)) runs.push({ kind: 'visible', item });
+    else {
+      const last = runs[runs.length - 1];
+      if (last?.kind === 'fog') last.items.push(item);
+      else runs.push({ kind: 'fog', items: [item] });
+    }
+  }
+  return runs;
+}
+
 export interface HiddenCount {
   events: number;
   characters: number;

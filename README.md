@@ -2,7 +2,7 @@
 
 **Explora la historia de tus sagas de videojuegos sin spoilers de lo que aún no has jugado.**
 
-Línea de tiempo, personajes y mapa de relaciones de seis sagas (The Legend of Zelda, Red Dead Redemption, The Witcher, Mass Effect, Metal Gear Solid y God of War). Le dices a Crónicas hasta qué capítulo llegaste en cada juego y el **escudo de spoilers** tapa todo lo que viene después.
+Línea de tiempo, personajes y mapa de relaciones de seis sagas (The Legend of Zelda, Red Dead Redemption, The Witcher, Mass Effect, Metal Gear Solid y God of War). Guardas tu partida (el último capítulo que terminaste en cada juego) y todo lo que viene después se queda **en la niebla**.
 
 **Demo:** https://jdmahecha1.github.io/cronicas/
 
@@ -14,15 +14,17 @@ Línea de tiempo, personajes y mapa de relaciones de seis sagas (The Legend of Z
 
 | | |
 |---|---|
-| **Escudo de spoilers por capítulo** | Cada evento, personaje, dato y relación lleva la marca del juego y la etapa en la que se descubre. Se muestra solo si ya la terminaste. |
+| **Partida guardada** | Por cada juego, un camino de puntos (uno por capítulo) que vas encendiendo. Por dentro son radios nativos: funciona con teclado y lector de pantalla. |
+| **Niebla de guerra** | Cada evento, personaje, dato y relación lleva la marca del juego y la etapa en la que se descubre. Lo que aún no viviste se agrupa en bancos de niebla que puedes despejar. |
 | **Línea de tiempo doble** | Cronología interna del universo (la precuela primero) u orden de lanzamiento, con filtros por juego y "solo momentos clave". |
-| **Mapa de relaciones** | Grafo de fuerzas con aliados, enemigos, familia, romances, mentores y rivales. Los personajes que aún no conoces aparecen como `???`. |
+| **Mapa de relaciones** | Grafo de fuerzas con vínculos, conflictos y afectos (colores validados para daltonismo, con el trazo como segunda pista) y una vista alternativa en lista. |
+| **Identidad por saga** | Cada saga tiene su paleta (con contraste WCAG AA verificado en pruebas) y un paisaje generativo propio, dibujado con código y sin arte de los juegos. |
 | **Búsqueda sin spoilers** | Índice estático con Pagefind que solo contiene texto público. |
-| **Sin cuentas ni servidor** | El progreso vive en `localStorage`. El sitio es HTML estático en GitHub Pages: cuesta $0. |
+| **Sin cuentas ni servidor** | La partida vive en `localStorage`. El sitio es HTML estático en GitHub Pages: cuesta $0. |
 
-![Escudo en acción: progreso por juego y línea de tiempo](docs/escudo.png)
+![Partida guardada y línea de tiempo con niebla](docs/escudo.png)
 
-![Mapa de relaciones con personajes ocultos](docs/relaciones.png)
+![Mapa de relaciones de una saga](docs/relaciones.png)
 
 ## Cómo funciona el escudo
 
@@ -62,7 +64,8 @@ Sin servidor, base de datos ni claves: la superficie de ataque es mínima y el h
 ## Pila técnica
 
 - **[Astro 7](https://astro.build)**: generación estática, una página por saga y por personaje (79 páginas).
-- **React 19** en islas: progreso, línea de tiempo, grafo, búsqueda e interruptor del escudo, sincronizados con `useSyncExternalStore` (también entre pestañas).
+- **React 19** en islas: partida guardada, línea de tiempo, grafo, búsqueda e interruptor del escudo, sincronizados con `useSyncExternalStore` (también entre pestañas).
+- **Diseño:** Bricolage Grotesque e Inter Tight (autoalojadas), iconos de Phosphor, escalas cerradas de 7 tamaños de letra y 8 espaciados, y movimiento que respeta `prefers-reduced-motion`.
 - **Zod 4**: esquema del contenido + verificación de integridad (referencias rotas, etapas inexistentes, ids duplicados). Si un JSON está mal, la compilación falla con el motivo.
 - **d3-force**: disposición del grafo, calculada en el servidor.
 - **Pagefind**: búsqueda estática.
@@ -79,7 +82,9 @@ src/
   lib/spoilers.ts           reglas del escudo (funciones puras)
   lib/progress-store.ts     estado en localStorage + suscripción
   lib/graph-layout.ts       disposición determinista del grafo
-  components/               islas React y componentes Astro (Spoiler, SagaCard…)
+  lib/themes.ts             paleta de cada saga (contraste probado en tests/themes.test.ts)
+  lib/landscape.ts          paisajes generativos y deterministas
+  components/               islas React y componentes Astro (SavePanel, Timeline, FogGroup…)
   scripts/spoilers-dom.ts   revela los <template> de las páginas estáticas
   pages/                    portada, saga, personaje, búsqueda, cómo funciona
 tests/                      Vitest: motor, contenido, almacenamiento y grafo

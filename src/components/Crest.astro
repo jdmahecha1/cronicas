@@ -1,0 +1,52 @@
+---
+interface Props {
+  name?: string;
+  size?: 'sm' | 'lg';
+}
+
+/** Emblema tipográfico de un personaje: sus iniciales dentro de un anillo del color de la saga. */
+const { name, size = 'sm' } = Astro.props;
+const initials = name
+  ? (() => {
+      const parts = name.replace(/\(.*?\)/g, '').trim().split(/\s+/);
+      return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
+    })()
+  : '?';
+---
+
+<span class:list={['crest', `crest--${size}`, { 'is-fog': !name }]} aria-hidden="true">{initials}</span>
+
+<style>
+  .crest {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background:
+      radial-gradient(circle at 30% 25%, color-mix(in oklab, var(--accent) 30%, transparent), transparent 65%),
+      var(--raised);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .crest--lg {
+    width: 112px;
+    height: 112px;
+    border-width: 3px;
+    font-size: var(--step-4);
+    box-shadow: 0 0 0 6px var(--bg);
+  }
+
+  .crest.is-fog {
+    border-style: dashed;
+    border-color: var(--line);
+    color: var(--muted);
+    background: var(--surface);
+  }
+</style>

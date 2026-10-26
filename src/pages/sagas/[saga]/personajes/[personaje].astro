@@ -1,11 +1,16 @@
 ---
+import { ArrowLeftIcon } from '@phosphor-icons/react/dist/ssr';
+import Crest from '../../../../components/Crest.astro';
+import FogGroup from '../../../../components/FogGroup.astro';
+import Landscape from '../../../../components/Landscape.astro';
+import { KIND_STYLE } from '../../../../components/RelationGraph';
 import Spoiler from '../../../../components/Spoiler.astro';
 import Base from '../../../../layouts/Base.astro';
 import { getSagas } from '../../../../lib/data';
 import type { Character, Saga } from '../../../../lib/schema';
 import { charactersById, sortEvents } from '../../../../lib/spoilers';
+import { themeFor } from '../../../../lib/themes';
 import { characterUrl, sagaUrl, url } from '../../../../lib/url';
-import { KIND_STYLE } from '../../../../components/RelationGraph';
 
 export function getStaticPaths() {
   return getSagas().flatMap((saga) =>
@@ -22,6 +27,7 @@ interface Props {
 }
 
 const { saga, character } = Astro.props;
+const theme = themeFor(saga.id);
 const people = charactersById(saga);
 const hidden = !!character.appears;
 const relations = saga.relations.filter((r) => r.from === character.id || r.to === character.id);
@@ -31,11 +37,15 @@ const gameTitle = new Map(saga.games.map((g) => [g.id, g.title]));
 // Si su existencia ya es un spoiler, ni el título de la pestaña ni el buscador dicen quién es.
 const title = hidden ? `Personaje oculto · ${saga.title}` : `${character.name} · ${saga.title}`;
 const description = hidden
-  ? `Un personaje de ${saga.title} que se desbloquea según tu progreso.`
+  ? `Un personaje de ${saga.title} que se desbloquea según tu partida.`
   : `${character.name}, ${character.role.toLowerCase()} en ${saga.title}. ${character.intro}`;
 ---
 
-<Base title={title} description={description} accent={saga.accent} indexable={!hidden}>
+<Base title={title} description={description} theme={theme} indexable={!hidden}>
+  <div class="banner">
+    <Landscape seed={`${saga.id}-${character.id}`} theme={theme} uid="banner" class="banner__art" />
+  </div>
+
   <article class="wrap person-page">
     <nav aria-label="Ruta" class="crumbs">
       <a href={url()}>Sagas</a> / <a href={sagaUrl(saga.id)}>{saga.title}</a> / <span>Personaje</span>
@@ -43,57 +53,68 @@ const description = hidden
 
     {
       hidden ? (
-        <Spoiler saga={saga} at={character.appears!} label="Personaje oculto">
-          <header class="person-page__head">
-            <p class="eyebrow">{character.role}</p>
-            <h1>{character.name}</h1>
-            <p class="person-page__intro">{character.intro}</p>
+        <Spoiler saga={saga} at={character.appears!} label="Este personaje">
+          <header class="person-head">
+            <Crest name={character.name} size="lg" />
+            <div>
+              <p class="person-head__role">{character.role}</p>
+              <h1>{character.name}</h1>
+            </div>
           </header>
+          <p class="person-intro">{character.intro}</p>
         </Spoiler>
       ) : (
-        <header class="person-page__head">
-          <p class="eyebrow">{character.role}</p>
-          <h1>{character.name}</h1>
-          <p class="person-page__intro">{character.intro}</p>
-        </header>
+        <>
+          <header class="person-head">
+            <Crest name={character.name} size="lg" />
+            <div>
+              <p class="person-head__role">{character.role}</p>
+              <h1>{character.name}</h1>
+            </div>
+          </header>
+          <p class="person-intro">{character.intro}</p>
+        </>
       )
     }
 
     {
       character.reveals.length > 0 && (
-        <section class="person-page__block" aria-labelledby="datos">
+        <section class="person-block" aria-labelledby="datos">
           <h2 id="datos">Lo que descubres después</h2>
-          <ul class="reveals">
+          <FogGroup singular="dato por descubrir" plural="datos por descubrir" count={character.reveals.length} listClass="reveals">
             {character.reveals.map((r) => (
-              <Spoiler as="li" saga={saga} at={r.at} label="Dato oculto">
+              <Spoiler as="li" saga={saga} at={r.at} label="Un dato">
                 <p class="reveal">{r.text}</p>
               </Spoiler>
             ))}
-          </ul>
+          </FogGroup>
         </section>
       )
     }
 
     {
       relations.length > 0 && (
-        <section class="person-page__block" aria-labelledby="relaciones">
+        <section class="person-block" aria-labelledby="relaciones">
           <h2 id="relaciones">Relaciones</h2>
-          <ul class="relations">
+          <FogGroup singular="relación por descubrir" plural="relaciones por descubrir" count={relations.length} listClass="relations">
             {relations.map((r) => {
               const other = people.get(r.from === character.id ? r.to : r.from)!;
               const style = KIND_STYLE[r.kind];
               // Mostrar la relación revela al otro personaje: se espera a lo más tardío de los dos.
               const content = (
-                <div class="relation card" style={`--kind: ${style.color}`}>
-                  <span class="relation__kind">{style.label}</span>
-                  <a href={characterUrl(saga.id, other.id)}>{other.name}</a>
-                  <p>{r.detail}</p>
-                </div>
+                <a class="relation" href={characterUrl(saga.id, other.id)} style={`--kind: ${style.color}`}>
+                  <Crest name={other.name} />
+                  <span>
+                    <span class="relation__kind">{style.label}</span>
+                    <span class="relation__name">{other.name}</span>
+                    <span class="relation__detail">{r.detail}</span>
+                  </span>
+                </a>
               );
               return (
-                <Spoiler as="li" saga={saga} at={r.at} label="Relación oculta">
+                <Spoiler as="li" saga={saga} at={r.at} label="Una relación">
                   {other.appears ? (
-                    <Spoiler saga={saga} at={other.appears} label="Personaje oculto">
+                    <Spoiler saga={saga} at={other.appears} label="Alguien que aún no conoces">
                       {content}
                     </Spoiler>
                   ) : (
@@ -102,130 +123,181 @@ const description = hidden
                 </Spoiler>
               );
             })}
-          </ul>
+          </FogGroup>
         </section>
       )
     }
 
     {
       events.length > 0 && (
-        <section class="person-page__block" aria-labelledby="momentos">
+        <section class="person-block" aria-labelledby="momentos">
           <h2 id="momentos">Momentos en la historia</h2>
-          <ol class="moments">
+          <FogGroup singular="momento por descubrir" plural="momentos por descubrir" count={events.length} listClass="moments" ordered>
             {events.map((e) => (
-              <Spoiler as="li" saga={saga} at={e.at} label="Evento oculto">
+              <Spoiler as="li" saga={saga} at={e.at} label="Un momento">
                 <div class="moment">
                   <p class="moment__date">
-                    {e.date} · {gameTitle.get(e.at.game)}
+                    {e.date}, {gameTitle.get(e.at.game)}
                   </p>
                   <h3>{e.title}</h3>
                   <p>{e.text}</p>
                 </div>
               </Spoiler>
             ))}
-          </ol>
+          </FogGroup>
         </section>
       )
     }
 
-    <p><a class="btn" href={sagaUrl(saga.id)}>← Volver a {saga.title}</a></p>
+    <p class="back">
+      <a class="btn" href={sagaUrl(saga.id)}>
+        <ArrowLeftIcon className="icon" aria-hidden="true" weight="bold" />
+        Volver a {saga.title}
+      </a>
+    </p>
   </article>
 </Base>
 
 <style>
+  .banner {
+    position: relative;
+    height: clamp(180px, 30dvh, 300px);
+    overflow: hidden;
+  }
+
+  :global(.banner__art) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .person-page {
-    max-width: 860px;
-    padding-top: clamp(2rem, 6vw, 4rem);
+    max-width: 880px;
+    margin-top: calc(var(--space-8) * -0.9);
+    position: relative;
   }
 
   .crumbs {
-    margin-bottom: 1.5rem;
-    font-size: 0.88rem;
-    color: var(--faint);
+    margin-bottom: var(--space-5);
+    color: var(--muted);
+    font-size: var(--step--1);
   }
 
   .crumbs a {
-    color: var(--muted);
+    color: var(--text);
   }
 
-  .person-page__intro {
-    font-size: 1.15rem;
-    color: var(--muted);
-    max-width: 62ch;
+  .person-head {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-5);
+    margin-bottom: var(--space-4);
   }
 
-  .person-page__block {
-    margin-top: 2.75rem;
-  }
-
-  .reveals,
-  .relations,
-  .moments {
-    display: grid;
-    gap: 0.75rem;
+  .person-head h1 {
     margin: 0;
+  }
+
+  .person-head__role {
+    margin: 0 0 var(--space-1);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .person-intro {
+    max-width: 60ch;
+    color: var(--muted);
+    font-size: var(--step-2);
+    line-height: 1.55;
+  }
+
+  .person-block {
+    margin-top: var(--space-7);
+  }
+
+  :global(.reveals),
+  :global(.relations),
+  :global(.moments) {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-3);
     padding: 0;
     list-style: none;
   }
 
-  .relations {
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  :global(.relations) {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   }
 
   .reveal {
     margin: 0;
-    padding: 0.9rem 1.1rem;
+    padding: var(--space-4) var(--space-5);
     border-left: 3px solid var(--accent);
-    border-radius: var(--radius-sm);
+    border-radius: 0;
     background: var(--surface);
   }
 
   .relation {
+    display: flex;
+    gap: var(--space-4);
     height: 100%;
-    padding: 1rem 1.1rem;
+    padding: var(--space-4);
+    border: 1px solid var(--line-soft);
     border-top: 3px solid var(--kind);
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .relation:hover {
+    border-color: var(--accent);
+    border-top-color: var(--kind);
+  }
+
+  .relation > span {
+    display: grid;
+    gap: var(--space-1);
   }
 
   .relation__kind {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--kind);
-  }
-
-  .relation a {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .relation p {
-    margin: 0.35rem 0 0;
-    font-size: 0.88rem;
     color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .relation__name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 650;
+  }
+
+  .relation__detail {
+    color: var(--muted);
+    font-size: var(--step--1);
   }
 
   .moment {
-    padding: 1rem 1.1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-card);
     background: var(--surface);
   }
 
   .moment__date {
-    margin: 0 0 0.2rem;
-    font-size: 0.8rem;
-    color: var(--accent-text);
-  }
-
-  .moment h3 {
-    margin-bottom: 0.3rem;
+    margin: 0 0 var(--space-1);
+    color: var(--accent);
+    font-size: var(--step--1);
+    font-weight: 600;
   }
 
   .moment p:last-child {
     margin: 0;
+    color: var(--muted);
+  }
+
+  .back {
+    margin-top: var(--space-7);
   }
 </style>

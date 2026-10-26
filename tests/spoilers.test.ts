@@ -153,3 +153,26 @@ describe('describeMarker', () => {
     expect(describeMarker(saga, { game: 'precuela', chapter: 2 }, shield({}, false))).toBe('La precuela · Final');
   });
 });
+
+describe('groupFog', () => {
+  it('agrupa los ocultos consecutivos y respeta el orden', async () => {
+    const { groupFog } = await import('../src/lib/spoilers');
+    const runs = groupFog([1, 2, 3, 4, 5, 6], (n) => n === 1 || n === 4);
+    expect(runs).toEqual([
+      { kind: 'visible', item: 1 },
+      { kind: 'fog', items: [2, 3] },
+      { kind: 'visible', item: 4 },
+      { kind: 'fog', items: [5, 6] },
+    ]);
+  });
+
+  it('nunca pierde ni duplica elementos (propiedad)', async () => {
+    const { groupFog } = await import('../src/lib/spoilers');
+    fc.assert(
+      fc.property(fc.array(fc.tuple(fc.integer(), fc.boolean())), (items) => {
+        const flat = groupFog(items, ([, v]) => v).flatMap((r) => (r.kind === 'fog' ? r.items : [r.item]));
+        return flat.length === items.length && flat.every((x, i) => x === items[i]);
+      }),
+    );
+  });
+});

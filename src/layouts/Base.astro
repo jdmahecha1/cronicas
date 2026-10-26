@@ -1,26 +1,23 @@
 ---
+import { CompassIcon, MagnifyingGlassIcon } from '@phosphor-icons/react/dist/ssr';
 import '../styles/global.css';
 import ShieldToggle from '../components/ShieldToggle';
+import { DEFAULT_THEME, themeStyle, type Theme } from '../lib/themes';
 import { url } from '../lib/url';
 
 interface Props {
   title: string;
   description: string;
-  /** Color de la saga; tiñe botones, enlaces y el brillo del fondo. */
-  accent?: string;
+  /** Identidad de la saga: colores de toda la página. */
+  theme?: Theme;
   /** false en páginas cuyo contenido completo sería un spoiler: Pagefind no las indexa. */
   indexable?: boolean;
 }
 
-const { title, description, accent, indexable = true } = Astro.props;
+const { title, description, theme = DEFAULT_THEME, indexable = true } = Astro.props;
 const fullTitle = title === 'Crónicas' ? title : `${title} · Crónicas`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
-const nav = [
-  { href: url(), label: 'Sagas' },
-  { href: url('buscar/'), label: 'Buscar' },
-  { href: url('acerca/'), label: 'Cómo funciona' },
-];
 ---
 
 <!doctype html>
@@ -33,7 +30,7 @@ const nav = [
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="sitemap" href={url('sitemap-index.xml')} />
-    <meta name="theme-color" content="#0c0e13" />
+    <meta name="theme-color" content={theme.bg} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CO" />
@@ -44,7 +41,7 @@ const nav = [
     <meta name="twitter:card" content="summary_large_image" />
     {!indexable && <meta name="robots" content="noindex" />}
   </head>
-  <body style={accent ? `--accent: ${accent}` : undefined}>
+  <body style={themeStyle(theme)}>
     <a class="skip" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
       <div class="wrap site-header__inner">
@@ -56,18 +53,15 @@ const nav = [
           </svg>
           <span>Crónicas</span>
         </a>
-        <nav aria-label="Principal">
-          <ul>
-            {
-              nav.map((item) => (
-                <li>
-                  <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>
-                    {item.label}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+        <nav aria-label="Principal" class="site-nav">
+          <a href={url()} aria-current={path === url() ? 'page' : undefined}>
+            <CompassIcon className="icon" aria-hidden="true" weight="duotone" />
+            <span>Sagas</span>
+          </a>
+          <a href={url('buscar/')} aria-current={path === url('buscar/') ? 'page' : undefined}>
+            <MagnifyingGlassIcon className="icon" aria-hidden="true" weight="bold" />
+            <span>Buscar</span>
+          </a>
         </nav>
         <ShieldToggle client:load />
       </div>
@@ -80,13 +74,14 @@ const nav = [
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
         <p>
-          <strong>Crónicas</strong> es un proyecto de fans sin ánimo de lucro, sin relación con los estudios
-          ni editoras de los juegos. Los nombres pertenecen a sus dueños; los resúmenes son propios.
+          Proyecto de fans sin ánimo de lucro, sin relación con los estudios ni editoras de los juegos.
+          Los nombres pertenecen a sus dueños; los resúmenes y las ilustraciones son propios.
         </p>
-        <p>
-          Hecho por <a href="https://github.com/jdmahecha1">toriikarii</a> ·
+        <nav aria-label="Pie de página" class="site-footer__links">
+          <a href={url('acerca/')}>Cómo funciona el escudo</a>
           <a href="https://github.com/jdmahecha1/cronicas">Código en GitHub</a>
-        </p>
+          <span>Hecho por <a href="https://github.com/jdmahecha1">toriikarii</a></span>
+        </nav>
       </div>
     </footer>
 
@@ -102,8 +97,8 @@ const nav = [
     left: 16px;
     top: -60px;
     z-index: 100;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-4);
+    border-radius: 999px;
     background: var(--accent);
     color: var(--accent-ink);
     font-weight: 600;
@@ -113,103 +108,110 @@ const nav = [
     top: 12px;
   }
 
+  /* z-index: 50 cabecera, 40 barra de sección, 30 barra inferior móvil. */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    backdrop-filter: blur(14px);
-    background: color-mix(in srgb, var(--bg) 78%, transparent);
-    border-bottom: 1px solid var(--border);
+    background: color-mix(in oklab, var(--bg) 82%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    .site-header {
+      background: var(--bg);
+      backdrop-filter: none;
+    }
   }
 
   .site-header__inner {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    min-height: 64px;
+    gap: var(--space-3);
+    height: var(--header-h);
   }
 
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
+    gap: var(--space-2);
+    margin-right: auto;
     color: var(--text);
     font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 650;
+    font-size: var(--step-2);
+    font-weight: 700;
+    letter-spacing: -0.02em;
     text-decoration: none;
   }
 
   .brand__mark {
     width: 28px;
     height: 28px;
-    color: var(--accent-text);
+    color: var(--accent);
   }
 
-  nav {
-    margin-left: auto;
-  }
-
-  nav ul {
+  .site-nav {
     display: flex;
-    gap: 0.25rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    gap: var(--space-1);
   }
 
-  nav a {
-    display: block;
-    padding: 0.4rem 0.7rem;
+  .site-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 44px;
+    padding: 0 var(--space-3);
     border-radius: 999px;
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: var(--step-0);
+    font-weight: 500;
     text-decoration: none;
   }
 
-  nav a:hover,
-  nav a[aria-current='page'] {
+  .site-nav a:hover,
+  .site-nav a[aria-current='page'] {
     color: var(--text);
-    background: var(--surface-2);
+    background: var(--surface);
   }
 
-  @media (max-width: 640px) {
-    .site-header__inner {
-      flex-wrap: wrap;
-      gap: 0.25rem 0.75rem;
-      padding-block: 0.5rem;
+  @media (max-width: 560px) {
+    .brand span {
+      display: none;
     }
 
-    nav {
-      order: 3;
-      width: 100%;
-      margin-left: 0;
-    }
-
-    nav ul {
-      justify-content: space-between;
+    .site-nav a {
+      padding: 0 var(--space-2);
     }
   }
 
   .site-footer {
-    margin-top: 4rem;
-    border-top: 1px solid var(--border);
-    color: var(--faint);
-    font-size: 0.88rem;
+    margin-top: var(--space-8);
+    border-top: 1px solid var(--line-soft);
+    color: var(--muted);
+    font-size: var(--step--1);
   }
 
   .site-footer__inner {
     display: grid;
-    gap: 0.25rem;
-    padding-block: 2rem;
+    gap: var(--space-3);
+    padding-block: var(--space-6) var(--space-7);
   }
 
   .site-footer p {
     margin: 0;
-    max-width: 75ch;
+    max-width: 70ch;
   }
 
-  .site-footer strong {
-    color: var(--muted);
+  .site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+
+  @media (max-width: 979px) {
+    .site-footer {
+      padding-bottom: 72px;
+    }
   }
 </style>

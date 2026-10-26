@@ -1,0 +1,82 @@
+---
+import { buildScene, H, W } from '../lib/landscape';
+import type { Theme } from '../lib/themes';
+
+interface Props {
+  /** Semilla: el mismo texto produce siempre el mismo paisaje. */
+  seed: string;
+  theme: Theme;
+  /** Identificador único en la página (los degradados SVG necesitan ids distintos). */
+  uid: string;
+  class?: string;
+  /** Niebla animada en la parte baja (se apaga con movimiento reducido). */
+  fog?: boolean;
+}
+
+const { seed, theme, uid, class: className, fog = true } = Astro.props;
+const scene = buildScene(seed, theme);
+const sky = `sky-${uid}`;
+const glow = `glow-${uid}`;
+const mist = `mist-${uid}`;
+const lines = `lines-${uid}`;
+---
+
+<svg
+  class:list={['landscape', className]}
+  viewBox={`0 0 ${W} ${H}`}
+  preserveAspectRatio="xMidYMax slice"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient id={sky} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color={scene.sky[0]}></stop>
+      <stop offset="1" stop-color={scene.sky[1]}></stop>
+    </linearGradient>
+    <radialGradient id={glow}>
+      <stop offset="0" stop-color={scene.glow} stop-opacity="0.95"></stop>
+      <stop offset="0.45" stop-color={scene.glow} stop-opacity="0.35"></stop>
+      <stop offset="1" stop-color={scene.glow} stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id={mist} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color={theme.bg} stop-opacity="0"></stop>
+      <stop offset="1" stop-color={theme.bg} stop-opacity="1"></stop>
+    </linearGradient>
+    {
+      scene.scanlines && (
+        <pattern id={lines} width="6" height="6" patternUnits="userSpaceOnUse">
+          <rect width="6" height="1" fill={scene.glow} opacity="0.06" />
+        </pattern>
+      )
+    }
+  </defs>
+
+  <rect width={W} height={H} fill={`url(#${sky})`}></rect>
+  {scene.stars.map((s) => <circle cx={s.cx} cy={s.cy} r={s.r} fill="#ffffff" opacity={s.opacity} />)}
+  {
+    scene.body && (
+      <g>
+        <circle cx={scene.body.cx} cy={scene.body.cy} r={scene.body.r * 2.6} fill={`url(#${glow})`} />
+        <circle cx={scene.body.cx} cy={scene.body.cy} r={scene.body.r} fill={scene.glow} opacity="0.92" />
+        {scene.body.ring && (
+          <ellipse
+            cx={scene.body.cx}
+            cy={scene.body.cy}
+            rx={scene.body.r * 1.7}
+            ry={scene.body.r * 0.32}
+            fill="none"
+            stroke={scene.glow}
+            stroke-width="6"
+            opacity="0.55"
+            transform={`rotate(-14 ${scene.body.cx} ${scene.body.cy})`}
+          />
+        )}
+      </g>
+    )
+  }
+  {scene.layers.map((l) => <path d={l.d} fill={l.fill} />)}
+  {scene.embers.map((e) => <circle class="landscape__ember" cx={e.cx} cy={e.cy} r={e.r} fill={scene.glow} opacity={e.opacity} />)}
+  {scene.scanlines && <rect width={W} height={H} fill={`url(#${lines})`} />}
+  {fog && <rect class="landscape__fog" x={-W * 0.1} y={H * 0.62} width={W * 1.2} height={H * 0.18} fill={scene.glow} opacity="0.07" rx="80" />}
+  <rect y={H * 0.55} width={W} height={H * 0.45} fill={`url(#${mist})`}></rect>
+</svg>

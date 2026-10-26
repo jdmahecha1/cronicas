@@ -1,266 +1,447 @@
 ---
-import SagaCard from '../components/SagaCard.astro';
+import { ArrowRightIcon, CloudIcon, FloppyDiskIcon, SwordIcon } from '@phosphor-icons/react/dist/ssr';
+import Landscape from '../components/Landscape.astro';
 import Base from '../layouts/Base.astro';
 import { getSagas } from '../lib/data';
-import { url } from '../lib/url';
+import { gamesByRelease } from '../lib/spoilers';
+import { themeFor, themeStyle } from '../lib/themes';
+import { sagaUrl, url } from '../lib/url';
 
-const sagas = getSagas();
+const sagas = getSagas().map((saga) => {
+  const games = gamesByRelease(saga);
+  return {
+    saga,
+    theme: themeFor(saga.id),
+    years: `${games[0].year}-${games[games.length - 1].year}`,
+  };
+});
 const totals = {
-  games: sagas.reduce((n, s) => n + s.games.length, 0),
-  characters: sagas.reduce((n, s) => n + s.characters.length, 0),
-  events: sagas.reduce((n, s) => n + s.events.length, 0),
+  games: sagas.reduce((n, s) => n + s.saga.games.length, 0),
+  characters: sagas.reduce((n, s) => n + s.saga.characters.length, 0),
+  events: sagas.reduce((n, s) => n + s.saga.events.length, 0),
 };
 ---
 
 <Base
   title="Crónicas"
-  description="Explora la historia de tus sagas de videojuegos favoritas —línea de tiempo, personajes y relaciones— sin spoilers de lo que aún no has jugado."
+  description="Explora la historia de tus sagas de videojuegos favoritas (línea de tiempo, personajes y relaciones) sin spoilers de lo que aún no has jugado."
 >
-  <section class="hero">
-    <div class="wrap hero__inner">
-      <div class="hero__text">
-      <p class="eyebrow">Explorador de historias de videojuegos</p>
-      <h1>Toda la historia de la saga.<br /><em>Solo hasta donde has llegado.</em></h1>
+  <section class="hero wrap">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Historias de videojuegos sin spoilers</p>
+      <h1>Toda la historia. <em>Solo hasta donde jugaste.</em></h1>
       <p class="hero__lead">
-        Líneas de tiempo, personajes y mapas de relaciones de {sagas.length} sagas. Dile a Crónicas
-        hasta qué capítulo has jugado y el escudo de spoilers esconde todo lo que viene después.
+        Línea de tiempo, personajes y relaciones de {sagas.length} sagas. Marca tu capítulo y el resto
+        queda en la niebla.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#sagas">Elegir una saga</a>
-        <a class="btn btn--ghost" href={url('acerca/')}>Cómo funciona el escudo</a>
+        <a class="btn btn--primary" href="#sagas">
+          Elegir saga
+          <ArrowRightIcon className="icon" aria-hidden="true" weight="bold" />
+        </a>
+        <a class="btn" href={url('acerca/')}>Cómo funciona</a>
       </div>
-      <dl class="hero__stats">
-        <div><dt>Juegos</dt><dd>{totals.games}</dd></div>
-        <div><dt>Personajes</dt><dd>{totals.characters}</dd></div>
-        <div><dt>Eventos</dt><dd>{totals.events}</dd></div>
-      </dl>
-      </div>
-
-      <figure class="hero__demo" aria-hidden="true">
-        <div class="demo-card">
-          <p class="demo-card__meta">Año 1899 · Capítulo 1</p>
-          <p class="demo-card__title">La huida a las montañas</p>
-          <p class="demo-card__text">Lo que ya jugaste se muestra completo, con sus personajes y su contexto.</p>
-          <span class="demo-card__chip">Visible</span>
-        </div>
-        <div class="demo-card demo-card--veiled">
-          <p class="demo-card__title">Evento oculto</p>
-          <p class="demo-card__text">Se desbloquea al terminar la etapa 4 de 8.</p>
-          <span class="demo-card__chip">Mostrar igual</span>
-        </div>
-        <div class="demo-card demo-card--veiled demo-card--far">
-          <p class="demo-card__title">Personaje oculto</p>
-          <p class="demo-card__text">Ni su nombre aparece hasta que lo conozcas.</p>
-        </div>
-        <figcaption class="sr-only">Ejemplo del escudo de spoilers</figcaption>
-      </figure>
     </div>
+
+    <nav class="vista" aria-label="Sagas destacadas">
+      {
+        sagas.map(({ saga, theme, years }, i) => (
+          <a class="vista__strip" href={sagaUrl(saga.id)} style={themeStyle(theme)}>
+            <Landscape seed={saga.id} theme={theme} uid={`vista-${i}`} class="vista__art" fog={false} />
+            <span class="vista__label">
+              <strong>{saga.title}</strong>
+              <span>{years}</span>
+            </span>
+          </a>
+        ))
+      }
+    </nav>
   </section>
 
-  <section class="section" id="sagas" aria-labelledby="sagas-titulo">
-    <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Biblioteca</p>
-          <h2 id="sagas-titulo">Sagas</h2>
-        </div>
-        <p class="muted">Cada saga guarda tu progreso por separado, en tu navegador.</p>
-      </div>
-      <div class="saga-grid">
-        {sagas.map((saga) => <SagaCard saga={saga} />)}
-      </div>
+  <section class="wrap sagas" id="sagas" aria-labelledby="sagas-titulo">
+    <div class="sagas__head">
+      <h2 id="sagas-titulo">Elige una saga</h2>
+      <p class="muted">
+        {totals.games} juegos, {totals.characters} personajes y {totals.events} eventos. Cada saga guarda tu
+        partida por separado.
+      </p>
     </div>
+    <ul class="sagas__list">
+      {
+        sagas.map(({ saga, theme, years }, i) => (
+          <li class="saga-row" style={themeStyle(theme)}>
+            <Landscape seed={`${saga.id}-fila`} theme={theme} uid={`fila-${i}`} class="saga-row__art" fog={false} />
+            <div class="saga-row__body">
+              <p class="saga-row__meta">
+                {saga.studio}, {years}
+              </p>
+              <h3>
+                <a href={sagaUrl(saga.id)}>{saga.title}</a>
+              </h3>
+              <p class="saga-row__tagline">{saga.tagline}</p>
+            </div>
+            <p class="saga-row__count">
+              <span>{saga.games.length} juegos</span>
+              <span>{saga.characters.length} personajes</span>
+            </p>
+            <ArrowRightIcon className="icon saga-row__arrow" aria-hidden="true" weight="bold" />
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
-  <section class="section steps" aria-labelledby="pasos-titulo">
-    <div class="wrap">
-      <p class="eyebrow">En tres pasos</p>
-      <h2 id="pasos-titulo">Repasa la historia sin arruinarte el final</h2>
-      <ol class="steps__list">
-        <li class="card">
-          <span class="steps__n">1</span>
-          <h3>Elige tu saga</h3>
-          <p class="muted">Seis sagas con su cronología interna y su orden de lanzamiento.</p>
-        </li>
-        <li class="card">
-          <span class="steps__n">2</span>
-          <h3>Marca tu progreso</h3>
-          <p class="muted">Indica el último capítulo que terminaste en cada juego. No hace falta cuenta.</p>
-        </li>
-        <li class="card">
-          <span class="steps__n">3</span>
-          <h3>Explora tranquilo</h3>
-          <p class="muted">
-            Lo que aún no has visto aparece tapado, con la etapa exacta en la que se desbloquea.
-          </p>
-        </li>
-      </ol>
-    </div>
+  <section class="wrap howto" aria-labelledby="howto-titulo">
+    <h2 id="howto-titulo">Repasa la historia sin arruinarte el final</h2>
+    <ol class="howto__path">
+      <li>
+        <span class="howto__node" aria-hidden="true"><SwordIcon className="icon" weight="duotone" /></span>
+        <h3>Elige tu saga</h3>
+        <p class="muted">Cronología interna u orden de lanzamiento, como prefieras.</p>
+      </li>
+      <li>
+        <span class="howto__node" aria-hidden="true"><FloppyDiskIcon className="icon" weight="duotone" /></span>
+        <h3>Guarda tu partida</h3>
+        <p class="muted">Toca el último capítulo que terminaste en cada juego. Sin cuentas.</p>
+      </li>
+      <li>
+        <span class="howto__node" aria-hidden="true"><CloudIcon className="icon" weight="duotone" /></span>
+        <h3>Explora sin miedo</h3>
+        <p class="muted">Lo que aún no viviste se queda en la niebla hasta que llegues.</p>
+      </li>
+    </ol>
   </section>
 </Base>
 
 <style>
   .hero {
-    padding-block: clamp(3.5rem, 10vw, 7rem) clamp(2rem, 6vw, 4rem);
-  }
-
-  .hero__inner {
     display: grid;
-    gap: 3rem;
+    gap: var(--space-7);
     align-items: center;
+    padding-block: var(--space-7) var(--space-8);
   }
 
   @media (min-width: 1000px) {
-    .hero__inner {
-      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      min-height: calc(100dvh - var(--header-h) - var(--space-6));
+      padding-block: var(--space-6);
     }
   }
 
-  @media (max-width: 999px) {
-    .hero__demo {
-      display: none;
-    }
-  }
-
-  .hero__demo {
-    position: relative;
-    display: grid;
-    gap: 0.9rem;
-    margin: 0;
-    transform: rotate(-2deg);
-  }
-
-  .demo-card {
-    position: relative;
-    padding: 1.1rem 1.25rem;
-    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
-    border-radius: var(--radius);
-    background: linear-gradient(180deg, var(--surface-2), var(--surface));
-    box-shadow: var(--shadow);
-  }
-
-  .demo-card--veiled {
-    border-style: dashed;
-    border-color: var(--border-strong);
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--surface),
-      var(--surface) 8px,
-      color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 8px,
-      color-mix(in srgb, var(--surface-2) 70%, var(--bg)) 16px
-    );
-    margin-left: 2rem;
-  }
-
-  .demo-card--far {
-    margin-left: 4rem;
-    opacity: 0.7;
-  }
-
-  .demo-card p {
-    margin: 0;
-  }
-
-  .demo-card__meta {
-    font-size: 0.78rem;
+  .hero__eyebrow {
+    margin-bottom: var(--space-4);
+    color: var(--accent);
+    font-size: var(--step--1);
     font-weight: 600;
-    color: var(--accent-text);
-  }
-
-  .demo-card__title {
-    font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 600;
-  }
-
-  .demo-card__text {
-    font-size: 0.88rem;
-    color: var(--muted);
-  }
-
-  .demo-card__chip {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.1rem 0.6rem;
-    border: 1px solid var(--border-strong);
-    border-radius: 999px;
-    font-size: 0.75rem;
-    color: var(--muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
   .hero h1 em {
+    display: block;
+    padding-bottom: 0.08em;
+    color: var(--accent);
     font-style: italic;
     font-weight: 500;
-    color: var(--accent-text);
   }
 
   .hero__lead {
-    max-width: 62ch;
-    font-size: 1.12rem;
+    max-width: 44ch;
     color: var(--muted);
+    font-size: var(--step-2);
+    line-height: 1.5;
   }
 
   .hero__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
   }
 
-  .hero__stats {
+  /* Acordeón de paisajes: cada franja es un enlace a su saga. */
+  .vista {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    margin: 2.75rem 0 0;
+    gap: var(--space-2);
+    height: min(560px, 62dvh);
   }
 
-  .hero__stats dt {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--faint);
+  .vista__strip {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--line-soft);
+    color: var(--text);
+    text-decoration: none;
+    transition: flex-grow 0.6s var(--ease-out);
   }
 
-  .hero__stats dd {
-    margin: 0;
+  .vista__strip:first-child,
+  .vista:hover .vista__strip:hover,
+  .vista__strip:focus-visible {
+    flex-grow: 5;
+  }
+
+  .vista:hover .vista__strip:first-child:not(:hover) {
+    flex-grow: 1;
+  }
+
+  :global(.vista__art) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vista__label {
+    position: absolute;
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
+    display: grid;
+    gap: var(--space-1);
+    font-size: var(--step--1);
+    color: var(--muted);
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.4s var(--ease-out),
+      transform 0.4s var(--ease-out);
+  }
+
+  .vista__label strong {
+    color: var(--text);
     font-family: var(--font-display);
-    font-size: 2.4rem;
-    font-weight: 600;
+    font-size: var(--step-3);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  .saga-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: 1.25rem;
+  .vista__strip:first-child .vista__label,
+  .vista:hover .vista__strip:hover .vista__label,
+  .vista__strip:focus-visible .vista__label {
+    opacity: 1;
+    transform: none;
   }
 
-  .steps__list {
+  .vista:hover .vista__strip:first-child:not(:hover) .vista__label {
+    opacity: 0;
+  }
+
+  @media (max-width: 999px) {
+    .vista {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: auto;
+    }
+
+    .vista__strip {
+      aspect-ratio: 3 / 4;
+    }
+
+    .vista__label {
+      opacity: 1;
+      transform: none;
+    }
+
+    .vista__label strong {
+      font-size: var(--step-0);
+    }
+
+    .vista__label span {
+      display: none;
+    }
+  }
+
+  .sagas {
+    padding-block: var(--space-7);
+  }
+
+  .sagas__head {
+    margin-bottom: var(--space-5);
+  }
+
+  .sagas__head p {
+    max-width: 60ch;
+  }
+
+  .sagas__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0 0;
+    gap: var(--space-3);
+    margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .steps__list li {
-    padding: 1.4rem;
+  .saga-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-3);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    transition:
+      border-color 0.2s var(--ease-out),
+      transform 0.2s var(--ease-out);
   }
 
-  .steps__n {
-    display: inline-grid;
-    place-items: center;
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 0.75rem;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--accent) 18%, transparent);
-    color: var(--accent-text);
-    font-weight: 700;
+  .saga-row:hover,
+  .saga-row:focus-within {
+    border-color: var(--accent);
+    transform: translateY(-2px);
   }
 
-  .steps__list p {
+  :global(.saga-row__art) {
+    width: 180px;
+    height: 104px;
+    border-radius: calc(var(--radius-card) - 4px);
+  }
+
+  .saga-row__meta {
+    margin: 0 0 var(--space-1);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .saga-row h3 {
+    margin-bottom: var(--space-1);
+  }
+
+  .saga-row h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  /* Toda la fila es clicable; el enlace sigue siendo el título. */
+  .saga-row h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .saga-row__tagline {
     margin: 0;
+    color: var(--muted);
+    font-size: var(--step-0);
+  }
+
+  .saga-row__count {
+    display: grid;
+    gap: var(--space-1);
+    margin: 0;
+    color: var(--accent);
+    font-size: var(--step--1);
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  :global(.saga-row__arrow) {
+    margin-right: var(--space-3);
+    color: var(--accent);
+  }
+
+  @media (max-width: 760px) {
+    .saga-row {
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: var(--space-4);
+    }
+
+    :global(.saga-row__art) {
+      width: 96px;
+      height: 96px;
+    }
+
+    .saga-row__count,
+    :global(.saga-row__arrow) {
+      display: none;
+    }
+
+    .saga-row__tagline {
+      display: none;
+    }
+  }
+
+  .howto {
+    padding-block: var(--space-7);
+  }
+
+  .howto__path {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-6) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* El camino que une las tres paradas, como en la partida guardada. */
+  .howto__path::before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 28px;
+    right: 28px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent) 66%, var(--line) 66%);
+  }
+
+  .howto__node {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: var(--space-4);
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--bg);
+    color: var(--accent);
+    font-size: 1.4rem;
+  }
+
+  .howto__path li:last-child .howto__node {
+    border-style: dashed;
+    border-color: var(--line);
+    color: var(--muted);
+  }
+
+  .howto__path p {
+    margin: 0;
+    max-width: 32ch;
+  }
+
+  @media (max-width: 760px) {
+    .howto__path {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .howto__path::before {
+      top: 28px;
+      bottom: 28px;
+      left: 27px;
+      right: auto;
+      width: 2px;
+      height: auto;
+      background: linear-gradient(180deg, var(--accent), var(--accent) 66%, var(--line) 66%);
+    }
+
+    .howto__path li {
+      padding-left: 80px;
+      position: relative;
+    }
+
+    .howto__node {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 </style>
