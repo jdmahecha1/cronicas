@@ -18,7 +18,7 @@ Línea de tiempo, personajes y mapa de relaciones de seis sagas (The Legend of Z
 | **Niebla de guerra** | Cada evento, personaje, dato y relación lleva la marca del juego y la etapa en la que se descubre. Lo que aún no viviste se agrupa en bancos de niebla que puedes despejar. |
 | **Línea de tiempo doble** | Cronología interna del universo (la precuela primero) u orden de lanzamiento, con filtros por juego y "solo momentos clave". |
 | **Mapa de relaciones** | Grafo de fuerzas con vínculos, conflictos y afectos (colores validados para daltonismo, con el trazo como segunda pista) y una vista alternativa en lista. |
-| **Identidad por saga** | Cada saga tiene su paleta (con contraste WCAG AA verificado en pruebas) y un paisaje generativo propio, dibujado con código y sin arte de los juegos. |
+| **Identidad por saga** | Cada saga tiene su paleta (con contraste WCAG AA verificado en pruebas), la portada oficial de sus juegos y un paisaje generativo propio como respaldo. |
 | **Búsqueda sin spoilers** | Índice estático con Pagefind que solo contiene texto público. |
 | **Sin cuentas ni servidor** | La partida vive en `localStorage`. El sitio es HTML estático en GitHub Pages: cuesta $0. |
 
@@ -118,7 +118,9 @@ No necesita variables de entorno ni claves.
 
 ## Sobre el contenido
 
-Los resúmenes son propios. Se redactaron con ayuda de IA y después se revisaron uno por uno contra el canon. Cuando la historia depende de decisiones del jugador, se usa el desenlace más común y así se indica. No se incluyen imágenes, logos ni textos de los juegos.
+Los resúmenes son propios. Se redactaron con ayuda de IA y después se revisaron uno por uno contra el canon. Cuando la historia depende de decisiones del jugador, se usa el desenlace más común y así se indica.
+
+Las portadas de los juegos son arte promocional oficial, en la versión de resolución reducida que publica Wikipedia (`npm run covers` las descarga y guarda su fuente; `npm run images` las convierte a WebP). Se usan sin fines comerciales y con crédito: la página [Créditos](https://jdmahecha1.github.io/cronicas/creditos/) enlaza cada imagen a su fuente y explica cómo pedir que se retire.
 
 Crónicas es un proyecto de fans sin ánimo de lucro y sin relación con Nintendo, Rockstar Games, CD Projekt, BioWare/EA, Konami ni Sony. Los nombres de los juegos y personajes pertenecen a sus dueños.
 

@@ -9,6 +9,7 @@ const pages = [
   ['personaje', 'sagas/the-witcher/personajes/geralt/'],
   ['búsqueda', 'buscar/'],
   ['cómo funciona', 'acerca/'],
+  ['créditos', 'creditos/'],
 ];
 
 for (const [name, path] of pages) {

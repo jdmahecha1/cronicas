@@ -23,3 +23,6 @@ npm-debug.log*
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Imágenes originales en alta resolución (se publican solo las versiones optimizadas)
+arte-original/

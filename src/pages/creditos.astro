@@ -1,0 +1,142 @@
+---
+import Base from '../layouts/Base.astro';
+import { OWNERS, coverFor } from '../lib/artwork';
+import { getSagas } from '../lib/data';
+
+const sagas = getSagas();
+const credits = sagas.map((saga) => ({
+  saga,
+  owner: OWNERS[saga.id] ?? saga.studio,
+  games: saga.games.flatMap((game) => {
+    const cover = coverFor(game.id);
+    return cover ? [{ game, cover }] : [];
+  }),
+}));
+const total = credits.reduce((n, c) => n + c.games.length, 0);
+---
+
+<Base
+  title="Créditos"
+  description="Créditos de las imágenes, tipografías e iconos de Crónicas, y cómo pedir que se retire una imagen."
+>
+  <article class="wrap credits">
+    <h1>Créditos</h1>
+    <p class="credits__lead">
+      Crónicas es un proyecto de fans, gratuito y sin publicidad. No vende nada ni tiene relación con
+      los estudios o editoras de los juegos.
+    </p>
+
+    <section>
+      <h2>Imágenes de los juegos</h2>
+      <p>
+        Las {total} portadas son arte promocional oficial de cada juego, en la versión de resolución
+        reducida que publica Wikipedia. Se usan con fines informativos y sin ánimo de lucro, y sus
+        derechos pertenecen a sus dueños. Cada enlace lleva a la página del archivo, con su fuente y
+        descripción.
+      </p>
+      {
+        credits.map(({ saga, owner, games }) => (
+          <div class="credits__saga">
+            <h3>
+              {saga.title} <span>© {owner}</span>
+            </h3>
+            <ul class="credits__list">
+              {games.map(({ game, cover }) => (
+                <li>
+                  <strong>{game.title}</strong>
+                  <span>
+                    Portada. <a href={cover.page} rel="nofollow">Archivo en Wikipedia</a>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+      <p>
+        Los paisajes que aparecen cuando una saga no tiene imagen oficial son ilustraciones propias,
+        generadas con código.
+      </p>
+    </section>
+
+    <section id="retiro">
+      <h2>¿Eres titular de alguna imagen?</h2>
+      <p>
+        Si quieres que retire una imagen o cambie su crédito, abre un issue en
+        <a href="https://github.com/jdmahecha1/cronicas/issues">GitHub</a> indicando cuál es. La retiraré
+        lo antes posible, sin necesidad de más trámites.
+      </p>
+    </section>
+
+    <section>
+      <h2>Textos, tipografías e iconos</h2>
+      <ul class="credits__list">
+        <li>
+          <strong>Resúmenes de las historias</strong>
+          <span>Redacción propia, bajo licencia CC BY-SA 4.0.</span>
+        </li>
+        <li>
+          <strong>Bricolage Grotesque e Inter Tight</strong>
+          <span>Tipografías bajo SIL Open Font License, autoalojadas con Fontsource.</span>
+        </li>
+        <li>
+          <strong>Phosphor Icons</strong>
+          <span>Iconos bajo licencia MIT.</span>
+        </li>
+      </ul>
+      <p>
+        Los nombres de los juegos y personajes son marcas de sus respectivos dueños: Nintendo, Rockstar
+        Games, CD Projekt, Electronic Arts y BioWare, Konami y Sony Interactive Entertainment.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .credits {
+    max-width: 780px;
+    padding-top: var(--space-7);
+  }
+
+  .credits__lead {
+    color: var(--muted);
+    font-size: var(--step-2);
+    line-height: 1.5;
+  }
+
+  .credits section {
+    margin-top: var(--space-6);
+  }
+
+  .credits__list {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-4);
+    padding: 0;
+    list-style: none;
+  }
+
+  .credits__list li {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-field);
+    background: var(--surface);
+  }
+
+  .credits__saga h3 span {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 500;
+  }
+
+  .credits__list {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  }
+
+  .credits__list span {
+    color: var(--muted);
+    font-size: var(--step-0);
+  }
+</style>

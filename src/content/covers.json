@@ -1,0 +1,184 @@
+{
+  "skyward-sword": {
+    "article": "The Legend of Zelda: Skyward Sword",
+    "file": "Legend of Zelda Skyward Sword boxart.png",
+    "page": "https://en.wikipedia.org/wiki/File:Legend_of_Zelda_Skyward_Sword_boxart.png",
+    "width": 258,
+    "height": 387
+  },
+  "ocarina-of-time": {
+    "article": "The Legend of Zelda: Ocarina of Time",
+    "file": "The Legend of Zelda Ocarina of Time.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_Ocarina_of_Time.jpg",
+    "width": 378,
+    "height": 263
+  },
+  "twilight-princess": {
+    "article": "The Legend of Zelda: Twilight Princess",
+    "file": "The Legend of Zelda Twilight Princess Game Cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_Twilight_Princess_Game_Cover.jpg",
+    "width": 250,
+    "height": 354
+  },
+  "the-wind-waker": {
+    "article": "The Legend of Zelda: The Wind Waker",
+    "file": "ZeldaWindWakerGCNCoverArtUS.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_The_Wind_Waker.jpg",
+    "width": 256,
+    "height": 309
+  },
+  "breath-of-the-wild": {
+    "article": "The Legend of Zelda: Breath of the Wild",
+    "file": "The Legend of Zelda Breath of the Wild.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+    "width": 273,
+    "height": 365
+  },
+  "tears-of-the-kingdom": {
+    "article": "The Legend of Zelda: Tears of the Kingdom",
+    "file": "The Legend of Zelda Tears of the Kingdom cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg",
+    "width": 268,
+    "height": 372
+  },
+  "rdr2": {
+    "article": "Red Dead Redemption 2",
+    "file": "Red Dead Redemption II.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Red_Dead_Redemption_II.jpg",
+    "width": 284,
+    "height": 350
+  },
+  "rdr1": {
+    "article": "Red Dead Redemption",
+    "file": "Red Dead Redemption.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Red_Dead_Redemption.jpg",
+    "width": 284,
+    "height": 351
+  },
+  "the-witcher": {
+    "article": "The Witcher (video game)",
+    "file": "The Witcher EU box.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:The_Witcher_EU_box.jpg",
+    "width": 250,
+    "height": 296
+  },
+  "the-witcher-2": {
+    "article": "The Witcher 2: Assassins of Kings",
+    "file": "Witcher 2 cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Witcher_2_cover.jpg",
+    "width": 267,
+    "height": 373
+  },
+  "the-witcher-3": {
+    "article": "The Witcher 3: Wild Hunt",
+    "file": "Witcher 3 cover art.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Witcher_3_cover_art.jpg",
+    "width": 258,
+    "height": 387
+  },
+  "hearts-of-stone": {
+    "article": "The Witcher 3: Wild Hunt – Hearts of Stone",
+    "file": "Hearts of stone art.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Hearts_of_stone_art.jpg",
+    "width": 320,
+    "height": 320
+  },
+  "blood-and-wine": {
+    "article": "The Witcher 3: Wild Hunt – Blood and Wine",
+    "file": "Blood and wine art.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Blood_and_wine_art.jpg",
+    "width": 400,
+    "height": 250
+  },
+  "mass-effect-1": {
+    "article": "Mass Effect (video game)",
+    "file": "MassEffect.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:MassEffect.jpg",
+    "width": 283,
+    "height": 400
+  },
+  "mass-effect-2": {
+    "article": "Mass Effect 2",
+    "file": "MassEffect2 cover.PNG",
+    "page": "https://en.wikipedia.org/wiki/File:MassEffect2_cover.PNG",
+    "width": 256,
+    "height": 370
+  },
+  "mass-effect-3": {
+    "article": "Mass Effect 3",
+    "file": "Mass Effect 3 Game Cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Mass_Effect_3_Game_Cover.jpg",
+    "width": 250,
+    "height": 345
+  },
+  "mgs-1": {
+    "article": "Metal Gear Solid (video game)",
+    "file": "Metal Gear Solid cover art.png",
+    "page": "https://en.wikipedia.org/wiki/File:Metal_Gear_Solid_cover_art.png",
+    "width": 340,
+    "height": 293
+  },
+  "mgs-2": {
+    "article": "Metal Gear Solid 2: Sons of Liberty",
+    "file": "Metalgear2boxart.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Metalgear2boxart.jpg",
+    "width": 260,
+    "height": 368
+  },
+  "mgs-3": {
+    "article": "Metal Gear Solid 3: Snake Eater",
+    "file": "Mgs3box.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Mgs3box.jpg",
+    "width": 266,
+    "height": 375
+  },
+  "mgs-4": {
+    "article": "Metal Gear Solid 4: Guns of the Patriots",
+    "file": "Mgs4us cover small.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:Mgs4us_cover_small.jpg",
+    "width": 294,
+    "height": 339
+  },
+  "mgs-v": {
+    "article": "Metal Gear Solid V: The Phantom Pain",
+    "file": "Metal Gear Solid V The Phantom Pain cover.png",
+    "page": "https://en.wikipedia.org/wiki/File:Metal_Gear_Solid_V_The_Phantom_Pain_cover.png",
+    "width": 273,
+    "height": 365
+  },
+  "gow-1": {
+    "article": "God of War (2005 video game)",
+    "file": "God of War (2005) cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:God_of_War_(2005)_cover.jpg",
+    "width": 267,
+    "height": 373
+  },
+  "gow-2": {
+    "article": "God of War II",
+    "file": "God of War II cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:God_of_War_II_cover.jpg",
+    "width": 260,
+    "height": 369
+  },
+  "gow-3": {
+    "article": "God of War III",
+    "file": "God of War III cover art.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:God_of_War_III_cover_art.jpg",
+    "width": 294,
+    "height": 337
+  },
+  "gow-2018": {
+    "article": "God of War (2018 video game)",
+    "file": "God of War 4 cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:God_of_War_4_cover.jpg",
+    "width": 273,
+    "height": 364
+  },
+  "gow-ragnarok": {
+    "article": "God of War Ragnarök",
+    "file": "God of War Ragnarök cover.jpg",
+    "page": "https://en.wikipedia.org/wiki/File:God_of_War_Ragnar%C3%B6k_cover.jpg",
+    "width": 287,
+    "height": 352
+  }
+}

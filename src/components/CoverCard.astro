@@ -1,0 +1,52 @@
+---
+import { coverFor, coverSrc, isLandscape } from '../lib/artwork';
+import { url } from '../lib/url';
+
+interface Props {
+  gameId: string;
+  /** Título del juego, para el texto alternativo. */
+  title: string;
+  class?: string;
+  priority?: boolean;
+  /** true si el texto de al lado ya nombra el juego: la imagen no se anuncia dos veces. */
+  decorative?: boolean;
+}
+
+/** Portada nítida de un juego, como una caja en la estantería. */
+const { gameId, title, class: className, priority = false, decorative = false } = Astro.props;
+const cover = coverFor(gameId);
+---
+
+{
+  cover && (
+    <img
+      class:list={['cover-card', { 'is-wide': isLandscape(cover) }, className]}
+      src={url(coverSrc(gameId))}
+      width={cover.width}
+      height={cover.height}
+      alt={decorative ? '' : `Portada oficial de ${title}`}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  )
+}
+
+<style>
+  .cover-card {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--raised);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--text) 10%, transparent),
+      0 18px 40px -18px rgb(0 0 0 / 0.7);
+  }
+
+  /* Portadas apaisadas: completas sobre el color de la superficie, sin recortar. */
+  .cover-card.is-wide {
+    object-fit: contain;
+  }
+</style>

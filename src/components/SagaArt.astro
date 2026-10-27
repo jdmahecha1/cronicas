@@ -1,0 +1,78 @@
+---
+import { coverSrc, sagaCover } from '../lib/artwork';
+import type { Theme } from '../lib/themes';
+import { url } from '../lib/url';
+import Landscape from './Landscape.astro';
+
+interface Props {
+  sagaId: string;
+  theme: Theme;
+  uid: string;
+  class?: string;
+  /**
+   * "backdrop": la portada ampliada y difuminada como fondo (decorativa).
+   * "cover": la portada nítida, recortada para llenar el espacio.
+   */
+  mode?: 'backdrop' | 'cover';
+  priority?: boolean;
+  fog?: boolean;
+  /** Degradado hacia el fondo en la parte baja, para el texto que va encima. */
+  scrim?: boolean;
+}
+
+const { sagaId, theme, uid, class: className, mode = 'backdrop', priority = false, fog = true, scrim = true } = Astro.props;
+const cover = sagaCover(sagaId);
+---
+
+<div class:list={['saga-art', `saga-art--${mode}`, className]}>
+  {/* El paisaje queda debajo: es el respaldo si la portada falta o no carga. */}
+  <Landscape seed={sagaId} theme={theme} uid={uid} class="saga-art__fallback" fog={fog && !cover} />
+  {
+    cover && (
+      <img
+        class="saga-art__img"
+        src={url(coverSrc(cover.gameId))}
+        width={cover.width}
+        height={cover.height}
+        alt=""
+        aria-hidden="true"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : undefined}
+        decoding="async"
+      />
+    )
+  }
+  {scrim && <span class="saga-art__scrim" aria-hidden="true" />}
+</div>
+
+<style>
+  .saga-art {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .saga-art :global(.saga-art__fallback),
+  .saga-art__img,
+  .saga-art__scrim {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .saga-art__img {
+    object-fit: cover;
+  }
+
+  /* Fondo: la portada (pequeña) ampliada y difuminada, como un póster visto de lejos. */
+  .saga-art--backdrop .saga-art__img {
+    filter: blur(26px) saturate(1.25);
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+
+  .saga-art__scrim {
+    background: linear-gradient(180deg, transparent 25%, color-mix(in oklab, var(--bg) 70%, transparent) 68%, var(--bg));
+  }
+</style>

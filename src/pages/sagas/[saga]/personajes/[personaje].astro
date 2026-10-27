@@ -2,7 +2,7 @@
 import { ArrowLeftIcon } from '@phosphor-icons/react/dist/ssr';
 import Crest from '../../../../components/Crest.astro';
 import FogGroup from '../../../../components/FogGroup.astro';
-import Landscape from '../../../../components/Landscape.astro';
+import SagaArt from '../../../../components/SagaArt.astro';
 import { KIND_STYLE } from '../../../../components/RelationGraph';
 import Spoiler from '../../../../components/Spoiler.astro';
 import Base from '../../../../layouts/Base.astro';
@@ -43,7 +43,7 @@ const description = hidden
 
 <Base title={title} description={description} theme={theme} indexable={!hidden}>
   <div class="banner">
-    <Landscape seed={`${saga.id}-${character.id}`} theme={theme} uid="banner" class="banner__art" />
+    <SagaArt sagaId={saga.id} theme={theme} uid="banner" class="banner__art" priority />
   </div>
 
   <article class="wrap person-page">
@@ -165,7 +165,7 @@ const description = hidden
     overflow: hidden;
   }
 
-  :global(.banner__art) {
+  .banner :global(.banner__art) {
     position: absolute;
     inset: 0;
     width: 100%;
