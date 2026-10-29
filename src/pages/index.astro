@@ -49,7 +49,7 @@ const totals = {
       {
         sagas.map(({ saga, theme, years }, i) => (
           <a class="vista__strip" href={sagaUrl(saga.id)} style={themeStyle(theme)}>
-            <SagaArt sagaId={saga.id} theme={theme} uid={`vista-${i}`} class="vista__art" fog={false} priority={i === 0} />
+            <SagaArt sagaId={saga.id} theme={theme} uid={`vista-${i}`} class="vista__art" fog={false} priority={i === 0} sizes="(min-width: 861px) 40vw, 100vw" />
             <CoverCard gameId={SAGA_COVER[saga.id]} title={saga.title} class="vista__cover" decorative priority={i === 0} />
             <span class="vista__label">
               <strong>{saga.title}</strong>

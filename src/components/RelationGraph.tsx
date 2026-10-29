@@ -4,11 +4,13 @@ import { layoutGraph } from '../lib/graph-layout';
 import { RELATION_KINDS, type RelationKind } from '../lib/kinds';
 import type { Saga } from '../lib/schema';
 import { charactersById, isCharacterKnown, isRelationVisible } from '../lib/spoilers';
-import { characterUrl } from '../lib/url';
+import { characterUrl, url } from '../lib/url';
 import { useShield } from '../lib/use-shield';
 
 interface Props {
   saga: Saga;
+  /** Retrato de cada personaje (ruta relativa al sitio, o vacía). Solo se muestra si ya lo conoces. */
+  portraits?: Record<string, string>;
 }
 
 /*
@@ -30,7 +32,7 @@ export const KIND_STYLE: Record<RelationKind, { color: string; dash?: string; la
 
 const ORDER: RelationKind[] = ['aliado', 'mentor', 'enemigo', 'rival', 'familia', 'romance'];
 
-export default function RelationGraph({ saga }: Props) {
+export default function RelationGraph({ saga, portraits = {} }: Props) {
   const shield = useShield(saga);
   const layout = useMemo(() => layoutGraph(saga), [saga]);
   const people = charactersById(saga);
@@ -150,9 +152,21 @@ export default function RelationGraph({ saga }: Props) {
               const body = (
                 <>
                   <circle r={radius} className={known ? 'graph__node' : 'graph__node is-fog'} />
-                  <text className="graph__initial" dy="0.35em" aria-hidden="true">
-                    {known ? initials(c.name) : '?'}
-                  </text>
+                  {known && portraits[c.id] ? (
+                    <image
+                      href={url(portraits[c.id])}
+                      x={-radius + 2}
+                      y={-radius + 2}
+                      width={(radius - 2) * 2}
+                      height={(radius - 2) * 2}
+                      className="graph__portrait"
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <text className="graph__initial" dy="0.35em" aria-hidden="true">
+                      {known ? initials(c.name) : '?'}
+                    </text>
+                  )}
                   {known && (
                     <text className="graph__label" y={radius + 18}>
                       {c.name}

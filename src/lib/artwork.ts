@@ -1,3 +1,4 @@
+import art from '../content/art.json';
 import covers from '../content/covers.json';
 
 /**
@@ -53,4 +54,36 @@ export function coverSrc(gameId: string): string {
 /** Las portadas apaisadas no se recortan: se muestran completas. */
 export function isLandscape(cover: Cover): boolean {
   return cover.width / cover.height > 0.85;
+}
+
+/**
+ * Retratos de personajes y paisajes de cada saga, tomados de las wikis de Fandom
+ * (arte oficial y capturas de los juegos). art.json guarda el archivo y su página
+ * de origen; las genera `npm run art:manifest` + `npm run images`.
+ */
+export interface FandomArt {
+  wiki: string;
+  file: string;
+  page: string;
+}
+
+const ART = art as { portraits: Record<string, FandomArt>; landscapes: Record<string, FandomArt> };
+
+export const portraitKey = (sagaId: string, characterId: string) => `${sagaId}--${characterId}`;
+
+export function portraitFor(sagaId: string, characterId: string): FandomArt | undefined {
+  return ART.portraits[portraitKey(sagaId, characterId)];
+}
+
+/** Retrato cuadrado (128 o 256 px de lado), o nada si el personaje no tiene. */
+export function portraitSrc(sagaId: string, characterId: string, side: 128 | 256 = 128): string | undefined {
+  return portraitFor(sagaId, characterId) ? `img/personajes/${portraitKey(sagaId, characterId)}-${side}.webp` : undefined;
+}
+
+export function landscapeFor(sagaId: string): FandomArt | undefined {
+  return ART.landscapes[sagaId];
+}
+
+export function landscapeSrc(sagaId: string, width: 960 | 1920): string {
+  return `img/paisajes/${sagaId}-${width}.webp`;
 }

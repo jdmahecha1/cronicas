@@ -1,0 +1,456 @@
+{
+  "portraits": {
+    "god-of-war--kratos": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Kratos- GOW Ragnarok.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Kratos-_GOW_Ragnarok.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/e/e9/Kratos-_GOW_Ragnarok.png/revision/latest/scale-to-width-down/640?cb=20230115190836"
+    },
+    "god-of-war--atenea": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Astral Athena 01 Andy Park.jpg",
+      "page": "https://godofwar.fandom.com/wiki/File:Astral_Athena_01_Andy_Park.jpg",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/0/03/Astral_Athena_01_Andy_Park.jpg/revision/latest/scale-to-width-down/640?cb=20231224112548"
+    },
+    "god-of-war--ares": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Ares 29 Render.webp",
+      "page": "https://godofwar.fandom.com/wiki/File:Ares_29_Render.webp",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/9/9e/Ares_29_Render.webp/revision/latest/scale-to-width-down/640?cb=20260613113051"
+    },
+    "god-of-war--zeus": {
+      "wiki": "godofwar.fandom.com",
+      "file": "AkinZeus.png",
+      "page": "https://godofwar.fandom.com/wiki/File:AkinZeus.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/8/8b/AkinZeus.png/revision/latest/scale-to-width-down/640?cb=20240128185031"
+    },
+    "god-of-war--gaia": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Gow2-gaia.jpg",
+      "page": "https://godofwar.fandom.com/wiki/File:Gow2-gaia.jpg",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/b/bb/Gow2-gaia.jpg/revision/latest/scale-to-width-down/640?cb=20080308184943"
+    },
+    "god-of-war--atreus": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Capture d’écran 2023-01-27 à 15.54.20.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.54.20.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/a/a8/Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.54.20.png/revision/latest/scale-to-width-down/640?cb=20230127152503"
+    },
+    "god-of-war--freya": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Capture d’écran 2023-01-27 à 15.03.43.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.03.43.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/9/95/Capture_d%E2%80%99%C3%A9cran_2023-01-27_%C3%A0_15.03.43.png/revision/latest/scale-to-width-down/640?cb=20230127142223"
+    },
+    "god-of-war--baldur": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Baldur2.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Baldur2.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/f/f0/Baldur2.png/revision/latest/scale-to-width-down/640?cb=20230219143256"
+    },
+    "god-of-war--mimir": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Mimir lunda notes 1.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Mimir_lunda_notes_1.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/e/e7/Mimir_lunda_notes_1.png/revision/latest/scale-to-width-down/640?cb=20231216073238"
+    },
+    "god-of-war--odin": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Odin Render.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Odin_Render.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/c/c0/Odin_Render.png/revision/latest/scale-to-width-down/640?cb=20251130123752"
+    },
+    "god-of-war--thor": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Capture d’écran 2023-01-26 à 20.45.43.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Capture_d%E2%80%99%C3%A9cran_2023-01-26_%C3%A0_20.45.43.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/e/e9/Capture_d%E2%80%99%C3%A9cran_2023-01-26_%C3%A0_20.45.43.png/revision/latest/scale-to-width-down/640?cb=20230127102918"
+    },
+    "god-of-war--sindri": {
+      "wiki": "godofwar.fandom.com",
+      "file": "Sindri2018.png",
+      "page": "https://godofwar.fandom.com/wiki/File:Sindri2018.png",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/b/bb/Sindri2018.png/revision/latest/scale-to-width-down/640?cb=20240225235738"
+    },
+    "mass-effect--shepard": {
+      "wiki": "masseffect.fandom.com",
+      "file": "MELE Default Shepards.png",
+      "page": "https://masseffect.fandom.com/wiki/File:MELE_Default_Shepards.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/2/24/MELE_Default_Shepards.png/revision/latest/scale-to-width-down/640?cb=20211028200648"
+    },
+    "mass-effect--garrus-vakarian": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME garrus charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_garrus_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/9/9d/ME_garrus_charshot.png/revision/latest/scale-to-width-down/640?cb=20210620043621"
+    },
+    "mass-effect--liara-t-soni": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME liara charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_liara_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/c/cd/ME_liara_charshot.png/revision/latest/scale-to-width-down/640?cb=20210620063412"
+    },
+    "mass-effect--tali-zorah": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME tali charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_tali_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/7/7d/ME_tali_charshot.png/revision/latest/scale-to-width-down/640?cb=20210606223657"
+    },
+    "mass-effect--urdnot-wrex": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME wrex charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_wrex_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/0/01/ME_wrex_charshot.png/revision/latest/scale-to-width-down/640?cb=20210620061307"
+    },
+    "mass-effect--kaidan-alenko": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME kaidan charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_kaidan_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/2/23/ME_kaidan_charshot.png/revision/latest/scale-to-width-down/640?cb=20210620061633"
+    },
+    "mass-effect--ashley-williams": {
+      "wiki": "masseffect.fandom.com",
+      "file": "ME ashley charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:ME_ashley_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/6/6e/ME_ashley_charshot.png/revision/latest/scale-to-width-down/640?cb=20210620044329"
+    },
+    "mass-effect--saren-arterius": {
+      "wiki": "masseffect.fandom.com",
+      "file": "Saren Arterius charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:Saren_Arterius_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/3/34/Saren_Arterius_charshot.png/revision/latest/scale-to-width-down/640?cb=20220619091655"
+    },
+    "mass-effect--el-hombre-ilusorio": {
+      "wiki": "masseffect.fandom.com",
+      "file": "TIM ME2 charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:TIM_ME2_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/a/af/TIM_ME2_charshot.png/revision/latest/scale-to-width-down/640?cb=20220810121141"
+    },
+    "mass-effect--miranda-lawson": {
+      "wiki": "masseffect.fandom.com",
+      "file": "Miranda ME2 charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:Miranda_ME2_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/b/b2/Miranda_ME2_charshot.png/revision/latest/scale-to-width-down/640?cb=20220812040816"
+    },
+    "mass-effect--mordin-solus": {
+      "wiki": "masseffect.fandom.com",
+      "file": "Mordin ME2 charshot.png",
+      "page": "https://masseffect.fandom.com/wiki/File:Mordin_ME2_charshot.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/4/42/Mordin_ME2_charshot.png/revision/latest/scale-to-width-down/640?cb=20220813153415"
+    },
+    "mass-effect--legion": {
+      "wiki": "masseffect.fandom.com",
+      "file": "LegionLE2.png",
+      "page": "https://masseffect.fandom.com/wiki/File:LegionLE2.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/d/dd/LegionLE2.png/revision/latest/scale-to-width-down/640?cb=20220827041057"
+    },
+    "metal-gear-solid--solid-snake": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Solid Snake MGS2.png",
+      "page": "https://metalgear.fandom.com/wiki/File:Solid_Snake_MGS2.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/6/66/Solid_Snake_MGS2.png/revision/latest/scale-to-width-down/640?cb=20251203002704"
+    },
+    "metal-gear-solid--naked-snake": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Big Boss MGS3 infobox.png",
+      "page": "https://metalgear.fandom.com/wiki/File:Big_Boss_MGS3_infobox.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/c/c7/Big_Boss_MGS3_infobox.png/revision/latest/scale-to-width-down/640?cb=20251129185107"
+    },
+    "metal-gear-solid--the-boss": {
+      "wiki": "metalgear.fandom.com",
+      "file": "BossI15.png",
+      "page": "https://metalgear.fandom.com/wiki/File:BossI15.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/e/e9/BossI15.png/revision/latest/scale-to-width-down/640?cb=20260101052537"
+    },
+    "metal-gear-solid--revolver-ocelot": {
+      "wiki": "metalgear.fandom.com",
+      "file": "OcelotMB.PNG",
+      "page": "https://metalgear.fandom.com/wiki/File:OcelotMB.PNG",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/8/85/OcelotMB.PNG/revision/latest/scale-to-width-down/640?cb=20230530114742"
+    },
+    "metal-gear-solid--liquid-snake": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Liquid1I2.png",
+      "page": "https://metalgear.fandom.com/wiki/File:Liquid1I2.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/5/55/Liquid1I2.png/revision/latest/scale-to-width-down/640?cb=20230819185830"
+    },
+    "metal-gear-solid--otacon": {
+      "wiki": "metalgear.fandom.com",
+      "file": "MGSOtaconPP.png",
+      "page": "https://metalgear.fandom.com/wiki/File:MGSOtaconPP.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/6/62/MGSOtaconPP.png/revision/latest/scale-to-width-down/640?cb=20230819185406"
+    },
+    "metal-gear-solid--raiden": {
+      "wiki": "metalgear.fandom.com",
+      "file": "RaidenPortrait2018.png",
+      "page": "https://metalgear.fandom.com/wiki/File:RaidenPortrait2018.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/1/14/RaidenPortrait2018.png/revision/latest/scale-to-width-down/640?cb=20220711220820"
+    },
+    "metal-gear-solid--eva": {
+      "wiki": "metalgear.fandom.com",
+      "file": "EVA MGS Delta.png",
+      "page": "https://metalgear.fandom.com/wiki/File:EVA_MGS_Delta.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/4/47/EVA_MGS_Delta.png/revision/latest/scale-to-width-down/640?cb=20251009023229"
+    },
+    "metal-gear-solid--kazuhira-miller": {
+      "wiki": "metalgear.fandom.com",
+      "file": "TPP Miller infobox.png",
+      "page": "https://metalgear.fandom.com/wiki/File:TPP_Miller_infobox.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/4/41/TPP_Miller_infobox.png/revision/latest/scale-to-width-down/640?cb=20140531075748"
+    },
+    "metal-gear-solid--skull-face": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Skull-face-profile.png",
+      "page": "https://metalgear.fandom.com/wiki/File:Skull-face-profile.png",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/f/f8/Skull-face-profile.png/revision/latest/scale-to-width-down/640?cb=20151014172731"
+    },
+    "metal-gear-solid--venom-snake": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Venom Snake.Motherbase.jpg",
+      "page": "https://metalgear.fandom.com/wiki/File:Venom_Snake.Motherbase.jpg",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/1/16/Venom_Snake.Motherbase.jpg/revision/latest/scale-to-width-down/640?cb=20210324042507"
+    },
+    "red-dead-redemption--arthur-morgan": {
+      "wiki": "reddead.fandom.com",
+      "file": "Arthur Morgan Level 2.jpg",
+      "page": "https://reddead.fandom.com/wiki/File:Arthur_Morgan_Level_2.jpg",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/3/30/Arthur_Morgan_Level_2.jpg/revision/latest/scale-to-width-down/640?cb=20250123181952"
+    },
+    "red-dead-redemption--john-marston": {
+      "wiki": "reddead.fandom.com",
+      "file": "John Marston TBTN 5 Cropped.png",
+      "page": "https://reddead.fandom.com/wiki/File:John_Marston_TBTN_5_Cropped.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/7/73/John_Marston_TBTN_5_Cropped.png/revision/latest/scale-to-width-down/640?cb=20250808171334"
+    },
+    "red-dead-redemption--dutch-van-der-linde": {
+      "wiki": "reddead.fandom.com",
+      "file": "RDR2 Dutch van der Linde PC.png",
+      "page": "https://reddead.fandom.com/wiki/File:RDR2_Dutch_van_der_Linde_PC.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/8/87/RDR2_Dutch_van_der_Linde_PC.png/revision/latest/scale-to-width-down/640?cb=20191216204516"
+    },
+    "red-dead-redemption--hosea-matthews": {
+      "wiki": "reddead.fandom.com",
+      "file": "Hosea injured.jpg",
+      "page": "https://reddead.fandom.com/wiki/File:Hosea_injured.jpg",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/d/d1/Hosea_injured.jpg/revision/latest/scale-to-width-down/640?cb=20210625011427"
+    },
+    "red-dead-redemption--micah-bell": {
+      "wiki": "reddead.fandom.com",
+      "file": "Micah .jpg",
+      "page": "https://reddead.fandom.com/wiki/File:Micah_.jpg",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/8/84/Micah_.jpg/revision/latest/scale-to-width-down/640?cb=20210307142059"
+    },
+    "red-dead-redemption--sadie-adler": {
+      "wiki": "reddead.fandom.com",
+      "file": "Sadie1898.png",
+      "page": "https://reddead.fandom.com/wiki/File:Sadie1898.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/8/8a/Sadie1898.png/revision/latest/scale-to-width-down/640?cb=20260101053702"
+    },
+    "red-dead-redemption--abigail-roberts": {
+      "wiki": "reddead.fandom.com",
+      "file": "AbigailRDR2.PNG",
+      "page": "https://reddead.fandom.com/wiki/File:AbigailRDR2.PNG",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/b/b8/AbigailRDR2.PNG/revision/latest/scale-to-width-down/640?cb=20251110005317"
+    },
+    "red-dead-redemption--charles-smith": {
+      "wiki": "reddead.fandom.com",
+      "file": "Charles.jpg",
+      "page": "https://reddead.fandom.com/wiki/File:Charles.jpg",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/e/e7/Charles.jpg/revision/latest/scale-to-width-down/640?cb=20250626180957"
+    },
+    "red-dead-redemption--bill-williamson": {
+      "wiki": "reddead.fandom.com",
+      "file": "Bill1899.png",
+      "page": "https://reddead.fandom.com/wiki/File:Bill1899.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/e/ee/Bill1899.png/revision/latest/scale-to-width-down/640?cb=20250710162038"
+    },
+    "red-dead-redemption--javier-escuella": {
+      "wiki": "reddead.fandom.com",
+      "file": "JavierRDR2New.png",
+      "page": "https://reddead.fandom.com/wiki/File:JavierRDR2New.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/4/42/JavierRDR2New.png/revision/latest/scale-to-width-down/640?cb=20251110210833"
+    },
+    "red-dead-redemption--edgar-ross": {
+      "wiki": "reddead.fandom.com",
+      "file": "Ross1899New.png",
+      "page": "https://reddead.fandom.com/wiki/File:Ross1899New.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/6/60/Ross1899New.png/revision/latest/scale-to-width-down/640?cb=20260507130330"
+    },
+    "the-legend-of-zelda--link": {
+      "wiki": "zelda.fandom.com",
+      "file": "TLoZ Series Link Render.png",
+      "page": "https://zelda.fandom.com/wiki/File:TLoZ_Series_Link_Render.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/4/47/TLoZ_Series_Link_Render.png/revision/latest/scale-to-width-down/640?cb=20210220213135"
+    },
+    "the-legend-of-zelda--zelda": {
+      "wiki": "zelda.fandom.com",
+      "file": "TotK Princess Zelda Artwork.png",
+      "page": "https://zelda.fandom.com/wiki/File:TotK_Princess_Zelda_Artwork.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c9/TotK_Princess_Zelda_Artwork.png/revision/latest/scale-to-width-down/640?cb=20240929143055"
+    },
+    "the-legend-of-zelda--ganondorf": {
+      "wiki": "zelda.fandom.com",
+      "file": "TotK Ganondorf.png",
+      "page": "https://zelda.fandom.com/wiki/File:TotK_Ganondorf.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/66/TotK_Ganondorf.png/revision/latest/scale-to-width-down/640?cb=20230513141802"
+    },
+    "the-legend-of-zelda--impa": {
+      "wiki": "zelda.fandom.com",
+      "file": "SS Impa Artwork.png",
+      "page": "https://zelda.fandom.com/wiki/File:SS_Impa_Artwork.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/8d/SS_Impa_Artwork.png/revision/latest/scale-to-width-down/640?cb=20111103171048"
+    },
+    "the-legend-of-zelda--fay": {
+      "wiki": "zelda.fandom.com",
+      "file": "SS Fi Artwork.png",
+      "page": "https://zelda.fandom.com/wiki/File:SS_Fi_Artwork.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ed/SS_Fi_Artwork.png/revision/latest/scale-to-width-down/640?cb=20111011033914"
+    },
+    "the-legend-of-zelda--el-heraldo-de-la-muerte": {
+      "wiki": "zelda.fandom.com",
+      "file": "SSHD Demise Model.png",
+      "page": "https://zelda.fandom.com/wiki/File:SSHD_Demise_Model.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/a5/SSHD_Demise_Model.png/revision/latest/scale-to-width-down/640?cb=20211107113054"
+    },
+    "the-legend-of-zelda--midna": {
+      "wiki": "zelda.fandom.com",
+      "file": "TPHD Midna Artwork.png",
+      "page": "https://zelda.fandom.com/wiki/File:TPHD_Midna_Artwork.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b6/TPHD_Midna_Artwork.png/revision/latest/scale-to-width-down/640?cb=20160130084342"
+    },
+    "the-legend-of-zelda--zant": {
+      "wiki": "zelda.fandom.com",
+      "file": "TP Zant Render.png",
+      "page": "https://zelda.fandom.com/wiki/File:TP_Zant_Render.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/91/TP_Zant_Render.png/revision/latest/scale-to-width-down/640?cb=20160206174304"
+    },
+    "the-legend-of-zelda--tetra": {
+      "wiki": "zelda.fandom.com",
+      "file": "TWW Tetra.png",
+      "page": "https://zelda.fandom.com/wiki/File:TWW_Tetra.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/4/4d/TWW_Tetra.png/revision/latest/scale-to-width-down/640?cb=20130831072904"
+    },
+    "the-legend-of-zelda--rauru": {
+      "wiki": "zelda.fandom.com",
+      "file": "TotK King Rauru Model.png",
+      "page": "https://zelda.fandom.com/wiki/File:TotK_King_Rauru_Model.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b4/TotK_King_Rauru_Model.png/revision/latest/scale-to-width-down/640?cb=20230521204850"
+    },
+    "the-legend-of-zelda--mipha": {
+      "wiki": "zelda.fandom.com",
+      "file": "BotW Mipha Artwork.png",
+      "page": "https://zelda.fandom.com/wiki/File:BotW_Mipha_Artwork.png",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/f0/BotW_Mipha_Artwork.png/revision/latest/scale-to-width-down/640?cb=20170204170637"
+    },
+    "the-witcher--geralt": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 Geralt of Rivia newest render.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_Geralt_of_Rivia_newest_render.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/a/a0/Tw3_Geralt_of_Rivia_newest_render.png/revision/latest/scale-to-width-down/640?cb=20170606064646"
+    },
+    "the-witcher--triss": {
+      "wiki": "witcher.fandom.com",
+      "file": "Triss-TW3-new-render.png",
+      "page": "https://witcher.fandom.com/wiki/File:Triss-TW3-new-render.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/2/27/Triss-TW3-new-render.png/revision/latest/scale-to-width-down/640?cb=20160402173701"
+    },
+    "the-witcher--yennefer": {
+      "wiki": "witcher.fandom.com",
+      "file": "The Witcher 3 Wild Hunt-Yennefer of Vengerberg.png",
+      "page": "https://witcher.fandom.com/wiki/File:The_Witcher_3_Wild_Hunt-Yennefer_of_Vengerberg.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/f/f0/The_Witcher_3_Wild_Hunt-Yennefer_of_Vengerberg.png/revision/latest/scale-to-width-down/640?cb=20160326134030"
+    },
+    "the-witcher--ciri": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 full Ciri render.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_full_Ciri_render.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/6/6c/Tw3_full_Ciri_render.png/revision/latest/scale-to-width-down/640?cb=20160925105504"
+    },
+    "the-witcher--dandelion": {
+      "wiki": "witcher.fandom.com",
+      "file": "Dandelion-TW3 render.png",
+      "page": "https://witcher.fandom.com/wiki/File:Dandelion-TW3_render.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/a/a1/Dandelion-TW3_render.png/revision/latest/scale-to-width-down/640?cb=20150216151806"
+    },
+    "the-witcher--vernon-roche": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw2 full Vernon.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw2_full_Vernon.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/c/c3/Tw2_full_Vernon.png/revision/latest/scale-to-width-down/640?cb=20101016121203"
+    },
+    "the-witcher--letho": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw2 full Letho 1.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw2_full_Letho_1.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/4/41/Tw2_full_Letho_1.png/revision/latest/scale-to-width-down/640?cb=20110508115002"
+    },
+    "the-witcher--emhyr": {
+      "wiki": "witcher.fandom.com",
+      "file": "The Witcher 3 Wild Hunt-Emhyr var Emreis.png",
+      "page": "https://witcher.fandom.com/wiki/File:The_Witcher_3_Wild_Hunt-Emhyr_var_Emreis.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/8/86/The_Witcher_3_Wild_Hunt-Emhyr_var_Emreis.png/revision/latest/scale-to-width-down/640?cb=20160809181812"
+    },
+    "the-witcher--olgierd": {
+      "wiki": "witcher.fandom.com",
+      "file": "HoS Olgierd full render.png",
+      "page": "https://witcher.fandom.com/wiki/File:HoS_Olgierd_full_render.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/0/06/HoS_Olgierd_full_render.png/revision/latest/scale-to-width-down/640?cb=20151009125319"
+    },
+    "the-witcher--gaunter-odimm": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 journal mirrorman.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_journal_mirrorman.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/f/f3/Tw3_journal_mirrorman.png/revision/latest/scale-to-width-down/640?cb=20170501180556"
+    },
+    "the-witcher--regis": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 journal regis.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_journal_regis.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/b/bd/Tw3_journal_regis.png/revision/latest/scale-to-width-down/640?cb=20160601040011"
+    },
+    "the-witcher--dettlaff": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 journal dettlaff.png",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_journal_dettlaff.png",
+      "download": "https://static.wikia.nocookie.net/witcher/images/f/f6/Tw3_journal_dettlaff.png/revision/latest/scale-to-width-down/640?cb=20160601043123"
+    }
+  },
+  "landscapes": {
+    "god-of-war": {
+      "wiki": "godofwar.fandom.com",
+      "file": "God-of-war--environment--lake-of-nine-02--by-mark-castanon.jpg",
+      "page": "https://godofwar.fandom.com/wiki/File:God-of-war--environment--lake-of-nine-02--by-mark-castanon.jpg",
+      "download": "https://static.wikia.nocookie.net/godofwar/images/9/90/God-of-war--environment--lake-of-nine-02--by-mark-castanon.jpg/revision/latest/scale-to-width-down/1920?cb=20240612005210"
+    },
+    "mass-effect": {
+      "wiki": "masseffect.fandom.com",
+      "file": "Normandy + Citadel.png",
+      "page": "https://masseffect.fandom.com/wiki/File:Normandy_%2B_Citadel.png",
+      "download": "https://static.wikia.nocookie.net/masseffect/images/b/b9/Normandy_%2B_Citadel.png/revision/latest/scale-to-width-down/1920?cb=20210620032713"
+    },
+    "metal-gear-solid": {
+      "wiki": "metalgear.fandom.com",
+      "file": "Tselinoyarsk.jpg",
+      "page": "https://metalgear.fandom.com/wiki/File:Tselinoyarsk.jpg",
+      "download": "https://static.wikia.nocookie.net/metalgear/images/0/06/Tselinoyarsk.jpg/revision/latest/scale-to-width-down/1920?cb=20100407212553"
+    },
+    "red-dead-redemption": {
+      "wiki": "reddead.fandom.com",
+      "file": "Grizzlies East overlooking Three Sisters.png",
+      "page": "https://reddead.fandom.com/wiki/File:Grizzlies_East_overlooking_Three_Sisters.png",
+      "download": "https://static.wikia.nocookie.net/reddeadredemption/images/8/81/Grizzlies_East_overlooking_Three_Sisters.png/revision/latest/scale-to-width-down/1920?cb=20201026200339"
+    },
+    "the-legend-of-zelda": {
+      "wiki": "zelda.fandom.com",
+      "file": "BotW Hyrule Sunset Artwork.jpg",
+      "page": "https://zelda.fandom.com/wiki/File:BotW_Hyrule_Sunset_Artwork.jpg",
+      "download": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/7e/BotW_Hyrule_Sunset_Artwork.jpg/revision/latest/scale-to-width-down/1920?cb=20170128225340"
+    },
+    "the-witcher": {
+      "wiki": "witcher.fandom.com",
+      "file": "Tw3 Kaer Morhen promo.jpg",
+      "page": "https://witcher.fandom.com/wiki/File:Tw3_Kaer_Morhen_promo.jpg",
+      "download": "https://static.wikia.nocookie.net/witcher/images/4/4a/Tw3_Kaer_Morhen_promo.jpg/revision/latest/scale-to-width-down/1920?cb=20160825155717"
+    }
+  }
+}

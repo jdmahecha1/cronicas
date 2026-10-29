@@ -543,6 +543,11 @@ select:hover {
   stroke-width: 4;
 }
 
+.graph__portrait {
+  clip-path: circle(50%);
+  pointer-events: none;
+}
+
 .graph__initial {
   fill: var(--text);
   font-family: var(--font-display);

@@ -1,0 +1,111 @@
+{
+  "wikis": {
+    "god-of-war": "godofwar.fandom.com",
+    "mass-effect": "masseffect.fandom.com",
+    "metal-gear-solid": "metalgear.fandom.com",
+    "red-dead-redemption": "reddead.fandom.com",
+    "the-legend-of-zelda": "zelda.fandom.com",
+    "the-witcher": "witcher.fandom.com"
+  },
+  "characters": {
+    "god-of-war": {
+      "kratos": "Kratos",
+      "atenea": "Athena",
+      "ares": "Ares",
+      "zeus": "Zeus",
+      "gaia": "Gaia",
+      "atreus": "Atreus",
+      "freya": "Freya",
+      "baldur": "Baldur",
+      "mimir": "Mimir",
+      "odin": "Odin",
+      "thor": "Thor",
+      "sindri": "Sindri"
+    },
+    "mass-effect": {
+      "shepard": "Commander Shepard",
+      "garrus-vakarian": "Garrus Vakarian",
+      "liara-t-soni": "Liara T'Soni",
+      "tali-zorah": "Tali'Zorah",
+      "urdnot-wrex": "Urdnot Wrex",
+      "kaidan-alenko": "Kaidan Alenko",
+      "ashley-williams": "Ashley Williams",
+      "saren-arterius": "Saren Arterius",
+      "el-hombre-ilusorio": "The Illusive Man",
+      "miranda-lawson": "Miranda Lawson",
+      "mordin-solus": "Mordin Solus",
+      "legion": "Legion"
+    },
+    "metal-gear-solid": {
+      "solid-snake": "Solid Snake",
+      "naked-snake": "Big Boss",
+      "the-boss": "The Boss",
+      "revolver-ocelot": "Revolver Ocelot",
+      "liquid-snake": "Liquid Snake",
+      "otacon": "Otacon",
+      "raiden": "Raiden",
+      "eva": "EVA",
+      "kazuhira-miller": "Kazuhira Miller",
+      "skull-face": "Skull Face",
+      "venom-snake": "Venom Snake"
+    },
+    "red-dead-redemption": {
+      "arthur-morgan": "Arthur Morgan",
+      "john-marston": "John Marston",
+      "dutch-van-der-linde": "Dutch van der Linde",
+      "hosea-matthews": "Hosea Matthews",
+      "micah-bell": "Micah Bell",
+      "sadie-adler": "Sadie Adler",
+      "abigail-roberts": "Abigail Marston",
+      "charles-smith": "Charles Smith",
+      "bill-williamson": "Bill Williamson",
+      "javier-escuella": "Javier Escuella",
+      "edgar-ross": "Edgar Ross"
+    },
+    "the-legend-of-zelda": {
+      "link": "Link",
+      "zelda": "Princess Zelda",
+      "ganondorf": "Ganondorf",
+      "impa": "Impa",
+      "fay": "Fi",
+      "el-heraldo-de-la-muerte": "Demise",
+      "midna": "Midna",
+      "zant": "Zant",
+      "tetra": "Tetra",
+      "rauru": "Rauru",
+      "mipha": "Mipha"
+    },
+    "the-witcher": {
+      "geralt": "Geralt of Rivia",
+      "triss": "Triss Merigold",
+      "yennefer": "Yennefer of Vengerberg",
+      "ciri": "Ciri",
+      "dandelion": "Dandelion",
+      "vernon-roche": "Vernon Roche",
+      "letho": "Letho of Gulet",
+      "emhyr": "Emhyr var Emreis",
+      "olgierd": "Olgierd von Everec",
+      "gaunter-odimm": "Gaunter O'Dimm",
+      "regis": "Regis",
+      "dettlaff": "Dettlaff van der Eretein"
+    }
+  },
+  "overrides": {
+    "the-witcher--geralt": "Tw3 Geralt of Rivia newest render.png",
+    "the-witcher--ciri": "Tw3 full Ciri render.png",
+    "metal-gear-solid--solid-snake": "Solid Snake MGS2.png",
+    "metal-gear-solid--naked-snake": "Big Boss MGS3 infobox.png",
+    "metal-gear-solid--eva": "EVA MGS Delta.png",
+    "metal-gear-solid--kazuhira-miller": "TPP Miller infobox.png",
+    "the-legend-of-zelda--impa": "SS Impa Artwork.png",
+    "the-legend-of-zelda--rauru": "TotK King Rauru Model.png"
+  },
+  "landscapes": {
+    "red-dead-redemption": "Grizzlies East overlooking Three Sisters.png",
+    "the-witcher": "Tw3 Kaer Morhen promo.jpg",
+    "mass-effect": "Normandy + Citadel.png",
+    "the-legend-of-zelda": "BotW Hyrule Sunset Artwork.jpg",
+    "metal-gear-solid": "Tselinoyarsk.jpg",
+    "god-of-war": "God-of-war--environment--lake-of-nine-02--by-mark-castanon.jpg"
+  }
+}

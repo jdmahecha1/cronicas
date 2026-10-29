@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { OWNERS, coverFor } from '../lib/artwork';
+import { OWNERS, coverFor, landscapeFor, portraitFor } from '../lib/artwork';
 import { getSagas } from '../lib/data';
 
 const sagas = getSagas();
@@ -11,8 +11,15 @@ const credits = sagas.map((saga) => ({
     const cover = coverFor(game.id);
     return cover ? [{ game, cover }] : [];
   }),
+  landscape: landscapeFor(saga.id),
+  // Nombrar a un personaje que aparece más adelante ya es un spoiler: esos van aparte, plegados.
+  portraits: saga.characters.flatMap((c) => {
+    const art = portraitFor(saga.id, c.id);
+    return art ? [{ character: c, art }] : [];
+  }),
 }));
 const total = credits.reduce((n, c) => n + c.games.length, 0);
+const totalPortraits = credits.reduce((n, c) => n + c.portraits.length, 0);
 ---
 
 <Base
@@ -53,9 +60,67 @@ const total = credits.reduce((n, c) => n + c.games.length, 0);
           </div>
         ))
       }
+    </section>
+
+    <section>
+      <h2>Retratos y paisajes</h2>
       <p>
-        Los paisajes que aparecen cuando una saga no tiene imagen oficial son ilustraciones propias,
-        generadas con código.
+        Los {totalPortraits} retratos de personajes y los paisajes de fondo son arte oficial y capturas de
+        los juegos, tomados de las wikis de cada saga en Fandom, donde la comunidad documenta su origen.
+        Se muestran recortados y a resolución reducida, y sus derechos pertenecen a sus dueños. Cada
+        enlace lleva a la página del archivo en su wiki.
+      </p>
+      {
+        credits.map(({ saga, owner, landscape, portraits }) => {
+          const known = portraits.filter(({ character }) => !character.appears);
+          const later = portraits.filter(({ character }) => character.appears);
+          return (
+            <div class="credits__saga">
+              <h3>
+                {saga.title} <span>© {owner}</span>
+              </h3>
+              <ul class="credits__list">
+                {landscape && (
+                  <li>
+                    <strong>Paisaje de fondo</strong>
+                    <span>
+                      <a href={landscape.page} rel="nofollow">{landscape.file}</a>
+                    </span>
+                  </li>
+                )}
+                {known.map(({ character, art }) => (
+                  <li>
+                    <strong>{character.name}</strong>
+                    <span>
+                      Retrato. <a href={art.page} rel="nofollow">Archivo en {art.wiki}</a>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {later.length > 0 && (
+                <details class="credits__later" data-pagefind-ignore="all">
+                  <summary>
+                    {later.length} {later.length === 1 ? 'personaje' : 'personajes'} que aparecen más adelante
+                    (sus nombres son spoilers)
+                  </summary>
+                  <ul class="credits__list">
+                    {later.map(({ character, art }) => (
+                      <li>
+                        <strong>{character.name}</strong>
+                        <span>
+                          Retrato. <a href={art.page} rel="nofollow">Archivo en {art.wiki}</a>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </div>
+          );
+        })
+      }
+      <p>
+        Si una imagen no carga, en su lugar se ve un paisaje propio, generado con código.
       </p>
     </section>
 
@@ -135,7 +200,19 @@ const total = credits.reduce((n, c) => n + c.games.length, 0);
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
   }
 
+  .credits__later {
+    margin: 0 0 var(--space-4);
+  }
+
+  .credits__later summary {
+    min-height: 44px;
+    padding-block: var(--space-2);
+    color: var(--muted);
+    cursor: pointer;
+  }
+
   .credits__list span {
+    overflow-wrap: anywhere;
     color: var(--muted);
     font-size: var(--step-0);
   }

@@ -8,6 +8,7 @@ import Spoiler from '../../../../components/Spoiler.astro';
 import Base from '../../../../layouts/Base.astro';
 import { getSagas } from '../../../../lib/data';
 import type { Character, Saga } from '../../../../lib/schema';
+import { portraitSrc } from '../../../../lib/artwork';
 import { charactersById, sortEvents } from '../../../../lib/spoilers';
 import { themeFor } from '../../../../lib/themes';
 import { characterUrl, sagaUrl, url } from '../../../../lib/url';
@@ -55,7 +56,7 @@ const description = hidden
       hidden ? (
         <Spoiler saga={saga} at={character.appears!} label="Este personaje">
           <header class="person-head">
-            <Crest name={character.name} size="lg" />
+            <Crest name={character.name} size="lg" portrait={portraitSrc(saga.id, character.id, 256)} />
             <div>
               <p class="person-head__role">{character.role}</p>
               <h1>{character.name}</h1>
@@ -66,7 +67,7 @@ const description = hidden
       ) : (
         <>
           <header class="person-head">
-            <Crest name={character.name} size="lg" />
+            <Crest name={character.name} size="lg" portrait={portraitSrc(saga.id, character.id, 256)} />
             <div>
               <p class="person-head__role">{character.role}</p>
               <h1>{character.name}</h1>
@@ -103,7 +104,7 @@ const description = hidden
               // Mostrar la relación revela al otro personaje: se espera a lo más tardío de los dos.
               const content = (
                 <a class="relation" href={characterUrl(saga.id, other.id)} style={`--kind: ${style.color}`}>
-                  <Crest name={other.name} />
+                  <Crest name={other.name} portrait={portraitSrc(saga.id, other.id)} />
                   <span>
                     <span class="relation__kind">{style.label}</span>
                     <span class="relation__name">{other.name}</span>

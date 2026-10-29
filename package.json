@@ -16,7 +16,8 @@
     "astro": "astro",
     "og": "node scripts/og.mjs",
     "images": "node scripts/images.mjs",
-    "covers": "node scripts/fetch-covers.mjs"
+    "covers": "node scripts/fetch-covers.mjs",
+    "art:manifest": "node scripts/art-manifest.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.1",

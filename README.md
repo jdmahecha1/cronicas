@@ -120,7 +120,7 @@ No necesita variables de entorno ni claves.
 
 Los resúmenes son propios. Se redactaron con ayuda de IA y después se revisaron uno por uno contra el canon. Cuando la historia depende de decisiones del jugador, se usa el desenlace más común y así se indica.
 
-Las portadas de los juegos son arte promocional oficial, en la versión de resolución reducida que publica Wikipedia (`npm run covers` las descarga y guarda su fuente; `npm run images` las convierte a WebP). Se usan sin fines comerciales y con crédito: la página [Créditos](https://jdmahecha1.github.io/cronicas/creditos/) enlaza cada imagen a su fuente y explica cómo pedir que se retire.
+Las portadas de los juegos son arte promocional oficial, en la versión de resolución reducida que publica Wikipedia (`npm run covers` las descarga y guarda su fuente; `npm run images` las convierte a WebP). Los retratos de los personajes y los paisajes de fondo son arte oficial y capturas de los juegos, tomados de las wikis de cada saga en Fandom (`src/content/art-sources.json` elige cada archivo y `npm run art:manifest` guarda su página de origen en `art.json`; las imágenes se bajan desde el navegador porque Fandom no permite descargas automáticas). Todo se usa sin fines comerciales y con crédito: la página [Créditos](https://jdmahecha1.github.io/cronicas/creditos/) enlaza cada imagen a su fuente y explica cómo pedir que se retire.
 
 Crónicas es un proyecto de fans sin ánimo de lucro y sin relación con Nintendo, Rockstar Games, CD Projekt, BioWare/EA, Konami ni Sony. Los nombres de los juegos y personajes pertenecen a sus dueños.
 
